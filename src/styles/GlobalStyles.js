@@ -7,7 +7,7 @@ const GlobalStyles = createGlobalStyle`
   --color-primary-2: #011221;
   --color-primary-3: #011627;
   /* color secondary */
-  --color-grey-0: #1E2D3D;
+  --color-grey-0: #999D9E;
   --color-grey-1: #607B96;
   --color-teal-1: #3C9D93;
   --color-purple-1 : #4D5BCE;
@@ -49,7 +49,7 @@ html {
 }
 
 body {
-  font-family: 'Fira Code', monospace;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: 1.6rem;
 }
 
