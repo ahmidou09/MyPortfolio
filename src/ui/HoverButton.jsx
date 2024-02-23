@@ -42,9 +42,9 @@ const HoverButton = ({ children }) => {
 
     const onHover = (x, y) => {
       gsap.to(button, {
-        x: (x - button.x) * 0.2,
-        y: (y - button.y) * 0.1,
-        scale: 1.05,
+        x: (x - button.x) * 0.4,
+        y: (y - button.y) * 0.4,
+        scale: 1.15,
         ease: "power2.out",
         duration: 0.4,
       });

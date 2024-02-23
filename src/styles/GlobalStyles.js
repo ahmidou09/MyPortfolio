@@ -84,6 +84,28 @@ a {
 ul {
   list-style: none;
 }
+
+.slide-in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-primary-3);
+  border-radius: 30% 30% 0 0;
+  transform-origin: bottom;
+}
+
+.slide-out {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  border-radius: 0 0 30% 30%;
+  background-color: var(--color-primary-3);
+  transform-origin: top;
+} 
 `;
 
 export default GlobalStyles;

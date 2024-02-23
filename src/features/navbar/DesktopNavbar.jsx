@@ -27,55 +27,47 @@ const ButtonText = styled.span`
   .copy span {
     position: relative;
     display: block;
-    transform: rotate(0);
     transition: transform 0.8s ease;
+    transform-origin: center;
+    font-size: 1.8rem;
   }
 
   &:hover .copy span {
-    transform: rotate(-720deg) translateX(0.5rem);
+    transform: rotate(360deg);
   }
 
-  &:hover .codeBy {
-    transform: translateX(-10rem);
-    opacity: 0;
-  }
-
-  &:hover .mehdi {
+  &:hover .credit .codeBy,
+  &:hover .credit .mehdi,
+  &:hover .credit .ahmidou {
     transform: translateX(-5.5rem);
-  }
-
-  &:hover .ahmidou {
-    transform: translateX(-5rem);
   }
 
   .credit {
     display: flex;
     align-items: center;
-    transition: transform 1s ease;
+    transition: transform 0.6s ease;
     overflow: hidden;
-  }
+    width: max-content;
 
-  .codeBy {
-    display: block;
-    transform: translateX(0);
-    transition: transform 0.6s ease;
-    opacity: 1;
-  }
+    .codeBy {
+      display: block;
+      transform: translateX(0);
+      transition: transform 0.6s ease;
+    }
 
-  .name {
-    display: flex;
-    align-items: center;
-  }
+    .mehdi {
+      transition: transform 0.6s ease;
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+    }
 
-  .mehdi {
-    transform: translateX(0.5rem);
-    transition: transform 0.6s ease;
-  }
-
-  .ahmidou {
-    display: block;
-    transform: translateX(10rem);
-    transition: transform 0.6s ease;
+    .ahmidou {
+      display: block;
+      transform: translateX(5.5rem);
+      transition: transform 0.6s ease;
+      width: 0;
+      padding-right: 1rem;
+    }
   }
 `;
 
@@ -83,10 +75,6 @@ const Nav = styled.nav`
   ul {
     display: flex;
     gap: 3rem;
-
-    li {
-      position: relative;
-    }
   }
 `;
 
@@ -98,7 +86,7 @@ const NavLinkWithHover = styled(NavLink)`
   &::before {
     content: "";
     position: absolute;
-    top: 300%;
+    top: 150%;
     left: 50%;
     transform: translateX(-50%);
     width: 0;
@@ -119,17 +107,15 @@ function DesktopNavbar() {
   return (
     <StyledDesktopNavbar>
       <HoverButton>
-        <Link href="/">
+        <Link to="/">
           <ButtonText>
             <div className="copy">
               <span>&copy;</span>
             </div>
             <div className="credit">
               <span className="codeBy">Code by </span>{" "}
-              <span className="name">
-                <span className="mehdi">El Mehdi</span>
-                <span className="ahmidou">Ahmidou</span>
-              </span>
+              <span className="mehdi">El Mehdi</span>
+              <span className="ahmidou">Ahmidou</span>
             </div>
           </ButtonText>
         </Link>
