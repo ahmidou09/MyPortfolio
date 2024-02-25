@@ -3,7 +3,6 @@ import styled from "styled-components";
 import NavBar from "../features/navbar/NavBar";
 
 const StyledAppLayout = styled.div`
-  height: 100vh;
   width: 100%;
   background-color: #9ca9b9;
 `;

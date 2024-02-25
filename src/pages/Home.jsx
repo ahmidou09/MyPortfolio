@@ -5,19 +5,28 @@ import animationData from "../assets/json/animation_frontend.json";
 import animationWord from "../assets/json/Animationw_world.json";
 import hero from "../assets/img/hero.png";
 import transition from "../hooks/animation";
+import HoverButton from "../ui/HoverButton";
 
 const HomeContainer = styled.div`
-  height: 100vh;
   display: flex;
   justify-content: center;
   position: relative;
 `;
 
+const fadeInLeft = keyframes`
+    from {
+      transform: translateX(-10rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  `;
+
 const Row = styled.div`
-  padding: 6rem 0;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(8, 8rem);
+  grid-template-rows: repeat(8, 10rem);
   align-items: center;
   justify-content: center;
   overflow: hidden;
@@ -26,6 +35,7 @@ const Row = styled.div`
 const LocatedLeft = styled.div`
   position: absolute;
   display: flex;
+  opacity: 0;
   align-items: center;
   padding: 0 0.5rem;
   height: 10rem;
@@ -34,6 +44,7 @@ const LocatedLeft = styled.div`
   left: 0;
   top: 50%;
   z-index: 999;
+  animation: ${fadeInLeft} 0.5s 1s ease-in-out forwards;
 
   @media screen and (max-width: 900px) {
     background-color: transparent;
@@ -47,8 +58,15 @@ const LocatedLeft = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
     svg {
-      width: 80% !important;
+      width: 55% !important;
+    }
+
+    address {
+      @media screen and (max-width: 720px) {
+        display: none;
+      }
     }
   }
 `;
@@ -74,6 +92,10 @@ const LocatedRight = styled.div`
     font-size: 3rem;
     font-weight: 300;
     letter-spacing: 0.1rem;
+
+    @media screen and (max-width: 900px) {
+      font-size: 2rem;
+    }
   }
 `;
 
@@ -131,12 +153,21 @@ const BoxHero = styled.div`
 
   img {
     object-fit: cover;
+    height: 100%;
     opacity: 0;
     align-self: self-start;
     animation: ${fadeInUp} 0.5s 1s ease-in-out forwards;
 
+    @media screen and (max-width: 720px) {
+      width: fill;
+      height: 90%;
+      padding: 6rem 0 0 0;
+    }
+
     @media screen and (max-width: 500px) {
-      width: 80%;
+      width: fill;
+      height: 70%;
+      padding: 6rem 0 0 0;
     }
   }
 `;
@@ -146,10 +177,12 @@ function Home() {
     <HomeContainer>
       <LocatedLeft>
         <div>
-          <span>Located in the morroco</span>
-          <span>
-            <Lottie animationData={animationWord} />
-          </span>
+          <address>Located in the morroco</address>
+          <HoverButton>
+            <span>
+              <Lottie animationData={animationWord} />
+            </span>
+          </HoverButton>
         </div>
       </LocatedLeft>
       <Row>
