@@ -46,12 +46,17 @@ const GlobalStyles = createGlobalStyle`
 
 html {
   font-size: 62.5%;
+
+  @media screen and (max-width: 720) {
+    font-size: 50%;
+  }
 }
 
 body {
   font-family: "Roboto Condensed", sans-serif;
   font-size: 1.6rem;
   height: 1000rem;
+  background-color: #9CA9B9;
 }
 
 
@@ -85,28 +90,6 @@ a {
 ul {
   list-style: none;
 }
-
-.slide-in {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: var(--color-primary-3);
-  border-radius: 30% 30% 0 0;
-  transform-origin: bottom;
-}
-
-.slide-out {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  border-radius: 0 0 30% 30%;
-  background-color: var(--color-primary-3);
-  transform-origin: top;
-} 
 `;
 
 export default GlobalStyles;

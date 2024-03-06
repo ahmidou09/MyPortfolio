@@ -1,37 +1,70 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import Links from "./Links";
+import ToggleButton from "./ToggleButton";
 import styled from "styled-components";
 
-const StyledMobileNavbar = styled.div``;
-const Img = styled.img`
-  height: 1.8rem;
-  cursor: pointer;
+const variants = {
+  open: {
+    clipPath: "circle(1200px at 350px 50px)",
+    transition: {
+      delay: 0,
+      type: "spring",
+      stiffness: 20,
+      restDelta: 2,
+    },
+  },
+  closed: {
+    clipPath: "circle(30px at 350px 50px)",
+    transition: {
+      delay: 0,
+      type: "spring",
+      stiffness: 2000,
+      damping: 4000,
+    },
+  },
+};
+
+const SideBar = styled(motion.div)`
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 40rem;
+  background: white;
+
+  ul {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    a {
+      font-size: 4rem;
+      cursor: pointer;
+    }
+  }
 `;
-const Menu = styled.div``;
 
 function MobileNavbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [open, setOpen] = useState(false);
+
+  const handleCloseSidebar = () => {
+    setOpen(false);
+    window.scrollTo(0, 0);
+  };
+
   return (
     <>
-      <StyledMobileNavbar>
-        <Link onClick={() => setIsMenuOpen(false)} to="/">
-          El mehdi Ahmidou
-        </Link>
-        <Img onClick={() => setIsMenuOpen(!isMenuOpen)} />
-      </StyledMobileNavbar>
-      {isMenuOpen && (
-        <Menu>
-          <Link onClick={() => setIsMenuOpen(false)} to="/projects">
-            Projects
-          </Link>
-          <Link onClick={() => setIsMenuOpen(false)} to="/about">
-            About
-          </Link>
-          <Link onClick={() => setIsMenuOpen(false)} to="/contact">
-            Contact
-          </Link>
-        </Menu>
-      )}
+      <SideBar animate={open ? "open" : "closed"} variants={variants}>
+        <ToggleButton setOpen={setOpen} />
+        <Links handleCloseSidebar={handleCloseSidebar} />
+      </SideBar>
     </>
   );
 }

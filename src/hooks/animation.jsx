@@ -1,22 +1,25 @@
 import { motion } from "framer-motion";
+import styled from "styled-components";
+
+const SlideOut = styled(motion.div)`
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 130vh;
+  width: 100%;
+  background-color: var(--color-primary-3);
+`;
+
 const transition = (ComponentUI) => {
   return () => (
     <>
+      <SlideOut
+        initial={{ top: "100vh" }}
+        animate={{ top: "-130vh" }}
+        exit={{ top: "0" }}
+        transition={{ delay: 0, duration: 1, ease: [0.64, 1.59, 0.96, 0.22] }}
+      />
       <ComponentUI />
-      <motion.div
-        className="slide-in"
-        initial={{ scaleY: 0 }}
-        animate={{ scaleY: 0 }}
-        exit={{ scaleY: 1 }}
-        transition={{ duration: 0.5, ease: [0.5, 0.7, 0.2, -0.94] }}
-      />
-      <motion.div
-        className="slide-out"
-        initial={{ scaleY: 1 }}
-        animate={{ scaleY: 0 }}
-        exit={{ scaleY: 0 }}
-        transition={{ duration: 1, ease: [0.28, 0.49, 1, -0.94] }}
-      />
     </>
   );
 };
