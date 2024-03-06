@@ -25,3 +25,4 @@ const transition = (ComponentUI) => {
 };
 
 export default transition;
+
