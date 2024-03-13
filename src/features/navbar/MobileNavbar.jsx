@@ -15,7 +15,7 @@ const variants = {
     },
   },
   closed: {
-    clipPath: "circle(30px at 350px 50px)",
+    clipPath: "circle(24px at 350px 50px)",
     transition: {
       delay: 0,
       type: "spring",
@@ -32,7 +32,7 @@ const SideBar = styled(motion.div)`
   right: 0;
   bottom: 0;
   width: 40rem;
-  background: white;
+  background: var(--color-primary-3);
 
   ul {
     position: absolute;
@@ -46,6 +46,7 @@ const SideBar = styled(motion.div)`
 
     a {
       font-size: 4rem;
+      color: var(--color-white);
       cursor: pointer;
     }
   }

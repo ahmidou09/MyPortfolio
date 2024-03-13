@@ -6,8 +6,14 @@ import { ScrollTrigger } from "gsap/all";
 import animationWord from "../assets/json/Animationw_world_1.json";
 import hero from "../assets/img/hero.png";
 import transition from "../hooks/animation";
+import Character from "../ui/Character";
+import HoverImageLinks from "../features/projects/HoverImageLinks";
+import { Link } from "react-router-dom";
+import MainButton from "../ui/Button";
 
 function Home() {
+  const paragraph =
+    "Developing secure, efficient, and scalable web applications and web-based management systems by writing standard, well-documented, and efficient codes.";
   const firstText = useRef(null);
   const secondText = useRef(null);
   const slider = useRef(null);
@@ -43,32 +49,46 @@ function Home() {
 
   return (
     <HomeContainer>
-      <LocatedLeft>
-        <span>Located in the morroco</span>
-        <span>
-          <Lottie animationData={animationWord} />
-        </span>
-      </LocatedLeft>
-      <BoxHero>
-        <img src={hero} alt="hero" />
-      </BoxHero>
-      <LocatedRight>
-        <h4>
-          <span>Freelance</span> Designer &amp; Developer
-        </h4>
-      </LocatedRight>
-
-      <ScrollingText>
-        <Slider ref={slider}>
-          <p ref={firstText}>El Mehdi Ahmidou -</p>
-          <p ref={secondText}>El Mehdi Ahmidou -</p>
-        </Slider>
-      </ScrollingText>
+      <Header>
+        <LocatedLeft>
+          <span>Located in the morroco</span>
+          <span>
+            <Lottie animationData={animationWord} />
+          </span>
+        </LocatedLeft>
+        <BoxHero>
+          <img src={hero} alt="hero" />
+        </BoxHero>
+        <LocatedRight>
+          <h4>
+            <span>Hi, I'm</span> Front-End Developer &amp; Designer
+          </h4>
+        </LocatedRight>
+        <ScrollingText>
+          <Slider ref={slider}>
+            <p ref={firstText}>El Mehdi Ahmidou -</p>
+            <p ref={secondText}>El Mehdi Ahmidou -</p>
+          </Slider>
+        </ScrollingText>
+      </Header>
+      <SectionAbout>
+        <Character paragraph={paragraph} />
+      </SectionAbout>
+      <SectionWork>
+        <HoverImageLinks element={3} />
+        <ShowMore>
+          <MainButton>
+            <Link to="/projects">Show more</Link>
+          </MainButton>
+        </ShowMore>
+      </SectionWork>
     </HomeContainer>
   );
 }
 
-const HomeContainer = styled.div`
+const HomeContainer = styled.div``;
+
+const Header = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -129,6 +149,27 @@ const Slider = styled.div`
     position: absolute;
     left: 100%;
     top: 0;
+  }
+`;
+
+const SectionAbout = styled.div`
+  background-color: var(--color-white);
+  height: 100vh;
+`;
+
+const SectionWork = styled.div`
+  background-color: var(--color-primary-3);
+`;
+
+const ShowMore = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  a {
+    color: var(--color-white);
+    font-size: 3rem;
+    font-weight: 500;
   }
 `;
 
