@@ -78,7 +78,7 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
         }}
         variants={{
           initial: { scale: 0, rotate: "-12.5deg" },
-          whileHover: { scale: 1, rotate: "12.5deg" },
+          whileHover: { scale: 3.5, rotate: "12.5deg" },
         }}
         transition={{ type: "spring" }}
         src={imgSrc}

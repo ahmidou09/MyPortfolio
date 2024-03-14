@@ -1,8 +1,6 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import styled from "styled-components";
 import Lottie from "lottie-react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
 import animationWord from "../assets/json/Animationw_world_1.json";
 import hero from "../assets/img/hero.png";
 import transition from "../hooks/animation";
@@ -10,42 +8,12 @@ import Character from "../ui/Character";
 import HoverImageLinks from "../features/projects/HoverImageLinks";
 import { Link } from "react-router-dom";
 import MainButton from "../ui/Button";
+import Skills from "../ui/MySkills";
+import ScrollingText from "../ui/ScrollingText";
 
 function Home() {
   const paragraph =
     "Developing secure, efficient, and scalable web applications and web-based management systems by writing standard, well-documented, and efficient codes.";
-  const firstText = useRef(null);
-  const secondText = useRef(null);
-  const slider = useRef(null);
-  let xPercent = 0;
-  let direction = -1;
-
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.to(slider.current, {
-      scrollTrigger: {
-        trigger: document.documentElement,
-        scrub: 0.25,
-        start: 0,
-        end: window.innerHeight,
-        //onUpdate: (e) => (direction = e.direction * -1),
-      },
-      x: "-500px",
-    });
-    requestAnimationFrame(animate);
-  }, []);
-
-  const animate = () => {
-    if (xPercent < -100) {
-      xPercent = 0;
-    } else if (xPercent > 0) {
-      xPercent = -100;
-    }
-    gsap.set(firstText.current, { xPercent: xPercent });
-    gsap.set(secondText.current, { xPercent: xPercent });
-    requestAnimationFrame(animate);
-    xPercent += 0.1 * direction;
-  };
 
   return (
     <HomeContainer>
@@ -64,15 +32,13 @@ function Home() {
             <span>Hi, I'm</span> Front-End Developer &amp; Designer
           </h4>
         </LocatedRight>
-        <ScrollingText>
-          <Slider ref={slider}>
-            <p ref={firstText}>El Mehdi Ahmidou -</p>
-            <p ref={secondText}>El Mehdi Ahmidou -</p>
-          </Slider>
-        </ScrollingText>
+        <ScrollingTextContainer>
+          <ScrollingText name={"El Mehdi Ahmidou -"} />
+        </ScrollingTextContainer>
       </Header>
       <SectionAbout>
         <Character paragraph={paragraph} />
+        <Skills />
       </SectionAbout>
       <SectionWork>
         <HoverImageLinks element={3} />
@@ -127,34 +93,13 @@ const BoxHero = styled.div`
   justify-content: center;
 `;
 
-const ScrollingText = styled.div`
+const ScrollingTextContainer = styled.div`
   position: absolute;
   top: calc(100vh - 35rem);
 `;
 
-const Slider = styled.div`
-  position: relative;
-  white-space: nowrap;
-
-  p {
-    position: relative;
-    margin: 0;
-    color: var(--color-white);
-    font-size: 23rem;
-    font-weight: 500;
-    padding-right: 5rem;
-  }
-
-  p:nth-of-type(2) {
-    position: absolute;
-    left: 100%;
-    top: 0;
-  }
-`;
-
 const SectionAbout = styled.div`
   background-color: var(--color-white);
-  height: 100vh;
 `;
 
 const SectionWork = styled.div`
