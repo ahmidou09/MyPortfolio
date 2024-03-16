@@ -22,21 +22,24 @@ const SkillsContainer = styled.div`
 const Section = styled.div`
   height: 100vh;
   width: 100%;
-  background-color: var(--color-grey-0);
   display: grid;
   place-content: center;
 
   p {
     text-align: center;
     padding: 1.5rem;
-    font-size: 4.2rem;
+    font-size: 12.2rem;
+  }
+
+  &:hover p {
+    display: none;
   }
 `;
 
 const MouseIcon = styled.div`
   pointer-events: none;
   position: absolute;
-  opacity: 0.5;
+  opacity: 0;
   top: 0;
   left: 0;
 
@@ -53,16 +56,16 @@ const Skills = () => {
       renderImageBuffer={100}
       rotationRange={25}
       icons={[
-        <FaReact />,
-        <DiRuby />,
-        <SiRubyonrails />,
-        <FaCss3 />,
-        <FaHtml5 />,
-        <FaBootstrap />,
-        <IoLogoJavascript />,
-        <FaSass />,
-        <SiTailwindcss />,
-        <FaGitAlt />,
+        <FaReact color="#61DBFB" />,
+        <DiRuby color="#E74C3C" />,
+        <SiRubyonrails color="#C60000" />,
+        <FaCss3 color="#3498DB" />,
+        <FaHtml5 color="#F4470B" />,
+        <FaBootstrap color="#7811F2" />,
+        <IoLogoJavascript color="#EFD81D" />,
+        <FaSass color="#C66394" />,
+        <SiTailwindcss color="#36B7F0" />,
+        <FaGitAlt color="#E84E31" />,
       ]}
     >
       <Section>
@@ -145,7 +148,7 @@ const MouseImageTrail = ({
       {
         opacity: [1, 0],
       },
-      { ease: "linear", duration: 0.5, delay: 0.2 }
+      { ease: "linear", duration: 0.5, delay: 2 }
     );
 
     imageRenderCount.current = imageRenderCount.current + 1;

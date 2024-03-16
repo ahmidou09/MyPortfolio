@@ -4,12 +4,13 @@ import styled from "styled-components";
 
 const ParagraphContainer = styled(motion.p)`
   display: flex;
-  font-size: 60px;
+  font-size: 6rem;
   line-height: 1;
-  padding: 40px;
-  max-width: 1280px;
+  padding: 4rem;
+  max-width: 120rem;
   color: var(--color-primary-1);
   flex-wrap: wrap;
+  margin: 0 auto;
 `;
 
 const WordSpan = styled.span`

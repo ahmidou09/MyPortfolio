@@ -55,7 +55,6 @@ html {
 body {
   font-family: "Roboto Condensed", sans-serif;
   font-size: 1.6rem;
-  height: 1000rem;
   background-color: #9CA9B9;
 }
 

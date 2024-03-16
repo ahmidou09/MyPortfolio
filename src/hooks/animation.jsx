@@ -8,6 +8,7 @@ const SlideOut = styled(motion.div)`
   height: 130vh;
   width: 100%;
   background-color: var(--color-primary-3);
+  z-index: 10;
 `;
 
 const transition = (ComponentUI) => {
@@ -25,4 +26,3 @@ const transition = (ComponentUI) => {
 };
 
 export default transition;
-

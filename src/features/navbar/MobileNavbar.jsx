@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Links from "./Links";
 import ToggleButton from "./ToggleButton";
 import styled from "styled-components";
+import SocialLinks from "../footer/SocialLinks";
 
 const variants = {
   open: {
@@ -65,6 +66,14 @@ function MobileNavbar() {
       <SideBar animate={open ? "open" : "closed"} variants={variants}>
         <ToggleButton setOpen={setOpen} />
         <Links handleCloseSidebar={handleCloseSidebar} />
+        <SocialLinks
+          style={{
+            display: "flex",
+            position: "absolute",
+            top: "80%",
+            color: "var(--color-white)",
+          }}
+        />
       </SideBar>
     </>
   );
