@@ -1,42 +1,151 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 
-const Form = styled.form`
-  width: 300px;
-  margin: 0 auto;
-`;
-
+const Form = styled.form``;
 const FormcarryBlock = styled.div`
-  margin-bottom: 20px;
+  position: relative;
+  width: 40rem;
 `;
 
 const Label = styled.label`
-  display: block;
-  margin-bottom: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: var(--color-white);
+  pointer-events: none;
+  transition: 0.5s;
+`;
+
+const inputStyles = css`
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: var(--color-white);
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid var(--color-white);
+  outline: none;
+  background: transparent;
+
+  &:focus ~ label {
+    top: -20px;
+    left: 0;
+    color: var(--color-purple-1);
+    font-size: 12px;
+  }
 `;
 
 const Input = styled.input`
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  ${inputStyles}
 `;
 
 const TextArea = styled.textarea`
-  width: 100%;
-  height: 100px;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  ${inputStyles}
+`;
+
+const btnAnim1 = keyframes`
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
+`;
+
+const btnAnim2 = keyframes`
+  0% {
+    top: -100%;
+  }
+  50%, 100% {
+    top: 100%;
+  }
+`;
+
+const btnAnim3 = keyframes`
+  0% {
+    right: -100%;
+  }
+  50%, 100% {
+    right: 100%;
+  }
+`;
+
+const btnAnim4 = keyframes`
+  0% {
+    bottom: -100%;
+  }
+  50%, 100% {
+    bottom: 100%;
+  }
 `;
 
 const Button = styled.button`
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
+  position: relative;
+  display: inline-block;
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  padding: 10px 20px;
+  color: var(--color-purple-1);
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+
+  &:hover {
+    background: var(--color-purple-1);
+    color: var(--color-white);
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--color-purple-1), 0 0 25px var(--color-purple-1),
+      0 0 50px var(--color-purple-1), 0 0 100px var(--color-purple-1);
+  }
+
+  span {
+    position: absolute;
+    display: block;
+  }
+
+  span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-purple-1));
+    animation: ${btnAnim1} 1s linear infinite;
+  }
+
+  span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, var(--color-purple-1));
+    animation: ${btnAnim2} 1s linear infinite;
+    animation-delay: 0.25s;
+  }
+
+  span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, var(--color-purple-1));
+    animation: ${btnAnim3} 1s linear infinite;
+    animation-delay: 0.5s;
+  }
+
+  span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, var(--color-purple-1));
+    animation: ${btnAnim4} 1s linear infinite;
+    animation-delay: 0.75s;
+  }
 `;
 
 function ContactForm() {
@@ -79,39 +188,42 @@ function ContactForm() {
   return (
     <Form onSubmit={(e) => onSubmit(e)}>
       <FormcarryBlock>
-        <Label htmlFor="name">Full Name</Label>
         <Input
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
           id="name"
-          placeholder="Your first and last name"
         />
+        <Label htmlFor="name">Full Name</Label>
       </FormcarryBlock>
 
       <FormcarryBlock>
-        <Label htmlFor="email">Your Email Address</Label>
         <Input
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           id="email"
-          placeholder="john@doe.com"
         />
+        <Label htmlFor="email">Your Email Address</Label>
       </FormcarryBlock>
 
       <FormcarryBlock>
-        <Label htmlFor="message">Your message</Label>
         <TextArea
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           id="message"
-          placeholder="Enter your message..."
         />
+        <Label htmlFor="message">Your message</Label>
       </FormcarryBlock>
 
       <FormcarryBlock>
-        <Button type="submit">Send</Button>
+        <Button type="submit">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Send
+        </Button>
       </FormcarryBlock>
     </Form>
   );
