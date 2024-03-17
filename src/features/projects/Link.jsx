@@ -13,7 +13,7 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
   const mouseYSpring = useSpring(y);
 
   const top = useTransform(mouseYSpring, [0.5, -0.5], ["40%", "60%"]);
-  const left = useTransform(mouseXSpring, [0.5, -0.5], ["60%", "70%"]);
+  const left = useTransform(mouseXSpring, [0.5, -0.5], ["80%", "70%"]);
 
   const handleMouseMove = (e) => {
     const rect = ref.current.getBoundingClientRect();
@@ -77,8 +77,8 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
           translateY: "-50%",
         }}
         variants={{
-          initial: { scale: 0, rotate: "-12.5deg" },
-          whileHover: { scale: 1.2, rotate: "12.5deg" },
+          initial: { scale: 0, rotate: "-6.5deg" },
+          whileHover: { scale: 1.2, rotate: "6.5deg" },
         }}
         transition={{ type: "spring" }}
         src={imgSrc}
@@ -147,8 +147,8 @@ const Subheading = styled.span`
 const Image = styled(motion.img)`
   position: absolute;
   z-index: 0;
-  height: 12rem;
-  width: 16rem;
+  height: 32rem;
+  width: 40rem;
   border-radius: 0.5rem;
   object-fit: cover;
 `;
