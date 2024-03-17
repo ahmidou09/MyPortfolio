@@ -68,10 +68,10 @@ function MobileNavbar() {
         <Links handleCloseSidebar={handleCloseSidebar} />
         <SocialLinks
           style={{
-            display: "flex",
-            position: "absolute",
+            flexDirection: "row",
             top: "80%",
-            color: "var(--color-white)",
+            gap: "1rem",
+            height: "5rem",
           }}
         />
       </SideBar>
