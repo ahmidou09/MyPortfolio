@@ -13,7 +13,7 @@ const MaxWidthContainer = styled.div`
   max-width: 120rem;
 `;
 
-const HoverImageLinks = ({ element }) => {
+const HoverImageLinks = ({ style, element }) => {
   // Get the number of links to display based on the provided element prop
   const numberOfLinks =
     element && element >= 0 && element <= linksData.length
@@ -21,7 +21,7 @@ const HoverImageLinks = ({ element }) => {
       : linksData.length;
 
   return (
-    <StyledSection>
+    <StyledSection style={style}>
       <MaxWidthContainer>
         {linksData.slice(0, numberOfLinks).map((link, index) => (
           <Link
