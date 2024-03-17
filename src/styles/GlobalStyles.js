@@ -30,6 +30,7 @@ const GlobalStyles = createGlobalStyle`
   --color-button-d-2: #FFAC6B;
   --color-button-p-1: #1C2B3A;
   --color-button-p-2: #263B50;
+  --color-button-p-3: #ffee10;
 
   --break-point-mob: 768px;
   --break-point-tab: 1024px;

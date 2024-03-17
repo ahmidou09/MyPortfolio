@@ -49,7 +49,6 @@ function ScrollingText({ name }) {
     };
   }, []);
 
-
   return (
     <ScrollingTextContainer ref={slider}>
       <p ref={firstText}>{name}</p>

@@ -1,15 +1,28 @@
 import React from "react";
 import transition from "../hooks/animation";
 import styled from "styled-components";
+import HoverImageLinks from "../features/projects/HoverImageLinks";
+import Footer from "../features/footer/Footer";
 
 const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 12rem 0;
+
+  h1 {
+    font-size: 8rem;
+  }
 `;
 function Projects() {
-  return <Container>Projects</Container>;
+  return (
+    <Container>
+      <h1>My Projects</h1>
+      <HoverImageLinks
+        style={{ marginTop: "5rem", backgroundColor: "transparent" }}
+      />
+      <Footer />
+    </Container>
+  );
 }
 
 export default transition(Projects);
