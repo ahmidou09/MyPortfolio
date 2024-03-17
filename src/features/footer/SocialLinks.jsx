@@ -71,7 +71,7 @@ function SocialLinks({ style }) {
   );
 }
 
-const BoxSocial = styled.div`
+const BoxSocial = styled.ul`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,12 +79,52 @@ const BoxSocial = styled.div`
   padding: 4rem;
 `;
 
-const SocialItem = styled.div`
-  border: 1px solid var(--color-white);
-  padding: 1rem;
-  border-radius: 50%;
-  width: 4rem;
-  height: 4rem;
+const SocialItem = styled.li`
+  list-style: none;
+
+  a {
+    position: relative;
+    display: block;
+    width: 6rem;
+    height: 6rem;
+    text-align: center;
+    line-height: 6.3rem;
+    background: var(--color-primary-3);
+    border-radius: 50%;
+    font-size: 3rem;
+    color: var(--color-grey-0);
+    transition: 0.5s;
+  }
+
+  a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: var(--color-button-p-3);
+    transition: 0.5s;
+    transform: scale(0.9);
+    z-index: -1;
+  }
+
+  a:hover::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 1.5rem var(--color-button-p-3);
+  }
+
+  a:hover {
+    color: var(--color-button-p-3);
+    box-shadow: 0 0 0.5rem var(--color-button-p-3);
+    text-shadow: 0 0 0.5rem var(--color-button-p-3);
+  }
+
+  svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 `;
 
 export default SocialLinks;
