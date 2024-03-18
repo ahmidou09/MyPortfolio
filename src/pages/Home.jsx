@@ -5,7 +5,7 @@ import animationWord from "../assets/json/Animationw_world_1.json";
 import hero from "../assets/img/hero.png";
 import transition from "../hooks/animation";
 import Character from "../ui/Character";
-import HoverImageLinks from "../features/projects/HoverImageLinks";
+import MyProjects from "../features/projects/MyProjects";
 import { Link } from "react-router-dom";
 import MainButton from "../ui/Button";
 import Skills from "../ui/MySkills";
@@ -40,7 +40,7 @@ function Home() {
       </SectionAbout>
       <SectionWork>
         <h3>My Work</h3>
-        <HoverImageLinks element={6} />
+        <MyProjects element={6} />
         <ShowMore>
           <MainButton>
             <Link to="/projects">Show more</Link>

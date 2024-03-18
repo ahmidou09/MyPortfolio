@@ -13,7 +13,7 @@ const MaxWidthContainer = styled.div`
   max-width: 120rem;
 `;
 
-const HoverImageLinks = ({ style, element }) => {
+const MyProjects = ({ style, element, color }) => {
   // Get the number of links to display based on the provided element prop
   const numberOfLinks =
     element && element >= 0 && element <= linksData.length
@@ -30,6 +30,7 @@ const HoverImageLinks = ({ style, element }) => {
             subheading={link.subheading}
             imgSrc={link.imgSrc + index}
             href={link.href}
+            color={color}
           />
         ))}
       </MaxWidthContainer>
@@ -37,4 +38,4 @@ const HoverImageLinks = ({ style, element }) => {
   );
 };
 
-export default HoverImageLinks;
+export default MyProjects;

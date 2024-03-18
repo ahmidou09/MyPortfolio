@@ -3,7 +3,7 @@ import { FiArrowRight } from "react-icons/fi";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import styled from "styled-components";
 
-const Link = ({ heading, imgSrc, subheading, href }) => {
+const Link = ({ heading, imgSrc, subheading, href, color }) => {
   const ref = useRef(null);
 
   const x = useMotionValue(0);
@@ -38,6 +38,7 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
       onMouseMove={handleMouseMove}
       initial="initial"
       whileHover="whileHover"
+      color={color}
     >
       <div>
         <Heading
@@ -50,6 +51,7 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
             staggerChildren: 0.075,
             delayChildren: 0.25,
           }}
+          color={color}
         >
           {heading.split("").map((l, i) => (
             <motion.span
@@ -66,7 +68,7 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
           ))}
         </Heading>
 
-        <Subheading>{subheading}</Subheading>
+        <Subheading color={color}>{subheading}</Subheading>
       </div>
 
       <Image
@@ -109,7 +111,8 @@ const LinkWrapper = styled(motion.a)`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 2px solid var(--color-grey-0);
+  border-bottom: 2px solid
+    ${(props) => (props.color ? props.color : "var(--color-grey-0)")};
   padding: 3rem;
   transition: border-color 0.5s;
 
@@ -127,7 +130,7 @@ const Heading = styled(motion.div)`
   z-index: 10;
   font-size: 4.5rem;
   font-weight: bold;
-  color: var(--color-grey-0);
+  color: ${(props) => (props.color ? props.color : "var(--color-grey-0)")};
   transition: color 0.5s;
 
   .inline-block {
@@ -140,7 +143,7 @@ const Subheading = styled.span`
   z-index: 10;
   margin-top: 0.5rem;
   font-size: 2rem;
-  color: var(--color-grey-0);
+  color: ${(props) => (props.color ? props.color : "var(--color-grey-0)")};
   transition: color 0.5s;
 `;
 

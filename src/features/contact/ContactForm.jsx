@@ -8,12 +8,14 @@ const FormcarryBlock = styled.div`
 `;
 
 const Label = styled.label`
+  transition: 0.5s;
   position: absolute;
-  top: 0;
+  top: ${({ hasContent }) => (hasContent ? "-20px" : "0")};
   left: 0;
+  font-size: ${({ hasContent }) => (hasContent ? "12px" : "16px")};
+  color: ${({ hasContent }) =>
+    hasContent ? "var(--color-purple-1)" : "var(--color-white)"};
   padding: 10px 0;
-  font-size: 16px;
-  color: var(--color-white);
   pointer-events: none;
   transition: 0.5s;
 `;
@@ -193,8 +195,11 @@ function ContactForm() {
           value={name}
           onChange={(e) => setName(e.target.value)}
           id="name"
+          required
         />
-        <Label htmlFor="name">Full Name</Label>
+        <Label htmlFor="name" hasContent={name.length > 0}>
+          Full Name
+        </Label>
       </FormcarryBlock>
 
       <FormcarryBlock>
@@ -203,8 +208,11 @@ function ContactForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           id="email"
+          required
         />
-        <Label htmlFor="email">Your Email Address</Label>
+        <Label htmlFor="email" hasContent={email.length > 0}>
+          Your Email Address
+        </Label>
       </FormcarryBlock>
 
       <FormcarryBlock>
@@ -212,8 +220,11 @@ function ContactForm() {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           id="message"
+          required
         />
-        <Label htmlFor="message">Your message</Label>
+        <Label htmlFor="message" hasContent={message.length > 0}>
+          Your message
+        </Label>
       </FormcarryBlock>
 
       <FormcarryBlock>

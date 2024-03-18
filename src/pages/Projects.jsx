@@ -1,7 +1,7 @@
 import React from "react";
 import transition from "../hooks/animation";
 import styled from "styled-components";
-import HoverImageLinks from "../features/projects/HoverImageLinks";
+import MyProjects from "../features/projects/MyProjects";
 import Footer from "../features/footer/Footer";
 
 const Container = styled.div`
@@ -17,8 +17,10 @@ function Projects() {
   return (
     <Container>
       <h1>My Projects</h1>
-      <HoverImageLinks
+
+      <MyProjects
         style={{ marginTop: "5rem", backgroundColor: "transparent" }}
+        color="var(--color-primary-3)"
       />
       <Footer />
     </Container>
