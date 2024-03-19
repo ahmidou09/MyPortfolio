@@ -76,7 +76,7 @@ const BoxSocial = styled.ul`
   align-items: center;
   justify-content: center;
   gap: 3rem;
-  padding: 4rem;
+  //padding: 4rem;
 `;
 
 const SocialItem = styled.li`

@@ -43,7 +43,9 @@ function Home() {
         <MyProjects element={6} />
         <ShowMore>
           <MainButton>
-            <Link to="/projects">Show more</Link>
+            <Link to="/projects" onClick={() => window.scrollTo(0, 0)}>
+              Show more
+            </Link>
           </MainButton>
         </ShowMore>
       </SectionWork>
