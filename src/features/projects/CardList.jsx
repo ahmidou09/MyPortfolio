@@ -3,7 +3,7 @@ import { FiArrowRight } from "react-icons/fi";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import styled from "styled-components";
 
-const Link = ({ heading, imgSrc, subheading, href, color }) => {
+const CardList = ({ heading, imgSrc, subheading, href, color }) => {
   const ref = useRef(null);
 
   const x = useMotionValue(0);
@@ -162,4 +162,4 @@ const ArrowWrapper = styled(motion.div)`
   padding: 1rem;
 `;
 
-export default Link;
+export default CardList;

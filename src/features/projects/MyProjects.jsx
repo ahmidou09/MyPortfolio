@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import linksData from "../../assets/json/data/links.json";
-import Link from "./Link";
+import CardList from "./CardList";
+import CardGrid from "./CardGrid";
 
 const StyledSection = styled.section`
   background-color: var(--color-primary-3);
@@ -13,8 +14,19 @@ const MaxWidthContainer = styled.div`
   max-width: 120rem;
 `;
 
-const MyProjects = ({ style, element, color }) => {
-  // Get the number of links to display based on the provided element prop
+const ListContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+`;
+
+const GridContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  gap: 4rem;
+`;
+
+const MyProjects = ({ style, element, color, displayMode = "list" }) => {
   const numberOfLinks =
     element && element >= 0 && element <= linksData.length
       ? element
@@ -23,16 +35,33 @@ const MyProjects = ({ style, element, color }) => {
   return (
     <StyledSection style={style}>
       <MaxWidthContainer>
-        {linksData.slice(0, numberOfLinks).map((link, index) => (
-          <Link
-            key={index}
-            heading={link.heading}
-            subheading={link.subheading}
-            imgSrc={link.imgSrc + index}
-            href={link.href}
-            color={color}
-          />
-        ))}
+        {displayMode === "list" ? (
+          <ListContainer>
+            {linksData.slice(0, numberOfLinks).map((link, index) => (
+              <CardList
+                key={index}
+                heading={link.heading}
+                subheading={link.subheading}
+                imgSrc={link.imgSrc + index}
+                href={link.href}
+                color={color}
+              />
+            ))}
+          </ListContainer>
+        ) : (
+          <GridContainer>
+            {linksData.slice(0, numberOfLinks).map((link, index) => (
+              <CardGrid
+                key={index}
+                heading={link.heading}
+                subheading={link.subheading}
+                imgSrc={link.imgSrc + index}
+                href={link.href}
+                color={color}
+              />
+            ))}
+          </GridContainer>
+        )}
       </MaxWidthContainer>
     </StyledSection>
   );

@@ -156,6 +156,7 @@ function ContactForm() {
   const [message, setMessage] = useState("");
 
   const [error, setError] = useState("");
+  console.log(error);
 
   function onSubmit(e) {
     e.preventDefault();
