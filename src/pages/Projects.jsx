@@ -3,6 +3,10 @@ import transition from "../hooks/animation";
 import styled from "styled-components";
 import MyProjects from "../features/projects/MyProjects";
 import Footer from "../features/footer/Footer";
+import { useSearchParams } from "react-router-dom";
+import { CiBoxList } from "react-icons/ci";
+import { IoGridOutline } from "react-icons/io5";
+import HoverButton from "../ui/HoverButton";
 
 const Container = styled.div`
   max-width: 120rem;
@@ -17,7 +21,7 @@ const Container = styled.div`
 const ButtonContainer = styled.div`
   margin-top: 2rem;
   display: flex;
-  justify-content: center;
+  justify-content: end;
 `;
 
 const Button = styled.button`
@@ -30,6 +34,10 @@ const Button = styled.button`
   border-radius: 0.5rem;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 
   &:hover {
     background-color: var(--color-primary-3);
@@ -38,14 +46,20 @@ const Button = styled.button`
 `;
 
 function Projects() {
-  const [displayMode, setDisplayMode] = useState("list");
+  const [searchParams, setSearchParams] = useSearchParams();
+  const view = searchParams.get("view" || "list");
+  const [displayMode, setDisplayMode] = useState(view);
 
   const handleListButtonClick = () => {
     setDisplayMode("list");
+    searchParams.set("view", "list");
+    setSearchParams({ view: "list" });
   };
 
   const handleGridButtonClick = () => {
     setDisplayMode("grid");
+    searchParams.set("view", "grid");
+    setSearchParams({ view: "grid" });
   };
 
   return (
@@ -53,8 +67,16 @@ function Projects() {
       <h1>My Projects</h1>
 
       <ButtonContainer>
-        <Button onClick={handleListButtonClick}>List View</Button>
-        <Button onClick={handleGridButtonClick}>Grid View</Button>
+        <HoverButton>
+          <Button onClick={handleListButtonClick}>
+            <CiBoxList /> List View
+          </Button>
+        </HoverButton>
+        <HoverButton>
+          <Button onClick={handleGridButtonClick}>
+            <IoGridOutline /> Grid View
+          </Button>
+        </HoverButton>
       </ButtonContainer>
 
       <MyProjects

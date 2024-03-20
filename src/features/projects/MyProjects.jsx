@@ -23,7 +23,7 @@ const ListContainer = styled.div`
 const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
-  gap: 2rem;
+  gap: 4rem;
 `;
 
 const MyProjects = ({ style, element, color, displayMode = "list" }) => {

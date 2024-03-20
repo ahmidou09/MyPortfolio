@@ -44,7 +44,7 @@ function Home() {
         <ShowMore>
           <MainButton>
             <Link to="/projects" onClick={() => window.scrollTo(0, 0)}>
-              Show more
+              <span>Show more</span>
             </Link>
           </MainButton>
         </ShowMore>
@@ -124,8 +124,16 @@ const ShowMore = styled.div`
   padding: 3rem;
   a {
     color: var(--color-white);
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 500;
+  }
+
+  span {
+    margin: 0 1rem;
+    background-color: var(--color-white);
+    color: var(--color-primary-3);
+    padding: 0.5rem 1.5rem;
+    border-radius: 100rem;
   }
 `;
 

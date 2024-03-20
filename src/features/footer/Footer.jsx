@@ -17,7 +17,6 @@ const Enfo = styled.div`
 
 const SectionContact = styled.section`
   background-color: var(--color-balck);
-  height: 100vh;
   color: var(--color-white);
 `;
 
