@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Lottie from "lottie-react";
-import animationWord from "../assets/json/Animationw_world_1.json";
+import animationWord from "../assets/json/Animationw_world.json";
 import hero from "../assets/img/hero.png";
 import transition from "../hooks/animation";
 import Character from "../ui/Character";
@@ -54,7 +54,9 @@ function Home() {
   );
 }
 
-const HomeContainer = styled.div``;
+const HomeContainer = styled.div`
+  position: static;
+`;
 
 const Header = styled.header`
   display: flex;
@@ -66,7 +68,7 @@ const Header = styled.header`
 `;
 
 const LocatedLeft = styled.div`
-  background-color: var(--color-primary-3);
+  background-color: var(--color-grey-1);
   border-radius: 0 10rem 10rem 0;
   color: var(--color-white);
   width: 40rem;
@@ -77,9 +79,10 @@ const LocatedLeft = styled.div`
   font-size: 1.8rem;
   font-weight: 300;
   margin-top: -30rem;
+  padding: 0.5rem 0;
 
   svg {
-    width: 7rem !important;
+    width: 8rem !important;
   }
 `;
 

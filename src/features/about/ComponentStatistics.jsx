@@ -19,7 +19,7 @@ const CounterComponent = styled.div`
   border-radius: 1rem;
   margin: 1rem;
   color: var(--color-white);
-  background: linear-gradient(to right, #878787, #8f8f8f);
+  background: linear-gradient(to right, #607b96, #607b962e);
 `;
 
 const CounterIcon = styled.div`

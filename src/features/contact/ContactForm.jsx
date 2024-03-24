@@ -22,10 +22,10 @@ const Label = styled.label`
 
 const inputStyles = css`
   width: 100%;
-  padding: 10px 0;
-  font-size: 16px;
+  padding: 1rem 0;
+  font-size: 1.6rem;
   color: var(--color-white);
-  margin-bottom: 30px;
+  margin-bottom: 6rem;
   border: none;
   border-bottom: 1px solid var(--color-white);
   outline: none;

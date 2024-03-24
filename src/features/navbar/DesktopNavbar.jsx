@@ -22,14 +22,14 @@ const ButtonText = styled.span`
   z-index: 2;
   position: relative;
   transform: rotate(0deg);
-  font-size: 1.5rem;
+  font-size: 2.2rem;
 
   .copy span {
     position: relative;
     display: block;
     transition: transform 0.8s ease;
     transform-origin: center;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
   }
 
   &:hover .copy span {
@@ -75,6 +75,10 @@ const Nav = styled.nav`
   ul {
     display: flex;
     gap: 3rem;
+  }
+
+  li {
+    font-size: 2.1rem;
   }
 `;
 

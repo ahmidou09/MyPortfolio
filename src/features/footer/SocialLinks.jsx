@@ -89,10 +89,10 @@ const SocialItem = styled.li`
     height: 6rem;
     text-align: center;
     line-height: 6.3rem;
-    background: var(--color-primary-3);
+    background: var(--color-grey-1);
     border-radius: 50%;
     font-size: 3rem;
-    color: var(--color-grey-0);
+    color: var(--color-white);
     transition: 0.5s;
   }
 

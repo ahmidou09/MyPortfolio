@@ -22,6 +22,7 @@ const PanelLabel = styled.button`
   font-weight: 500;
   font-size: 1.8rem;
   color: var(--color-primary-3);
+  background-color: #607b9645;
   font-family: inherit;
   transition: color 0.2s linear;
   cursor: pointer;
@@ -63,6 +64,7 @@ const PanelInner = styled.div`
   overflow: hidden;
   will-change: height;
   transition: height 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+  background-color: #607b9613;
 `;
 
 const PanelContent = styled.div`

@@ -11,7 +11,7 @@ import HoverButton from "../ui/HoverButton";
 const Container = styled.div`
   max-width: 120rem;
   margin: 0 auto;
-  padding: 12rem 0;
+  padding: 12rem 0 0 0;
 
   h1 {
     font-size: 8rem;

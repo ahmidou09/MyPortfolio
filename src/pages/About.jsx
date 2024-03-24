@@ -88,7 +88,7 @@ const panels = [
 const AboutContainer = styled.div`
   max-width: 120rem;
   margin: 0 auto;
-  padding: 12rem 0;
+  padding: 12rem 0 0 0;
 `;
 
 const IntroContainer = styled.div`

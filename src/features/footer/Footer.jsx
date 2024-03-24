@@ -23,10 +23,10 @@ const SectionContact = styled.section`
 const Wrapper = styled.div`
   max-width: 120rem;
   margin: 0 auto;
-  padding: 12rem 0;
+  padding: 12rem 0 5rem 0;
 
   h2 {
-    font-size: 12rem;
+    font-size: 8rem;
     font-weight: 500;
     margin-bottom: 6rem;
   }
@@ -44,12 +44,18 @@ const Line = styled.hr`
 
 const GetTouch = styled.button`
   background-color: transparent;
-  color: var(--color-white);
   font-size: 3rem;
   font-weight: 500;
   border: 0.2rem solid var(--color-white);
   border-radius: 5rem;
   padding: 1.5rem 3rem;
+`;
+
+const SectionCopyright = styled.div`
+  background-color: var(--color-balck);
+  color: var(--color-white);
+  padding: 3rem 0;
+  text-align: center;
 `;
 
 function Footer({ style }) {
@@ -74,6 +80,12 @@ function Footer({ style }) {
         <Line />
         <SocialLinks />
       </Wrapper>
+      <SectionCopyright>
+        <p>
+          &copy; {new Date().getFullYear()} El Mehdi Ahmidou. All rights
+          reserved.
+        </p>
+      </SectionCopyright>
     </SectionContact>
   );
 }
