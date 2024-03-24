@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styled, { css } from "styled-components";
 
 const PanelWrapper = styled.div`
-  background-color: var(--color-primary-3);
+  background-color: transparent;
   color: var(--color-white);
   margin-bottom: 3px;
 
@@ -21,7 +21,7 @@ const PanelLabel = styled.button`
   padding: 2.5rem 6rem 2.5rem 2.5rem;
   font-weight: 500;
   font-size: 1.8rem;
-  color: var(--color-white);
+  color: var(--color-primary-3);
   font-family: inherit;
   transition: color 0.2s linear;
   cursor: pointer;
@@ -34,13 +34,13 @@ const PanelLabel = styled.button`
   &:before {
     content: "";
     position: absolute;
-    color: var(--color-white);
+    color: var(--color-primary-3);
     right: 2.5rem;
     top: 50%;
     width: 2.2rem;
     height: 0.2rem;
     margin-top: -1px;
-    background-color: var(--color-white);
+    background-color: var(--color-primary-3);
   }
 
   &:before {
@@ -51,7 +51,7 @@ const PanelLabel = styled.button`
   ${(props) =>
     props.expanded &&
     css`
-      color: #fff;
+      color: var(--color-purple-1);
 
       &:before {
         transform: rotate(0deg);
@@ -65,23 +65,44 @@ const PanelInner = styled.div`
   transition: height 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
 `;
 
-const PanelContent = styled.p`
-  font-size: 1.5rem;
-  color: var(--color-grey-0);
+const PanelContent = styled.div`
+  font-size: 2rem;
+  color: var(--color-primary-3);
   opacity: 1;
   transition: opacity 0.3s linear 0.18s;
+  padding: 3rem 6rem;
+  line-height: 1.5;
+
+  p {
+    margin-bottom: 2rem;
+  }
+
+  li {
+    position: relative;
+  }
+
+  li::before {
+    content: "✓";
+    position: absolute;
+    left: -3rem;
+    top: 0;
+    width: 2rem;
+    height: 2rem;
+    color: var(--color-primary-3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 const Panel = ({ label, content, isActive, onClick }) => {
   const [height, setHeight] = useState(0);
+  const panelContentRef = useRef(null);
 
   useEffect(() => {
-    const el = document.createElement("div");
-    document.body.appendChild(el);
-    el.innerHTML = content;
-    const height = el.clientHeight;
-    document.body.removeChild(el);
-    setHeight(height);
+    if (panelContentRef.current) {
+      setHeight(panelContentRef.current.clientHeight);
+    }
   }, [content]);
 
   return (
@@ -90,7 +111,7 @@ const Panel = ({ label, content, isActive, onClick }) => {
         {label}
       </PanelLabel>
       <PanelInner style={{ height: isActive ? height + "px" : 0 }}>
-        <PanelContent>{content}</PanelContent>
+        <PanelContent ref={panelContentRef}>{content}</PanelContent>
       </PanelInner>
     </PanelWrapper>
   );
