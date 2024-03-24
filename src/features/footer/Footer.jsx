@@ -52,9 +52,9 @@ const GetTouch = styled.button`
   padding: 1.5rem 3rem;
 `;
 
-function Footer() {
+function Footer({ style }) {
   return (
-    <SectionContact>
+    <SectionContact style={style}>
       <Wrapper>
         <h2>Let’s work together</h2>
         <Line />

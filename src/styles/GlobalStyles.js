@@ -19,6 +19,7 @@ const GlobalStyles = createGlobalStyle`
   --color-accent-3: #43D9AD;
   --color-accent-4: #FEA55F;
   /* color lines */
+  --color-black: #000;
   --color-lines : #1E2D3D;
   --color-white : #FFFFFF;
   --color-white-2 : #e5e9f0;
