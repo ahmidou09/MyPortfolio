@@ -62,6 +62,7 @@ const Header = styled.header`
   align-items: center;
   position: relative;
   overflow: hidden;
+  height: 100vh;
 `;
 
 const LocatedLeft = styled.div`
@@ -93,6 +94,10 @@ const BoxHero = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  img {
+    height: 100vh;
+  }
 `;
 
 const ScrollingTextContainer = styled.div`
