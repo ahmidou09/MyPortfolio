@@ -2,6 +2,14 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { FaTasks, FaSmile, FaCoffee } from "react-icons/fa";
 
+const ComponentStatisticsWrapper = styled.div`
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+`;
+
 const CounterComponent = styled.div`
   display: flex;
   flex-direction: column;
@@ -11,7 +19,7 @@ const CounterComponent = styled.div`
   border-radius: 1rem;
   margin: 1rem;
   color: var(--color-white);
-  background: linear-gradient(to right, #4d5bce, #5565e8);
+  background: linear-gradient(to right, #878787, #8f8f8f);
 `;
 
 const CounterIcon = styled.div`
@@ -24,7 +32,7 @@ const CounterDescription = styled.div`
 `;
 
 const CounterNumber = styled.div`
-  font-size: 3.5rem;
+  font-size: 2.5rem;
 `;
 
 const Counter = ({ icon, endValue, duration, description }) => {
@@ -61,32 +69,26 @@ const Counter = ({ icon, endValue, duration, description }) => {
 
 const ComponentStatistics = () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+    <ComponentStatisticsWrapper>
       <Counter
         icon={<FaTasks />}
-        endValue={100}
+        endValue={50}
         duration={2500}
         description="Number of projects done"
       />
       <Counter
         icon={<FaSmile />}
-        endValue={50}
+        endValue={23}
         duration={2500}
         description="Number of happy clients"
       />
       <Counter
         icon={<FaCoffee />}
-        endValue={10000}
+        endValue={1000}
         duration={2500}
         description="Cups of coffee consumed"
       />
-    </div>
+    </ComponentStatisticsWrapper>
   );
 };
 
