@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Links from "./Links";
 import ToggleButton from "./ToggleButton";
@@ -11,8 +11,8 @@ const variants = {
     transition: {
       delay: 0,
       type: "spring",
-      stiffness: 20,
-      restDelta: 2,
+      stiffness: 40,
+      restDelta: 10,
     },
   },
   closed: {
@@ -34,6 +34,8 @@ const SideBar = styled(motion.div)`
   bottom: 0;
   width: 40rem;
   background: var(--color-primary-3);
+  opacity: ${(props) =>
+    props.opacity}; /* Updated to accept opacity as a prop */
 
   ul {
     position: absolute;
@@ -55,6 +57,23 @@ const SideBar = styled(motion.div)`
 
 function MobileNavbar() {
   const [open, setOpen] = useState(false);
+  const [sidebarOpacity, setSidebarOpacity] = useState(0); // State to manage opacity
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 200) {
+        setSidebarOpacity(1); // Set opacity to 1 when scrolled down 200 pixels
+      } else {
+        setSidebarOpacity(0); // Otherwise, keep opacity at 0
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll); // Add event listener for scroll
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll); // Remove event listener on component unmount
+    };
+  }, []);
 
   const handleCloseSidebar = () => {
     setOpen(false);
@@ -63,7 +82,11 @@ function MobileNavbar() {
 
   return (
     <>
-      <SideBar animate={open ? "open" : "closed"} variants={variants}>
+      <SideBar
+        animate={open ? "open" : "closed"}
+        variants={variants}
+        opacity={sidebarOpacity} // Pass opacity as prop
+      >
         <ToggleButton setOpen={setOpen} />
         <Links handleCloseSidebar={handleCloseSidebar} />
         <SocialLinks
