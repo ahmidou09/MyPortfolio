@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import Links from "./Links";
 import ToggleButton from "./ToggleButton";
 import styled from "styled-components";
-import SocialLinks from "../footer/SocialLinks";
 
 const variants = {
   open: {
@@ -89,14 +88,6 @@ function MobileNavbar() {
       >
         <ToggleButton setOpen={setOpen} />
         <Links handleCloseSidebar={handleCloseSidebar} />
-        <SocialLinks
-          style={{
-            flexDirection: "row",
-            top: "80%",
-            gap: "1rem",
-            height: "5rem",
-          }}
-        />
       </SideBar>
     </>
   );

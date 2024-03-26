@@ -1,8 +1,8 @@
 import React from "react";
-import transition from "../hooks/animation";
 import styled from "styled-components";
 import ContactForm from "../features/contact/ContactForm";
 import SocialLinks from "../features/footer/SocialLinks";
+import TransitionAnim from "../ui/TransitionAnim";
 
 const Container = styled.div`
   max-width: 120rem;
@@ -61,32 +61,34 @@ const SectionCopyright = styled.div`
 
 function Contact() {
   return (
-    <Container>
-      <h1>Let's work together</h1>
-      <InfoParagraph>
-        I’m currently looking for new opportunities, my inbox is always open.
-        Whether you have a question or just want to say hi, I’ll try my best to
-        get back to you!
-      </InfoParagraph>
-      <ContactWrapp>
-        <InfoDetails>
-          <ContactForm />
-          <ContactDetails>
-            <h2>Contact Details</h2>
-            <span>ahmidouem@gmail.com</span>
-            <span>+2126 73 23 53 39</span>
-            <SocialLinksWrapper />
-          </ContactDetails>
-        </InfoDetails>
-      </ContactWrapp>
-      <SectionCopyright>
-        <p>
-          &copy; {new Date().getFullYear()} El Mehdi Ahmidou. All rights
-          reserved.
-        </p>
-      </SectionCopyright>
-    </Container>
+    <TransitionAnim>
+      <Container>
+        <h1>Let's work together</h1>
+        <InfoParagraph>
+          I’m currently looking for new opportunities, my inbox is always open.
+          Whether you have a question or just want to say hi, I’ll try my best
+          to get back to you!
+        </InfoParagraph>
+        <ContactWrapp>
+          <InfoDetails>
+            <ContactForm />
+            <ContactDetails>
+              <h2>Contact Details</h2>
+              <span>ahmidouem@gmail.com</span>
+              <span>+2126 73 23 53 39</span>
+              <SocialLinksWrapper />
+            </ContactDetails>
+          </InfoDetails>
+        </ContactWrapp>
+        <SectionCopyright>
+          <p>
+            &copy; {new Date().getFullYear()} El Mehdi Ahmidou. All rights
+            reserved.
+          </p>
+        </SectionCopyright>
+      </Container>
+    </TransitionAnim>
   );
 }
 
-export default transition(Contact);
+export default Contact;

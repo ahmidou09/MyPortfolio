@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import transition from "../hooks/animation";
 import styled from "styled-components";
 import MyProjects from "../features/projects/MyProjects";
 import Footer from "../features/footer/Footer";
@@ -7,6 +6,7 @@ import { useSearchParams } from "react-router-dom";
 import { CiBoxList } from "react-icons/ci";
 import { IoGridOutline } from "react-icons/io5";
 import HoverButton from "../ui/HoverButton";
+import TransitionAnim from "../ui/TransitionAnim";
 
 const Container = styled.div`
   max-width: 120rem;
@@ -63,30 +63,32 @@ function Projects() {
   };
 
   return (
-    <Container>
-      <h1>My Projects</h1>
+    <TransitionAnim>
+      <Container>
+        <h1>My Projects</h1>
 
-      <ButtonContainer>
-        <HoverButton>
-          <Button onClick={handleListButtonClick}>
-            <CiBoxList /> List View
-          </Button>
-        </HoverButton>
-        <HoverButton>
-          <Button onClick={handleGridButtonClick}>
-            <IoGridOutline /> Grid View
-          </Button>
-        </HoverButton>
-      </ButtonContainer>
+        <ButtonContainer>
+          <HoverButton>
+            <Button onClick={handleListButtonClick}>
+              <CiBoxList /> List View
+            </Button>
+          </HoverButton>
+          <HoverButton>
+            <Button onClick={handleGridButtonClick}>
+              <IoGridOutline /> Grid View
+            </Button>
+          </HoverButton>
+        </ButtonContainer>
 
-      <MyProjects
-        style={{ marginTop: "5rem", backgroundColor: "transparent" }}
-        color="var(--color-primary-3)"
-        displayMode={displayMode}
-      />
-      <Footer />
-    </Container>
+        <MyProjects
+          style={{ marginTop: "5rem", backgroundColor: "transparent" }}
+          color="var(--color-primary-3)"
+          displayMode={displayMode}
+        />
+        <Footer />
+      </Container>
+    </TransitionAnim>
   );
 }
 
-export default transition(Projects);
+export default Projects;

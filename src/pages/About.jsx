@@ -1,11 +1,12 @@
 import React from "react";
-import transition from "../hooks/animation";
 import styled from "styled-components";
 import ComponentStatistics from "../features/about/ComponentStatistics";
 import AccordionWrapper from "../features/about/AccordionWrapper";
 import Accordion from "../features/about/Accordion";
 import profileImage from "../assets/img/profile.jpg";
 import Footer from "../features/footer/Footer";
+import TransitionAnim from "../ui/TransitionAnim";
+//import Inner from "../ui/Inner";
 
 const panels = [
   {
@@ -122,32 +123,34 @@ const IntroText = styled.div`
   }
 `;
 
-function About(color) {
+function About() {
   return (
-    <AboutContainer>
-      <IntroContainer>
-        <IntroImage>
-          <Image src={profileImage} alt="EL MEHDI AHMIDOU" />
-        </IntroImage>
-        <IntroText>
-          <h1>Hello, I'm EL MEHDI AHMIDOU 🙂</h1>
-          <p>
-            {" "}
-            I’m Front End Developer, located in Rabat, Morocco. With an
-            experience of 4 years, I have built web applications for clients
-            from different countries and industries. My main objective is to
-            create interfaces that are engaging, accessible, and high-performing
-            for humans.
-          </p>
-          <ComponentStatistics />
-        </IntroText>
-      </IntroContainer>
-      <AccordionWrapper>
-        <Accordion panels={panels} />
-      </AccordionWrapper>
-      <Footer style={{ color: "var(--color-primary-3)" }} />
-    </AboutContainer>
+    <TransitionAnim>
+      <AboutContainer>
+        <IntroContainer>
+          <IntroImage>
+            <Image src={profileImage} alt="EL MEHDI AHMIDOU" />
+          </IntroImage>
+          <IntroText>
+            <h1>Hello, I'm EL MEHDI AHMIDOU 🙂</h1>
+            <p>
+              {" "}
+              I’m Front End Developer, located in Rabat, Morocco. With an
+              experience of 4 years, I have built web applications for clients
+              from different countries and industries. My main objective is to
+              create interfaces that are engaging, accessible, and
+              high-performing for humans.
+            </p>
+            <ComponentStatistics />
+          </IntroText>
+        </IntroContainer>
+        <AccordionWrapper>
+          <Accordion panels={panels} />
+        </AccordionWrapper>
+        <Footer style={{ color: "var(--color-primary-3)" }} />
+      </AboutContainer>
+    </TransitionAnim>
   );
 }
 
-export default transition(About);
+export default About;

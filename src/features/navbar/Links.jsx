@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import SocialLinks from "../footer/SocialLinks";
 
 const variants = {
   open: {
@@ -67,6 +68,21 @@ const Links = ({ handleCloseSidebar }) => {
         <Link to="/about" onClick={handleLinkClick}>
           About
         </Link>
+      </motion.li>
+
+      <motion.li
+        whileHover={{ scale: 0.95 }}
+        whileTap={{ scale: 0.95 }}
+        variants={itemVariants}
+      >
+        <SocialLinks
+          style={{
+            position: "static",
+            display: "flex",
+            flexDirection: "row",
+            marginTop: "20rem",
+          }}
+        />
       </motion.li>
     </motion.ul>
   );

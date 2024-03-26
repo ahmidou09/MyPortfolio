@@ -4,7 +4,7 @@ import NavBar from "../features/navbar/NavBar";
 
 const StyledAppLayout = styled.div`
   width: 100%;
-  background-color: #9ca9b9;
+  background-color: var(--color-background);
 `;
 
 function AppLayout() {

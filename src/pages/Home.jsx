@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import Lottie from "lottie-react";
-import animationWord from "../assets/json/Animationw_world.json";
+import animationWord from "../assets/json/Animationw_world_3.json";
 import hero from "../assets/img/hero.png";
-import transition from "../hooks/animation";
 import Character from "../ui/Character";
 import MyProjects from "../features/projects/MyProjects";
 import { Link } from "react-router-dom";
@@ -11,46 +10,49 @@ import MainButton from "../ui/Button";
 import Skills from "../ui/MySkills";
 import ScrollingText from "../ui/ScrollingText";
 import Footer from "../features/footer/Footer";
+import TransitionAnim from "../ui/TransitionAnim";
 
 function Home() {
   return (
-    <HomeContainer>
-      <Header>
-        <LocatedLeft>
-          <span>Located in the morroco</span>
-          <span>
-            <Lottie animationData={animationWord} />
-          </span>
-        </LocatedLeft>
-        <BoxHero>
-          <img src={hero} alt="hero" />
-        </BoxHero>
-        <LocatedRight>
-          <h4>
-            <span>Hi, I'm</span> Front-End Developer &amp; Designer
-          </h4>
-        </LocatedRight>
-        <ScrollingTextContainer>
-          <ScrollingText name={"El Mehdi Ahmidou -"} />
-        </ScrollingTextContainer>
-      </Header>
-      <SectionAbout>
-        <Character paragraph={paragraph} />
-        <Skills />
-      </SectionAbout>
-      <SectionWork>
-        <h3>My Work</h3>
-        <MyProjects element={6} />
-        <ShowMore>
-          <MainButton>
-            <Link to="/projects" onClick={() => window.scrollTo(0, 0)}>
-              <span>Show more</span>
-            </Link>
-          </MainButton>
-        </ShowMore>
-      </SectionWork>
-      <Footer />
-    </HomeContainer>
+    <TransitionAnim>
+      <HomeContainer>
+        <Header>
+          <LocatedLeft>
+            <span>Located in the morroco</span>
+            <span>
+              <Lottie animationData={animationWord} />
+            </span>
+          </LocatedLeft>
+          <BoxHero>
+            <img src={hero} alt="hero" />
+          </BoxHero>
+          <LocatedRight>
+            <h4>
+              <span>Hi, I'm</span> Front-End Developer &amp; Designer
+            </h4>
+          </LocatedRight>
+          <ScrollingTextContainer>
+            <ScrollingText name={"El Mehdi Ahmidou -"} />
+          </ScrollingTextContainer>
+        </Header>
+        <SectionAbout>
+          <Character paragraph={paragraph} />
+          <Skills />
+        </SectionAbout>
+        <SectionWork>
+          <h3>My Work</h3>
+          <MyProjects element={6} />
+          <ShowMore>
+            <MainButton>
+              <Link to="/projects" onClick={() => window.scrollTo(0, 0)}>
+                <span>Show more</span>
+              </Link>
+            </MainButton>
+          </ShowMore>
+        </SectionWork>
+        <Footer />
+      </HomeContainer>
+    </TransitionAnim>
   );
 }
 
@@ -74,12 +76,14 @@ const LocatedLeft = styled.div`
   width: 40rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0 2rem;
   gap: 2rem;
   font-size: 1.8rem;
   font-weight: 300;
   margin-top: -30rem;
-  padding: 0.5rem 0;
+  height: 10rem;
+  width: 40rem;
 
   svg {
     width: 8rem !important;
@@ -148,4 +152,4 @@ const ShowMore = styled.div`
 const paragraph =
   "Developing secure, efficient, and scalable web applications and web-based management systems by writing standard, well-documented, and efficient codes.";
 
-export default transition(Home);
+export default Home;
