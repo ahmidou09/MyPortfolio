@@ -41,7 +41,7 @@ function Home() {
         </SectionAbout>
         <SectionWork>
           <h3>My Work</h3>
-          <MyProjects element={6} />
+          <MyProjects element={6} displayMode="grid" />
           <ShowMore>
             <MainButton>
               <Link to="/projects" onClick={() => window.scrollTo(0, 0)}>
