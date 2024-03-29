@@ -28,6 +28,14 @@ const CardContainer = styled.div`
   &:hover {
     box-shadow: 0 5px 20px 5px #00000044;
   }
+
+  &:hover p span {
+    margin-left: 1.2rem;
+  }
+
+  &:hover img {
+    opacity: 1;
+  }
 `;
 
 const CardImage = styled.img`
@@ -36,29 +44,44 @@ const CardImage = styled.img`
   object-fit: cover;
   border-radius: 10px 10px 0 0;
   pointer-events: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
 `;
 
 const CardHeading = styled.h2`
   font-size: 4.2rem;
-  margin-bottom: 0.5rem;
-  padding: 2rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
   color: var(--color-white);
+  border-bottom: 2px solid var(--color-white);
+  width: 70%;
 `;
 
 const CardSubheading = styled.p`
   font-size: 1.6rem;
   color: var(--color-white);
   padding: 0 2rem 2rem;
+  transition: font-size 0.5s;
+
+  span {
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    display: block;
+    transition: margin-left 0.3s;
+  }
 `;
 
-const CardGrid = ({ heading, subheading, imgSrc, href }) => {
+const CardGrid = ({ projectData}) => {
+  const  { imgSrc, heading, subheading} = projectData;
   return (
     <Tilt options={defaultOptions}>
-      <Link to={href}>
+      <Link to={`/projects/${projectData.id}`}>
         <CardContainer>
           <CardImage src={imgSrc} alt={heading} />
           <CardHeading>{heading}</CardHeading>
-          <CardSubheading>{subheading}</CardSubheading>
+          <CardSubheading>
+            {subheading} <span>→</span>
+          </CardSubheading>
         </CardContainer>
       </Link>
     </Tilt>

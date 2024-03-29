@@ -2,8 +2,11 @@ import React, { useRef } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
-const CardList = ({ heading, imgSrc, subheading, href, color }) => {
+const CardList = ({ projectData, color }) => {
+  const { imgSrc, heading, subheading } = projectData;
+  const navigate = useNavigate();
   const ref = useRef(null);
 
   const x = useMotionValue(0);
@@ -33,7 +36,7 @@ const CardList = ({ heading, imgSrc, subheading, href, color }) => {
 
   return (
     <LinkWrapper
-      href={href}
+      onClick={() => navigate(`/projects/${projectData.id}`)}
       ref={ref}
       onMouseMove={handleMouseMove}
       initial="initial"

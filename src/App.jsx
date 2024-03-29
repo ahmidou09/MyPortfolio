@@ -6,6 +6,7 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import AppLayout from "./ui/AppLayout";
 import { AnimatePresence } from "framer-motion";
+import ProjectView from "./features/projects/ProjectView";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
               <Route index element={<Home />} />
               <Route path="about" element={<About />} />
               <Route path="projects" element={<Projects />} />
+              <Route path="projects/:id" element={<ProjectView />} />
               <Route path="contact" element={<Contact />} />
             </Route>
           </Routes>

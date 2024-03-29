@@ -38,27 +38,13 @@ const MyProjects = ({ style, element, color, displayMode = "list" }) => {
         {displayMode === "list" ? (
           <ListContainer>
             {linksData.slice(0, numberOfLinks).map((link, index) => (
-              <CardList
-                key={index}
-                heading={link.heading}
-                subheading={link.subheading}
-                imgSrc={link.imgSrc + index}
-                href={link.href}
-                color={color}
-              />
+              <CardList key={link.id} projectData={link} color={color} />
             ))}
           </ListContainer>
         ) : (
           <GridContainer>
             {linksData.slice(0, numberOfLinks).map((link, index) => (
-              <CardGrid
-                key={index}
-                heading={link.heading}
-                subheading={link.subheading}
-                imgSrc={link.imgSrc + index}
-                href={link.href}
-                color={color}
-              />
+              <CardGrid key={link.id} projectData={link} color={color} />
             ))}
           </GridContainer>
         )}

@@ -1,62 +1,163 @@
 [
   {
+    "id": 1,
     "heading": "SparkleChat",
     "subheading": "A Real-Time Messaging App",
-    "imgSrc": "https://source.unsplash.com/random/200x200?sig=",
-    "href": "/SparkleChat"
+    "imgSrc": "https://source.unsplash.com/random/200x200?sig=1",
+    "Overview": "Wilsonport is a multiservice logistics and transport company and I created their multi-page website using my Frontend Web Development skills to build their online presence and make them stand out among their competitors and provide a better user experience for all types of devices. I took User Interface ideas by visiting different types of websites of the same industry and",
+    "video": "https://source.unsplash.com/random/200x200?sig=",
+    "imgs": [
+      "https://source.unsplash.com/random/200x200?sig=",
+      "https://source.unsplash.com/random/200x200?sig=",
+      "https://source.unsplash.com/random/200x200?sig="
+    ],
+    "techonlogy": [
+      "Laravel",
+      "Tailwind",
+      "VueJs",
+      "JavaScript",
+      "PHP",
+      "MySQL"
+    ],
+    "projectLink": "https://source.unsplash.com/random/200x200?sig=",
+    "liveLink": "https://source.unsplash.com/random/200x200?sig="
   },
   {
+    "id": 2,
     "heading": "EcoHarvest",
     "subheading": " Sustainable Agriculture Platform",
-    "imgSrc": "https://source.unsplash.com/random/200x200?sig=",
-    "href": "/EcoHarvest"
+    "imgSrc": "https://source.unsplash.com/random/200x200?sig=2",
+    "Overview": "Wilsonport is a multiservice logistics and transport company and I created their multi-page website using my Frontend Web Development skills to build their online presence and make them stand out among their competitors and provide a better user experience for all types of devices. I took User Interface ideas by visiting different types of websites of the same industry and",
+    "video": "https://source.unsplash.com/random/200x200?sig=",
+    "imgs": [
+      "https://source.unsplash.com/random/200x200?sig=",
+      "https://source.unsplash.com/random/200x200?sig=",
+      "https://source.unsplash.com/random/200x200?sig="
+    ],
+    "techonlogy": [
+      "Laravel",
+      "Tailwind",
+      "VueJs",
+      "JavaScript",
+      "PHP",
+      "MySQL"
+    ],
+    "projectLink": "https://source.unsplash.com/random/200x200?sig=",
+    "liveLink": "https://source.unsplash.com/random/200x200?sig="
   },
   {
+    "id": 3,
     "heading": "SwiftServe",
     "subheading": " On-Demand Delivery Service",
-    "imgSrc": "https://source.unsplash.com/random/200x200?sig=",
-    "href": "SwiftServe"
+    "imgSrc": "https://source.unsplash.com/random/200x200?sig=3",
+    "Overview": "Wilsonport is a multiservice logistics and transport company and I created their multi-page website using my Frontend Web Development skills to build their online presence and make them stand out among their competitors and provide a better user experience for all types of devices. I took User Interface ideas by visiting different types of websites of the same industry and",
+    "video": "https://source.unsplash.com/random/200x200?sig=",
+    "imgs": [
+      "https://source.unsplash.com/random/200x200?sig=",
+      "https://source.unsplash.com/random/200x200?sig=",
+      "https://source.unsplash.com/random/200x200?sig="
+    ],
+    "techonlogy": [
+      "Laravel",
+      "Tailwind",
+      "VueJs",
+      "JavaScript",
+      "PHP",
+      "MySQL"
+    ],
+    "projectLink": "https://source.unsplash.com/random/200x200?sig=",
+    "liveLink": "https://source.unsplash.com/random/200x200?sig="
   },
   {
+    "id": 4,
     "heading": "TranquilMind",
     "subheading": "Meditation and Mindfulness App",
-    "imgSrc": "https://source.unsplash.com/random/200x200?sig=",
-    "href": "/TranquilMind"
+    "imgSrc": "https://source.unsplash.com/random/200x200?sig=4",
+    "Overview": "Wilsonport is a multiservice logistics and transport company and I created their multi-page website using my Frontend Web Development skills to build their online presence and make them stand out among their competitors and provide a better user experience for all types of devices. I took User Interface ideas by visiting different types of websites of the same industry and",
+    "video": "https://source.unsplash.com/random/200x200?sig=",
+    "imgs": [
+      "https://source.unsplash.com/random/200x200?sig=",
+      "https://source.unsplash.com/random/200x200?sig=",
+      "https://source.unsplash.com/random/200x200?sig="
+    ],
+    "techonlogy": [
+      "Laravel",
+      "Tailwind",
+      "VueJs",
+      "JavaScript",
+      "PHP",
+      "MySQL"
+    ],
+    "projectLink": "https://source.unsplash.com/random/200x200?sig=",
+    "liveLink": "https://source.unsplash.com/random/200x200?sig="
   },
   {
+    "id": 5,
     "heading": "CodeNest",
     "subheading": "Collaborative Coding Platform",
-    "imgSrc": "https://source.unsplash.com/random/200x200?sig=",
-    "href": "/CodeNest"
+    "imgSrc": "https://source.unsplash.com/random/200x200?sig=5",
+    "Overview": "Wilsonport is a multiservice logistics and transport company and I created their multi-page website using my Frontend Web Development skills to build their online presence and make them stand out among their competitors and provide a better user experience for all types of devices. I took User Interface ideas by visiting different types of websites of the same industry and",
+    "video": "https://source.unsplash.com/random/200x200?sig=",
+    "imgs": [
+      "https://source.unsplash.com/random/200x200?sig=",
+      "https://source.unsplash.com/random/200x200?sig=",
+      "https://source.unsplash.com/random/200x200?sig="
+    ],
+    "techonlogy": [
+      "Laravel",
+      "Tailwind",
+      "VueJs",
+      "JavaScript",
+      "PHP",
+      "MySQL"
+    ],
+    "projectLink": "https://source.unsplash.com/random/200x200?sig=",
+    "liveLink": "https://source.unsplash.com/random/200x200?sig="
   },
   {
+    "id": 6,
     "heading": "SparkleChat",
     "subheading": "A Real-Time Messaging App",
-    "imgSrc": "https://source.unsplash.com/random/200x200?sig=",
-    "href": "/SparkleChat"
+    "imgSrc": "https://source.unsplash.com/random/200x200?sig=6",
+    "Overview": "Wilsonport is a multiservice logistics and transport company and I created their multi-page website using my Frontend Web Development skills to build their online presence and make them stand out among their competitors and provide a better user experience for all types of devices. I took User Interface ideas by visiting different types of websites of the same industry and",
+    "video": "https://source.unsplash.com/random/200x200?sig=",
+    "imgs": [
+      "https://source.unsplash.com/random/200x200?sig=",
+      "https://source.unsplash.com/random/200x200?sig=",
+      "https://source.unsplash.com/random/200x200?sig="
+    ],
+    "techonlogy": [
+      "Laravel",
+      "Tailwind",
+      "VueJs",
+      "JavaScript",
+      "PHP",
+      "MySQL"
+    ],
+    "projectLink": "https://source.unsplash.com/random/200x200?sig=",
+    "liveLink": "https://source.unsplash.com/random/200x200?sig="
   },
   {
+    "id": 7,
     "heading": "EcoHarvest",
     "subheading": " Sustainable Agriculture Platform",
-    "imgSrc": "https://source.unsplash.com/random/200x200?sig=",
-    "href": "/EcoHarvest"
-  },
-  {
-    "heading": "SwiftServe",
-    "subheading": " On-Demand Delivery Service",
-    "imgSrc": "https://source.unsplash.com/random/200x200?sig=",
-    "href": "SwiftServe"
-  },
-  {
-    "heading": "TranquilMind",
-    "subheading": "Meditation and Mindfulness App",
-    "imgSrc": "https://source.unsplash.com/random/200x200?sig=",
-    "href": "/TranquilMind"
-  },
-  {
-    "heading": "CodeNest",
-    "subheading": "Collaborative Coding Platform",
-    "imgSrc": "https://source.unsplash.com/random/200x200?sig=",
-    "href": "/CodeNest"
+    "imgSrc": "https://source.unsplash.com/random/200x200?sig=7",
+    "Overview": "Wilsonport is a multiservice logistics and transport company and I created their multi-page website using my Frontend Web Development skills to build their online presence and make them stand out among their competitors and provide a better user experience for all types of devices. I took User Interface ideas by visiting different types of websites of the same industry and",
+    "video": "https://source.unsplash.com/random/200x200?sig=",
+    "imgs": [
+      "https://source.unsplash.com/random/200x200?sig=",
+      "https://source.unsplash.com/random/200x200?sig=",
+      "https://source.unsplash.com/random/200x200?sig="
+    ],
+    "techonlogy": [
+      "Laravel",
+      "Tailwind",
+      "VueJs",
+      "JavaScript",
+      "PHP",
+      "MySQL"
+    ],
+    "projectLink": "https://source.unsplash.com/random/200x200?sig=",
+    "liveLink": "https://source.unsplash.com/random/200x200?sig="
   }
 ]
