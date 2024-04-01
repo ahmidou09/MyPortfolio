@@ -1,163 +1,212 @@
 [
   {
     "id": 1,
-    "heading": "SparkleChat",
-    "subheading": "A Real-Time Messaging App",
-    "imgSrc": "https://i.ibb.co/fpD098N/rent-car-1.png",
-    "Overview": "Wilsonport is a multiservice logistics and transport company and I created their multi-page website using my Frontend Web Development skills to build their online presence and make them stand out among their competitors and provide a better user experience for all types of devices. I took User Interface ideas by visiting different types of websites of the same industry and",
-    "video": "https://ibb.co/fpD098N",
+    "heading": "Cruise Fleet",
+    "subheading": "Rent A Car Website Template for Mobile Devices",
+    "imgSrc": "https://i.ibb.co/pLrqT2x/rent-car-9.png",
+    "Overview": "Cruise-fleet is a mobile web application where you can manage car reservations: you have a list of cars ready for rent, and you can see how much money you spent daily based on your choice.",
     "imgs": [
-      "https://ibb.co/fpD098N",
-      "https://ibb.co/fpD098N",
-      "https://ibb.co/fpD098N"
+      "https://i.ibb.co/Kyw49LG/rent-car-3.png",
+      "https://i.ibb.co/vkckY1P/rent-car-1.png",
+      "https://i.ibb.co/2dfqWQx/rent-car-5.png",
+      "https://i.ibb.co/z8PnFqM/rent-car-4.png",
+      "https://i.ibb.co/ZM535w3/rent-car-2.png",
+      "https://i.ibb.co/dWBQRt0/rent-car-8.png"
     ],
     "techonlogy": [
-      "Laravel",
-      "Tailwind",
-      "VueJs",
+      "React",
+      "Ruby on Rails",
+      "Ruby",
       "JavaScript",
-      "PHP",
-      "MySQL"
+      "PostgreSQL",
+      "HTML",
+      "CSS",
+      "Github"
     ],
-    "projectLink": "https://source.unsplash.com/random/200x200?sig=",
-    "liveLink": "https://source.unsplash.com/random/200x200?sig="
+    "features": [
+      "See a list of cars",
+      "See the details of each car",
+      "Make a reservation to the car",
+      "Add a car Item",
+      "Delete a car Item",
+      "List all reservations for a given car"
+    ],
+    "projectLink": "https://github.com/ahmidou09/cruise-fleet-frontend",
+    "liveLink": "https://cruisefleet.onrender.com/"
   },
   {
     "id": 2,
-    "heading": "EcoHarvest",
-    "subheading": " Sustainable Agriculture Platform",
-    "imgSrc": "https://source.unsplash.com/random/200x200?sig=2",
-    "Overview": "Wilsonport is a multiservice logistics and transport company and I created their multi-page website using my Frontend Web Development skills to build their online presence and make them stand out among their competitors and provide a better user experience for all types of devices. I took User Interface ideas by visiting different types of websites of the same industry and",
-    "video": "https://source.unsplash.com/random/200x200?sig=",
+    "heading": "Cruise Fleet",
+    "subheading": "Rent A Car Website Template for Mobile Devices",
+    "imgSrc": "https://i.ibb.co/pLrqT2x/rent-car-9.png",
+    "Overview": "Cruise-fleet is a mobile web application where you can manage car reservations: you have a list of cars ready for rent, and you can see how much money you spent daily based on your choice.",
     "imgs": [
-      "https://source.unsplash.com/random/200x200?sig=",
-      "https://source.unsplash.com/random/200x200?sig=",
-      "https://source.unsplash.com/random/200x200?sig="
+      "https://i.ibb.co/Kyw49LG/rent-car-3.png",
+      "https://i.ibb.co/vkckY1P/rent-car-1.png",
+      "https://i.ibb.co/2dfqWQx/rent-car-5.png",
+      "https://i.ibb.co/z8PnFqM/rent-car-4.png",
+      "https://i.ibb.co/ZM535w3/rent-car-2.png",
+      "https://i.ibb.co/dWBQRt0/rent-car-8.png"
     ],
     "techonlogy": [
-      "Laravel",
-      "Tailwind",
-      "VueJs",
+      "React",
+      "Ruby on Rails",
+      "Ruby",
       "JavaScript",
-      "PHP",
-      "MySQL"
+      "PostgreSQL",
+      "HTML",
+      "CSS",
+      "Github"
     ],
-    "projectLink": "https://source.unsplash.com/random/200x200?sig=",
-    "liveLink": "https://source.unsplash.com/random/200x200?sig="
+    "features": [
+      "See a list of cars",
+      "See the details of each car",
+      "Make a reservation to the car",
+      "Add a car Item",
+      "Delete a car Item",
+      "List all reservations for a given car"
+    ],
+    "projectLink": "https://github.com/ahmidou09/cruise-fleet-frontend",
+    "liveLink": "https://cruisefleet.onrender.com/"
   },
   {
     "id": 3,
-    "heading": "SwiftServe",
-    "subheading": " On-Demand Delivery Service",
-    "imgSrc": "https://source.unsplash.com/random/200x200?sig=3",
-    "Overview": "Wilsonport is a multiservice logistics and transport company and I created their multi-page website using my Frontend Web Development skills to build their online presence and make them stand out among their competitors and provide a better user experience for all types of devices. I took User Interface ideas by visiting different types of websites of the same industry and",
-    "video": "https://source.unsplash.com/random/200x200?sig=",
+    "heading": "Cruise Fleet",
+    "subheading": "Rent A Car Website Template for Mobile Devices",
+    "imgSrc": "https://i.ibb.co/pLrqT2x/rent-car-9.png",
+    "Overview": "Cruise-fleet is a mobile web application where you can manage car reservations: you have a list of cars ready for rent, and you can see how much money you spent daily based on your choice.",
     "imgs": [
-      "https://source.unsplash.com/random/200x200?sig=",
-      "https://source.unsplash.com/random/200x200?sig=",
-      "https://source.unsplash.com/random/200x200?sig="
+      "https://i.ibb.co/Kyw49LG/rent-car-3.png",
+      "https://i.ibb.co/vkckY1P/rent-car-1.png",
+      "https://i.ibb.co/2dfqWQx/rent-car-5.png",
+      "https://i.ibb.co/z8PnFqM/rent-car-4.png",
+      "https://i.ibb.co/ZM535w3/rent-car-2.png",
+      "https://i.ibb.co/dWBQRt0/rent-car-8.png"
     ],
     "techonlogy": [
-      "Laravel",
-      "Tailwind",
-      "VueJs",
+      "React",
+      "Ruby on Rails",
+      "Ruby",
       "JavaScript",
-      "PHP",
-      "MySQL"
+      "PostgreSQL",
+      "HTML",
+      "CSS",
+      "Github"
     ],
-    "projectLink": "https://source.unsplash.com/random/200x200?sig=",
-    "liveLink": "https://source.unsplash.com/random/200x200?sig="
+    "features": [
+      "See a list of cars",
+      "See the details of each car",
+      "Make a reservation to the car",
+      "Add a car Item",
+      "Delete a car Item",
+      "List all reservations for a given car"
+    ],
+    "projectLink": "https://github.com/ahmidou09/cruise-fleet-frontend",
+    "liveLink": "https://cruisefleet.onrender.com/"
   },
   {
     "id": 4,
-    "heading": "TranquilMind",
-    "subheading": "Meditation and Mindfulness App",
-    "imgSrc": "https://source.unsplash.com/random/200x200?sig=4",
-    "Overview": "Wilsonport is a multiservice logistics and transport company and I created their multi-page website using my Frontend Web Development skills to build their online presence and make them stand out among their competitors and provide a better user experience for all types of devices. I took User Interface ideas by visiting different types of websites of the same industry and",
-    "video": "https://source.unsplash.com/random/200x200?sig=",
+    "heading": "Cruise Fleet",
+    "subheading": "Rent A Car Website Template for Mobile Devices",
+    "imgSrc": "https://i.ibb.co/pLrqT2x/rent-car-9.png",
+    "Overview": "Cruise-fleet is a mobile web application where you can manage car reservations: you have a list of cars ready for rent, and you can see how much money you spent daily based on your choice.",
     "imgs": [
-      "https://source.unsplash.com/random/200x200?sig=",
-      "https://source.unsplash.com/random/200x200?sig=",
-      "https://source.unsplash.com/random/200x200?sig="
+      "https://i.ibb.co/Kyw49LG/rent-car-3.png",
+      "https://i.ibb.co/vkckY1P/rent-car-1.png",
+      "https://i.ibb.co/2dfqWQx/rent-car-5.png",
+      "https://i.ibb.co/z8PnFqM/rent-car-4.png",
+      "https://i.ibb.co/ZM535w3/rent-car-2.png",
+      "https://i.ibb.co/dWBQRt0/rent-car-8.png"
     ],
     "techonlogy": [
-      "Laravel",
-      "Tailwind",
-      "VueJs",
+      "React",
+      "Ruby on Rails",
+      "Ruby",
       "JavaScript",
-      "PHP",
-      "MySQL"
+      "PostgreSQL",
+      "HTML",
+      "CSS",
+      "Github"
     ],
-    "projectLink": "https://source.unsplash.com/random/200x200?sig=",
-    "liveLink": "https://source.unsplash.com/random/200x200?sig="
+    "features": [
+      "See a list of cars",
+      "See the details of each car",
+      "Make a reservation to the car",
+      "Add a car Item",
+      "Delete a car Item",
+      "List all reservations for a given car"
+    ],
+    "projectLink": "https://github.com/ahmidou09/cruise-fleet-frontend",
+    "liveLink": "https://cruisefleet.onrender.com/"
   },
   {
     "id": 5,
-    "heading": "CodeNest",
-    "subheading": "Collaborative Coding Platform",
-    "imgSrc": "https://source.unsplash.com/random/200x200?sig=5",
-    "Overview": "Wilsonport is a multiservice logistics and transport company and I created their multi-page website using my Frontend Web Development skills to build their online presence and make them stand out among their competitors and provide a better user experience for all types of devices. I took User Interface ideas by visiting different types of websites of the same industry and",
-    "video": "https://source.unsplash.com/random/200x200?sig=",
+    "heading": "Cruise Fleet",
+    "subheading": "Rent A Car Website Template for Mobile Devices",
+    "imgSrc": "https://i.ibb.co/pLrqT2x/rent-car-9.png",
+    "Overview": "Cruise-fleet is a mobile web application where you can manage car reservations: you have a list of cars ready for rent, and you can see how much money you spent daily based on your choice.",
     "imgs": [
-      "https://source.unsplash.com/random/200x200?sig=",
-      "https://source.unsplash.com/random/200x200?sig=",
-      "https://source.unsplash.com/random/200x200?sig="
+      "https://i.ibb.co/Kyw49LG/rent-car-3.png",
+      "https://i.ibb.co/vkckY1P/rent-car-1.png",
+      "https://i.ibb.co/2dfqWQx/rent-car-5.png",
+      "https://i.ibb.co/z8PnFqM/rent-car-4.png",
+      "https://i.ibb.co/ZM535w3/rent-car-2.png",
+      "https://i.ibb.co/dWBQRt0/rent-car-8.png"
     ],
     "techonlogy": [
-      "Laravel",
-      "Tailwind",
-      "VueJs",
+      "React",
+      "Ruby on Rails",
+      "Ruby",
       "JavaScript",
-      "PHP",
-      "MySQL"
+      "PostgreSQL",
+      "HTML",
+      "CSS",
+      "Github"
     ],
-    "projectLink": "https://source.unsplash.com/random/200x200?sig=",
-    "liveLink": "https://source.unsplash.com/random/200x200?sig="
+    "features": [
+      "See a list of cars",
+      "See the details of each car",
+      "Make a reservation to the car",
+      "Add a car Item",
+      "Delete a car Item",
+      "List all reservations for a given car"
+    ],
+    "projectLink": "https://github.com/ahmidou09/cruise-fleet-frontend",
+    "liveLink": "https://cruisefleet.onrender.com/"
   },
   {
     "id": 6,
-    "heading": "SparkleChat",
-    "subheading": "A Real-Time Messaging App",
-    "imgSrc": "https://source.unsplash.com/random/200x200?sig=6",
-    "Overview": "Wilsonport is a multiservice logistics and transport company and I created their multi-page website using my Frontend Web Development skills to build their online presence and make them stand out among their competitors and provide a better user experience for all types of devices. I took User Interface ideas by visiting different types of websites of the same industry and",
-    "video": "https://source.unsplash.com/random/200x200?sig=",
+    "heading": "Cruise Fleet",
+    "subheading": "Rent A Car Website Template for Mobile Devices",
+    "imgSrc": "https://i.ibb.co/pLrqT2x/rent-car-9.png",
+    "Overview": "Cruise-fleet is a mobile web application where you can manage car reservations: you have a list of cars ready for rent, and you can see how much money you spent daily based on your choice.",
     "imgs": [
-      "https://source.unsplash.com/random/200x200?sig=",
-      "https://source.unsplash.com/random/200x200?sig=",
-      "https://source.unsplash.com/random/200x200?sig="
+      "https://i.ibb.co/Kyw49LG/rent-car-3.png",
+      "https://i.ibb.co/vkckY1P/rent-car-1.png",
+      "https://i.ibb.co/2dfqWQx/rent-car-5.png",
+      "https://i.ibb.co/z8PnFqM/rent-car-4.png",
+      "https://i.ibb.co/ZM535w3/rent-car-2.png",
+      "https://i.ibb.co/dWBQRt0/rent-car-8.png"
     ],
     "techonlogy": [
-      "Laravel",
-      "Tailwind",
-      "VueJs",
+      "React",
+      "Ruby on Rails",
+      "Ruby",
       "JavaScript",
-      "PHP",
-      "MySQL"
+      "PostgreSQL",
+      "HTML",
+      "CSS",
+      "Github"
     ],
-    "projectLink": "https://source.unsplash.com/random/200x200?sig=",
-    "liveLink": "https://source.unsplash.com/random/200x200?sig="
-  },
-  {
-    "id": 7,
-    "heading": "EcoHarvest",
-    "subheading": " Sustainable Agriculture Platform",
-    "imgSrc": "https://source.unsplash.com/random/200x200?sig=7",
-    "Overview": "Wilsonport is a multiservice logistics and transport company and I created their multi-page website using my Frontend Web Development skills to build their online presence and make them stand out among their competitors and provide a better user experience for all types of devices. I took User Interface ideas by visiting different types of websites of the same industry and",
-    "video": "https://source.unsplash.com/random/200x200?sig=",
-    "imgs": [
-      "https://source.unsplash.com/random/200x200?sig=",
-      "https://source.unsplash.com/random/200x200?sig=",
-      "https://source.unsplash.com/random/200x200?sig="
+    "features": [
+      "See a list of cars",
+      "See the details of each car",
+      "Make a reservation to the car",
+      "Add a car Item",
+      "Delete a car Item",
+      "List all reservations for a given car"
     ],
-    "techonlogy": [
-      "Laravel",
-      "Tailwind",
-      "VueJs",
-      "JavaScript",
-      "PHP",
-      "MySQL"
-    ],
-    "projectLink": "https://source.unsplash.com/random/200x200?sig=",
-    "liveLink": "https://source.unsplash.com/random/200x200?sig="
+    "projectLink": "https://github.com/ahmidou09/cruise-fleet-frontend",
+    "liveLink": "https://cruisefleet.onrender.com/"
   }
 ]
