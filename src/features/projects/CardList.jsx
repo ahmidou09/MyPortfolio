@@ -36,7 +36,10 @@ const CardList = ({ projectData, color }) => {
 
   return (
     <LinkWrapper
-      onClick={() => navigate(`/projects/${projectData.id}`)}
+      onClick={() => {
+        navigate(`/projects/${projectData.id}`);
+        window.scrollTo(0, 0);
+      }}
       ref={ref}
       onMouseMove={handleMouseMove}
       initial="initial"

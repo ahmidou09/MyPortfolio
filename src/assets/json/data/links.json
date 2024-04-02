@@ -6,12 +6,11 @@
     "imgSrc": "https://i.ibb.co/pLrqT2x/rent-car-9.png",
     "Overview": "Cruise-fleet is a mobile web application where you can manage car reservations: you have a list of cars ready for rent, and you can see how much money you spent daily based on your choice.",
     "imgs": [
-      "https://i.ibb.co/Kyw49LG/rent-car-3.png",
-      "https://i.ibb.co/vkckY1P/rent-car-1.png",
-      "https://i.ibb.co/2dfqWQx/rent-car-5.png",
-      "https://i.ibb.co/z8PnFqM/rent-car-4.png",
-      "https://i.ibb.co/ZM535w3/rent-car-2.png",
-      "https://i.ibb.co/dWBQRt0/rent-car-8.png"
+      "https://i.ibb.co/p1KxGqJ/rent-car-1.jpg",
+      "https://i.ibb.co/myj86gh/rent-car-2.jpg",
+      "https://i.ibb.co/1fwLf67/rent-car-3.jpg",
+      "https://i.ibb.co/BTwkkmj/rent-car-4.jpg",
+      "https://i.ibb.co/hdrsryt/rent-car-5.jpg"
     ],
     "techonlogy": [
       "React",
@@ -31,182 +30,28 @@
       "Delete a car Item",
       "List all reservations for a given car"
     ],
-    "projectLink": "https://github.com/ahmidou09/cruise-fleet-frontend",
+    "githubLink": "https://github.com/ahmidou09/cruise-fleet-frontend",
     "liveLink": "https://cruisefleet.onrender.com/"
   },
   {
     "id": 2,
-    "heading": "Cruise Fleet",
-    "subheading": "Rent A Car Website Template for Mobile Devices",
-    "imgSrc": "https://i.ibb.co/pLrqT2x/rent-car-9.png",
-    "Overview": "Cruise-fleet is a mobile web application where you can manage car reservations: you have a list of cars ready for rent, and you can see how much money you spent daily based on your choice.",
+    "heading": "Air Pollution",
+    "subheading": "Air pollution web application ",
+    "imgSrc": "https://i.ibb.co/8jvtnh9/air-pullution-1.png",
+    "Overview": "The Air Pollution App is a simple web application that allows users to stay informed about the air quality conditions in countries worldwide. It provides a user-friendly experience with precise regional search capabilities.",
     "imgs": [
-      "https://i.ibb.co/Kyw49LG/rent-car-3.png",
-      "https://i.ibb.co/vkckY1P/rent-car-1.png",
-      "https://i.ibb.co/2dfqWQx/rent-car-5.png",
-      "https://i.ibb.co/z8PnFqM/rent-car-4.png",
-      "https://i.ibb.co/ZM535w3/rent-car-2.png",
-      "https://i.ibb.co/dWBQRt0/rent-car-8.png"
+      "https://i.ibb.co/9r013cr/air-pullution-2.png",
+      "https://i.ibb.co/wWRCjmP/air-pullution-3.png",
+      "https://i.ibb.co/tPPk7h0/air-pullution-4.png"
     ],
-    "techonlogy": [
-      "React",
-      "Ruby on Rails",
-      "Ruby",
-      "JavaScript",
-      "PostgreSQL",
-      "HTML",
-      "CSS",
-      "Github"
-    ],
+    "techonlogy": ["React", "JavaScript", "HTML", "CSS", "Github"],
     "features": [
-      "See a list of cars",
-      "See the details of each car",
-      "Make a reservation to the car",
-      "Add a car Item",
-      "Delete a car Item",
-      "List all reservations for a given car"
+      "User-friendly interface with basic HTML layout.",
+      "Display different countries by region",
+      "Display detailed information about the pollution in the area.",
+      "Air quality index bar that changes of color depending on the level of pollution."
     ],
-    "projectLink": "https://github.com/ahmidou09/cruise-fleet-frontend",
-    "liveLink": "https://cruisefleet.onrender.com/"
-  },
-  {
-    "id": 3,
-    "heading": "Cruise Fleet",
-    "subheading": "Rent A Car Website Template for Mobile Devices",
-    "imgSrc": "https://i.ibb.co/pLrqT2x/rent-car-9.png",
-    "Overview": "Cruise-fleet is a mobile web application where you can manage car reservations: you have a list of cars ready for rent, and you can see how much money you spent daily based on your choice.",
-    "imgs": [
-      "https://i.ibb.co/Kyw49LG/rent-car-3.png",
-      "https://i.ibb.co/vkckY1P/rent-car-1.png",
-      "https://i.ibb.co/2dfqWQx/rent-car-5.png",
-      "https://i.ibb.co/z8PnFqM/rent-car-4.png",
-      "https://i.ibb.co/ZM535w3/rent-car-2.png",
-      "https://i.ibb.co/dWBQRt0/rent-car-8.png"
-    ],
-    "techonlogy": [
-      "React",
-      "Ruby on Rails",
-      "Ruby",
-      "JavaScript",
-      "PostgreSQL",
-      "HTML",
-      "CSS",
-      "Github"
-    ],
-    "features": [
-      "See a list of cars",
-      "See the details of each car",
-      "Make a reservation to the car",
-      "Add a car Item",
-      "Delete a car Item",
-      "List all reservations for a given car"
-    ],
-    "projectLink": "https://github.com/ahmidou09/cruise-fleet-frontend",
-    "liveLink": "https://cruisefleet.onrender.com/"
-  },
-  {
-    "id": 4,
-    "heading": "Cruise Fleet",
-    "subheading": "Rent A Car Website Template for Mobile Devices",
-    "imgSrc": "https://i.ibb.co/pLrqT2x/rent-car-9.png",
-    "Overview": "Cruise-fleet is a mobile web application where you can manage car reservations: you have a list of cars ready for rent, and you can see how much money you spent daily based on your choice.",
-    "imgs": [
-      "https://i.ibb.co/Kyw49LG/rent-car-3.png",
-      "https://i.ibb.co/vkckY1P/rent-car-1.png",
-      "https://i.ibb.co/2dfqWQx/rent-car-5.png",
-      "https://i.ibb.co/z8PnFqM/rent-car-4.png",
-      "https://i.ibb.co/ZM535w3/rent-car-2.png",
-      "https://i.ibb.co/dWBQRt0/rent-car-8.png"
-    ],
-    "techonlogy": [
-      "React",
-      "Ruby on Rails",
-      "Ruby",
-      "JavaScript",
-      "PostgreSQL",
-      "HTML",
-      "CSS",
-      "Github"
-    ],
-    "features": [
-      "See a list of cars",
-      "See the details of each car",
-      "Make a reservation to the car",
-      "Add a car Item",
-      "Delete a car Item",
-      "List all reservations for a given car"
-    ],
-    "projectLink": "https://github.com/ahmidou09/cruise-fleet-frontend",
-    "liveLink": "https://cruisefleet.onrender.com/"
-  },
-  {
-    "id": 5,
-    "heading": "Cruise Fleet",
-    "subheading": "Rent A Car Website Template for Mobile Devices",
-    "imgSrc": "https://i.ibb.co/pLrqT2x/rent-car-9.png",
-    "Overview": "Cruise-fleet is a mobile web application where you can manage car reservations: you have a list of cars ready for rent, and you can see how much money you spent daily based on your choice.",
-    "imgs": [
-      "https://i.ibb.co/Kyw49LG/rent-car-3.png",
-      "https://i.ibb.co/vkckY1P/rent-car-1.png",
-      "https://i.ibb.co/2dfqWQx/rent-car-5.png",
-      "https://i.ibb.co/z8PnFqM/rent-car-4.png",
-      "https://i.ibb.co/ZM535w3/rent-car-2.png",
-      "https://i.ibb.co/dWBQRt0/rent-car-8.png"
-    ],
-    "techonlogy": [
-      "React",
-      "Ruby on Rails",
-      "Ruby",
-      "JavaScript",
-      "PostgreSQL",
-      "HTML",
-      "CSS",
-      "Github"
-    ],
-    "features": [
-      "See a list of cars",
-      "See the details of each car",
-      "Make a reservation to the car",
-      "Add a car Item",
-      "Delete a car Item",
-      "List all reservations for a given car"
-    ],
-    "projectLink": "https://github.com/ahmidou09/cruise-fleet-frontend",
-    "liveLink": "https://cruisefleet.onrender.com/"
-  },
-  {
-    "id": 6,
-    "heading": "Cruise Fleet",
-    "subheading": "Rent A Car Website Template for Mobile Devices",
-    "imgSrc": "https://i.ibb.co/pLrqT2x/rent-car-9.png",
-    "Overview": "Cruise-fleet is a mobile web application where you can manage car reservations: you have a list of cars ready for rent, and you can see how much money you spent daily based on your choice.",
-    "imgs": [
-      "https://i.ibb.co/Kyw49LG/rent-car-3.png",
-      "https://i.ibb.co/vkckY1P/rent-car-1.png",
-      "https://i.ibb.co/2dfqWQx/rent-car-5.png",
-      "https://i.ibb.co/z8PnFqM/rent-car-4.png",
-      "https://i.ibb.co/ZM535w3/rent-car-2.png",
-      "https://i.ibb.co/dWBQRt0/rent-car-8.png"
-    ],
-    "techonlogy": [
-      "React",
-      "Ruby on Rails",
-      "Ruby",
-      "JavaScript",
-      "PostgreSQL",
-      "HTML",
-      "CSS",
-      "Github"
-    ],
-    "features": [
-      "See a list of cars",
-      "See the details of each car",
-      "Make a reservation to the car",
-      "Add a car Item",
-      "Delete a car Item",
-      "List all reservations for a given car"
-    ],
-    "projectLink": "https://github.com/ahmidou09/cruise-fleet-frontend",
-    "liveLink": "https://cruisefleet.onrender.com/"
+    "githubLink": "https://github.com/ahmidou09/capstone-air-pollution-app?tab=readme-ov-file",
+    "liveLink": "https://air-pollution-4yaz.onrender.com/"
   }
 ]

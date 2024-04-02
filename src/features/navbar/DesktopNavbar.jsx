@@ -1,6 +1,6 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
-import styled from "styled-components";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import styled, { css } from "styled-components";
 import HoverButton from "../../ui/HoverButton";
 
 const StyledDesktopNavbar = styled.header`
@@ -10,6 +10,13 @@ const StyledDesktopNavbar = styled.header`
   color: var(--color-white);
   font-weight: 400;
   letter-spacing: 0.1rem;
+  ${(props) =>
+    props.isProjectPage &&
+    css`
+      background-color: var(
+        --color-primary-3
+      ); /* Change to the desired background color */
+    `}
 `;
 
 const ButtonText = styled.span`
@@ -108,8 +115,10 @@ const NavLinkWithHover = styled(NavLink)`
 `;
 
 function DesktopNavbar() {
+  const location = useLocation();
+  const isProjectPage = location.pathname.match(/^\/projects\/\d+/);
   return (
-    <StyledDesktopNavbar>
+    <StyledDesktopNavbar isProjectPage={!!isProjectPage}>
       <HoverButton>
         <Link to="/">
           <ButtonText>

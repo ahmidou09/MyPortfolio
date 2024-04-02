@@ -71,11 +71,14 @@ const CardSubheading = styled.p`
   }
 `;
 
-const CardGrid = ({ projectData}) => {
-  const  { imgSrc, heading, subheading} = projectData;
+const CardGrid = ({ projectData }) => {
+  const { imgSrc, heading, subheading } = projectData;
   return (
     <Tilt options={defaultOptions}>
-      <Link to={`/projects/${projectData.id}`}>
+      <Link
+        to={`/projects/${projectData.id}`}
+        onClick={() => window.scrollTo(0, 0)}
+      >
         <CardContainer>
           <CardImage src={imgSrc} alt={heading} />
           <CardHeading>{heading}</CardHeading>

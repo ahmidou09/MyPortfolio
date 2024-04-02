@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 // 2340 x 1200
 // 580 x 800
-const ONE_SECOND = 1000;
+const ONE_SECOND = 500;
 const AUTO_DELAY = ONE_SECOND * 10;
 const DRAG_BUFFER = 50;
 
