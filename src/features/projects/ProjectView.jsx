@@ -185,10 +185,10 @@ const NextProjectButton = styled(Link)`
   text-decoration: none;
 
   h2 {
-    font-size: 5rem;
+    font-size: 12rem;
     transition: all 0.5s ease-in-out;
     font-weight: 300;
-    text-decoration: underline;
+    text-decoration: underline var(--color-purple-1) 4px;
   }
 
   &:hover > span {

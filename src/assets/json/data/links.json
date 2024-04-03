@@ -37,12 +37,13 @@
     "id": 2,
     "heading": "Air Pollution",
     "subheading": "Air pollution web application ",
-    "imgSrc": "https://i.ibb.co/8jvtnh9/air-pullution-1.png",
+    "imgSrc": "https://i.ibb.co/F6whqNC/air-pullution-1.png",
     "Overview": "The Air Pollution App is a simple web application that allows users to stay informed about the air quality conditions in countries worldwide. It provides a user-friendly experience with precise regional search capabilities.",
     "imgs": [
-      "https://i.ibb.co/9r013cr/air-pullution-2.png",
-      "https://i.ibb.co/wWRCjmP/air-pullution-3.png",
-      "https://i.ibb.co/tPPk7h0/air-pullution-4.png"
+      "https://i.ibb.co/F0sgGpC/air-pullution-2.png",
+      "https://i.ibb.co/RNTW3M3/air-pullution-3.png",
+      "https://i.ibb.co/vjR1qr5/air-pullution-4.png",
+      "https://i.ibb.co/X7xTdrz/air-pullution-5.png"
     ],
     "techonlogy": ["React", "JavaScript", "HTML", "CSS", "Github"],
     "features": [
