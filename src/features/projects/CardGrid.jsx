@@ -38,10 +38,17 @@ const CardContainer = styled.div`
   }
 `;
 
+const CardImageBox = styled.div`
+  overflow: hidden;
+  height: 40rem;
+  border-radius: 10px 10px 0 0;
+`;
+
 const CardImage = styled.img`
   width: 100%;
-  height: 50%;
+  height: 100%;
   object-fit: cover;
+  object-position: top;
   border-radius: 10px 10px 0 0;
   pointer-events: none;
   opacity: 0.7;
@@ -54,7 +61,7 @@ const CardHeading = styled.h2`
   padding: 1rem;
   color: var(--color-white);
   border-bottom: 2px solid var(--color-white);
-  width: 70%;
+  width: 80%;
 `;
 
 const CardSubheading = styled.p`
@@ -80,7 +87,9 @@ const CardGrid = ({ projectData }) => {
         onClick={() => window.scrollTo(0, 0)}
       >
         <CardContainer>
-          <CardImage src={imgSrc} alt={heading} />
+          <CardImageBox>
+            <CardImage src={imgSrc} alt={heading} />
+          </CardImageBox>
           <CardHeading>{heading}</CardHeading>
           <CardSubheading>
             {subheading} <span>→</span>

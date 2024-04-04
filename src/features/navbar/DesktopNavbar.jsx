@@ -29,7 +29,7 @@ const ButtonText = styled.span`
   z-index: 2;
   position: relative;
   transform: rotate(0deg);
-  font-size: 2.2rem;
+  font-size: 1.7rem;
 
   .copy span {
     position: relative;
@@ -46,7 +46,7 @@ const ButtonText = styled.span`
   &:hover .credit .codeBy,
   &:hover .credit .mehdi,
   &:hover .credit .ahmidou {
-    transform: translateX(-5.5rem);
+    transform: translateX(-6rem);
   }
 
   .credit {
@@ -85,7 +85,7 @@ const Nav = styled.nav`
   }
 
   li {
-    font-size: 2.1rem;
+    font-size: 1.7rem;
   }
 `;
 

@@ -26,7 +26,7 @@ function SocialLinks({ style }) {
       <HoverButton>
         <SocialItem>
           <a
-            href={"https://www.github.com"}
+            href={"https://github.com/ahmidou09/"}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -37,7 +37,7 @@ function SocialLinks({ style }) {
       <HoverButton>
         <SocialItem>
           <a
-            href={"https://www.facebook.com"}
+            href={"https://www.facebook.com/mehdi.ahmidou"}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -48,22 +48,11 @@ function SocialLinks({ style }) {
       <HoverButton>
         <SocialItem>
           <a
-            href={"https://www.twitter.com"}
+            href={"https://twitter.com/el_ahmidou"}
             target="_blank"
             rel="noopener noreferrer"
           >
             <BsTwitterX />
-          </a>
-        </SocialItem>
-      </HoverButton>
-      <HoverButton>
-        <SocialItem>
-          <a
-            href={"https://www.instagram.com"}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaInstagram />
           </a>
         </SocialItem>
       </HoverButton>

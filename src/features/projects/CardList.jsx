@@ -86,7 +86,7 @@ const CardList = ({ projectData, color }) => {
         }}
         variants={{
           initial: { scale: 0, rotate: "-6.5deg" },
-          whileHover: { scale: 1.2, rotate: "6.5deg" },
+          whileHover: { scale: 0.8, rotate: "6.5deg" },
         }}
         transition={{ type: "spring" }}
         src={imgSrc}
@@ -155,8 +155,8 @@ const Subheading = styled.span`
 
 const Image = styled(motion.img)`
   position: absolute;
-  z-index: 0;
-  height: 32rem;
+  z-index: 99999;
+  height: auto;
   width: 40rem;
   border-radius: 0.5rem;
   object-fit: cover;

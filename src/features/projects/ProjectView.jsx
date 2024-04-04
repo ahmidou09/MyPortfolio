@@ -176,7 +176,7 @@ const NextProjectSection = styled.div`
 const NextProjectButton = styled(Link)`
   background-color: var(--color-blue-1);
   color: var(--color-white-2);
-  border-radius: 4px;
+  border-radius: 0.4rem;
   padding: 0.5rem 1rem;
   cursor: pointer;
   display: flex;
@@ -192,10 +192,10 @@ const NextProjectButton = styled(Link)`
   }
 
   &:hover > span {
-    transform: translateY(-30%);
+    transform: translateY(-10%);
     opacity: 1;
     width: 30rem;
-    height: 30rem;
+    height: 35rem;
   }
 
   &:hover h2 {
@@ -204,13 +204,13 @@ const NextProjectButton = styled(Link)`
 `;
 
 const ProjectPreview = styled.span`
-  transform: translateY(-60%);
+  transform: translateY(0%);
   width: 0;
   height: 0;
   opacity: 0;
   position: absolute;
   background-size: cover;
-  background-position: center;
+  background-position: top;
   border-radius: 4px;
   transition: all 0.5s ease-in-out;
 `;
@@ -276,7 +276,7 @@ const ProjectView = () => {
             >
               <h2> {nextProject.heading}</h2>
               <ProjectPreview
-                style={{ backgroundImage: `url(${nextProject.imgSrc})` }}
+                style={{ backgroundImage: `url(${nextProject.imgSrc}) ` }}
               />
             </NextProjectButton>
           )}

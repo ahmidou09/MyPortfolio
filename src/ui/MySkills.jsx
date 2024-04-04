@@ -1,5 +1,6 @@
 import { useAnimate } from "framer-motion";
 import React, { useRef } from "react";
+import skills from "../assets/img/skills-bg_1.png";
 import styled from "styled-components";
 import {
   FaReact,
@@ -24,16 +25,11 @@ const Section = styled.div`
   width: 100%;
   display: grid;
   place-content: center;
-
-  p {
-    text-align: center;
-    padding: 1.5rem;
-    font-size: 12.2rem;
-  }
-
-  &:hover p {
-    display: none;
-  }
+  background-image: url(${skills});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  opacity: 0.09;
 `;
 
 const MouseIcon = styled.div`
@@ -68,9 +64,7 @@ const Skills = () => {
         <FaGitAlt color="#E84E31" />,
       ]}
     >
-      <Section>
-        <p>My Skills</p>{" "}
-      </Section>
+      <Section />
     </MouseImageTrail>
   );
 };

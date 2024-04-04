@@ -54,5 +54,29 @@
     ],
     "githubLink": "https://github.com/ahmidou09/capstone-air-pollution-app?tab=readme-ov-file",
     "liveLink": "https://air-pollution-4yaz.onrender.com/"
+  },
+  {
+    "id": 3,
+    "heading": "Creative Studio",
+    "subheading": "Creative Studio Capston communication agency",
+    "imgSrc": "https://i.ibb.co/Fgq6RGq/poster.png",
+    "Overview": "Creative_Studio_Capstone It's a creative communication agency, responsive web site! This is a Capstone Project to include all learning topics of Microverse Program's Module 1.",
+    "imgs": [
+      "https://i.ibb.co/vLZ4tDL/1.png",
+      "https://i.ibb.co/K69LVWW/2.png",
+      "https://i.ibb.co/0s29YPg/3.png",
+      "https://i.ibb.co/74MgCWD/4.png",
+      "https://i.ibb.co/rcMy522/5.png"
+    ],
+    "techonlogy": ["JavaScript", "HTML", "CSS", "Github"],
+    "features": [
+      "Good HTML and CSS practices",
+      "A webpage with the use of linters",
+      "Flexbox & Grid",
+      "Responsive Web Design",
+      "Basic interactivity with JavaScript"
+    ],
+    "githubLink": "https://github.com/ahmidou09/CreativeStudioCapstone",
+    "liveLink": "https://ahmidou09.github.io/CreativeStudioCapstone/index.html"
   }
 ]
