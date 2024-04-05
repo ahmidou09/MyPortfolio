@@ -27,9 +27,7 @@ function Home() {
             <img src={hero} alt="hero" />
           </BoxHero>
           <LocatedRight>
-            <h4>
-              <span>Hi, I'm</span> Front-End Developer &amp; Designer
-            </h4>
+            <h4>Front-End Developer &amp; Designer</h4>
           </LocatedRight>
           <ScrollingTextContainer>
             <ScrollingText name={"El Mehdi Ahmidou -"} />
@@ -50,7 +48,7 @@ function Home() {
             </MainButton>
           </ShowMore>
         </SectionWork>
-        <Footer />
+        {/* <Footer /> */}
       </HomeContainer>
     </TransitionAnim>
   );
@@ -62,18 +60,21 @@ const HomeContainer = styled.div`
 
 const Header = styled.header`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   position: relative;
   overflow: hidden;
   height: 100vh;
+
+  @media screen and (max-width: 720px) {
+    flex-direction: column;
+  }
 `;
 
 const LocatedLeft = styled.div`
   background-color: var(--color-grey-1);
   border-radius: 0 10rem 10rem 0;
   color: var(--color-white);
-  width: 40rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -83,10 +84,14 @@ const LocatedLeft = styled.div`
   font-weight: 300;
   margin-top: -30rem;
   height: 10rem;
-  width: 40rem;
+  width: 30%;
 
   svg {
     width: 8rem !important;
+  }
+
+  @media screen and (max-width: 720px) {
+    display: none;
   }
 `;
 
@@ -95,12 +100,22 @@ const LocatedRight = styled.div`
   padding: 2rem;
   font-size: 5rem;
   margin-top: -30rem;
+  width: 30%;
+
+  @media screen and (max-width: 720px) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5rem 2rem;
+  }
 `;
 
 const BoxHero = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 40%;
 
   img {
     height: 100vh;
@@ -110,6 +125,10 @@ const BoxHero = styled.div`
 const ScrollingTextContainer = styled.div`
   position: absolute;
   top: calc(100vh - 35rem);
+
+  @media screen and (max-width: 720px) {
+    top: calc(100vh - 40rem);
+  }
 `;
 
 const SectionAbout = styled.div`

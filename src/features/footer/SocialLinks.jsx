@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  FaLinkedinIn,
-  FaGithub,
-  FaFacebook,
-  FaInstagram,
-} from "react-icons/fa";
+import { FaLinkedinIn, FaGithub, FaFacebook } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import HoverButton from "../../ui/HoverButton";
 import styled from "styled-components";

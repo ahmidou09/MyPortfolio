@@ -68,6 +68,10 @@ const ScrollingTextContainer = styled.div`
     font-size: 23rem;
     font-weight: 500;
     padding-right: 5rem;
+
+    @media screen and (max-width: 720px) {
+      font-size: 15rem;
+    }
   }
 
   p:nth-of-type(2) {
