@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Links from "./Links";
 import ToggleButton from "./ToggleButton";
 import styled from "styled-components";
+import useIsMobile from "../../hooks/useIsMobile";
 
 const variants = {
   open: {
@@ -31,10 +32,12 @@ const SideBar = styled(motion.div)`
   top: 0;
   right: 0;
   bottom: 0;
-  width: 40rem;
-  background: var(--color-primary-3);
-  opacity: ${(props) =>
-    props.opacity}; /* Updated to accept opacity as a prop */
+  width: 400px;
+  background: var(--color-primary-1);
+  opacity: ${(props) => props.opacity};
+
+  @media screen and (max-width: 720px) {
+  }
 
   ul {
     position: absolute;
@@ -44,10 +47,10 @@ const SideBar = styled(motion.div)`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 20px;
 
     a {
-      font-size: 4rem;
+      font-size: 40px;
       color: var(--color-white);
       cursor: pointer;
     }
@@ -56,23 +59,24 @@ const SideBar = styled(motion.div)`
 
 function MobileNavbar() {
   const [open, setOpen] = useState(false);
-  const [sidebarOpacity, setSidebarOpacity] = useState(0); // State to manage opacity
+  const isMobile = useIsMobile();
+  const [sidebarOpacity, setSidebarOpacity] = useState(isMobile ? 1 : 0);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY >= 200) {
-        setSidebarOpacity(1); // Set opacity to 1 when scrolled down 200 pixels
+      if (isMobile || window.scrollY >= 200) {
+        setSidebarOpacity(1);
       } else {
-        setSidebarOpacity(0); // Otherwise, keep opacity at 0
+        setSidebarOpacity(0);
       }
     };
 
-    window.addEventListener("scroll", handleScroll); // Add event listener for scroll
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll); // Remove event listener on component unmount
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [isMobile]);
 
   const handleCloseSidebar = () => {
     setOpen(false);
@@ -84,7 +88,7 @@ function MobileNavbar() {
       <SideBar
         animate={open ? "open" : "closed"}
         variants={variants}
-        opacity={sidebarOpacity} // Pass opacity as prop
+        opacity={sidebarOpacity}
       >
         <ToggleButton setOpen={setOpen} />
         <Links handleCloseSidebar={handleCloseSidebar} />

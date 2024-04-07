@@ -10,11 +10,11 @@ const FormcarryBlock = styled.div`
 const Label = styled.label`
   transition: 0.5s;
   position: absolute;
-  top: ${({ hasContent }) => (hasContent ? "-20px" : "0")};
+  top: ${({ $hasContent }) => ($hasContent ? "-20px" : "0")};
   left: 0;
-  font-size: ${({ hasContent }) => (hasContent ? "12px" : "16px")};
-  color: ${({ hasContent }) =>
-    hasContent ? "var(--color-purple-1)" : "var(--color-white)"};
+  font-size: ${({ $hasContent }) => ($hasContent ? "12px" : "16px")};
+  color: ${({ $hasContent }) =>
+    $hasContent ? "var(--color-purple-1)" : "var(--color-white)"};
   padding: 10px 0;
   pointer-events: none;
   transition: 0.5s;
@@ -94,8 +94,12 @@ const Button = styled.button`
   text-transform: uppercase;
   overflow: hidden;
   transition: 0.5s;
-  margin-top: 40px;
+  margin-top: 4rem;
   letter-spacing: 4px;
+
+  @media screen and (max-width: 720px) {
+    margin-top: 0;
+  }
 
   &:hover {
     background: var(--color-purple-1);
@@ -198,7 +202,7 @@ function ContactForm() {
           id="name"
           required
         />
-        <Label htmlFor="name" hasContent={name.length > 0}>
+        <Label htmlFor="name" $hasContent={name.length > 0}>
           Full Name
         </Label>
       </FormcarryBlock>
@@ -211,7 +215,7 @@ function ContactForm() {
           id="email"
           required
         />
-        <Label htmlFor="email" hasContent={email.length > 0}>
+        <Label htmlFor="email" $hasContent={email.length > 0}>
           Your Email Address
         </Label>
       </FormcarryBlock>
@@ -223,7 +227,7 @@ function ContactForm() {
           id="message"
           required
         />
-        <Label htmlFor="message" hasContent={message.length > 0}>
+        <Label htmlFor="message" $hasContent={message.length > 0}>
           Your message
         </Label>
       </FormcarryBlock>

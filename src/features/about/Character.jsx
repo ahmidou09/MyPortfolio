@@ -11,6 +11,10 @@ const ParagraphContainer = styled(motion.p)`
   color: var(--color-primary-1);
   flex-wrap: wrap;
   margin: 0 auto;
+
+  @media screen and (max-width: 720px) {
+    font-size: 3rem;
+  }
 `;
 
 const WordSpan = styled.span`

@@ -7,15 +7,16 @@ const StyledDesktopNavbar = styled.header`
   display: flex;
   padding: 2rem 5rem;
   justify-content: space-between;
+  align-items: center;
   color: var(--color-white);
   font-weight: 400;
   letter-spacing: 0.1rem;
   ${(props) =>
-    props.isProjectPage &&
+    props.$isProjectPage &&
     css`
       background-color: var(
         --color-primary-3
-      ); /* Change to the desired background color */
+      );
     `}
 `;
 
@@ -118,7 +119,7 @@ function DesktopNavbar() {
   const location = useLocation();
   const isProjectPage = location.pathname.match(/^\/projects\/\d+/);
   return (
-    <StyledDesktopNavbar isProjectPage={!!isProjectPage}>
+    <StyledDesktopNavbar $isProjectPage={!!isProjectPage}>
       <HoverButton>
         <Link to="/">
           <ButtonText>

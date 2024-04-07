@@ -12,7 +12,7 @@ const GlobalStyles = createGlobalStyle`
   --color-teal-1: #3C9D93;
   --color-purple-1 : #4D5BCE;
   --color-purple-2 : #5565E8;
-  --color-background : ##9CA9B9;
+  --color-background : #011627;
 
   /* color accent */
   --color-accent-1: #C98BDF;
@@ -50,9 +50,9 @@ const GlobalStyles = createGlobalStyle`
 html {
   font-size: 62.5%;
 
-  @media screen and (max-width: 720) {
+ @media screen and (max-width: 720px) {
     font-size: 50%;
-  }
+  } 
 }
 
 body {

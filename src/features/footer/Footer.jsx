@@ -9,10 +9,19 @@ const BoxContact = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 5rem 1rem;
+
+  @media only screen and (max-width: 720px) {
+    flex-direction: column;
+    gap: 3rem;
+  }
 `;
 
 const Enfo = styled.div`
-  font-size: 4.5rem;
+  font-size: 3.5rem;
+
+  @media only screen and (max-width: 720px) {
+    font-size: 3rem;
+  }
 `;
 
 const SectionContact = styled.section`
@@ -29,6 +38,11 @@ const Wrapper = styled.div`
     font-size: 8rem;
     font-weight: 500;
     margin-bottom: 6rem;
+
+    @media only screen and (max-width: 720px) {
+      font-size: 4rem;
+      text-align: center;
+    }
   }
 `;
 
@@ -44,11 +58,15 @@ const Line = styled.hr`
 
 const GetTouch = styled.button`
   background-color: transparent;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 500;
   border: 0.2rem solid var(--color-white);
   border-radius: 5rem;
   padding: 1.5rem 3rem;
+
+  @media only screen and (max-width: 720px) {
+    font-size: 2rem;
+  }
 `;
 
 const SectionCopyright = styled.div`

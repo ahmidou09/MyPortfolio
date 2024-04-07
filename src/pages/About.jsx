@@ -6,7 +6,6 @@ import Accordion from "../features/about/Accordion";
 import profileImage from "../assets/img/profile.jpg";
 import Footer from "../features/footer/Footer";
 import TransitionAnim from "../ui/TransitionAnim";
-//import Inner from "../ui/Inner";
 
 const panels = [
   {
@@ -98,10 +97,19 @@ const IntroContainer = styled.div`
   align-items: center;
   margin-bottom: 5rem;
   gap: 6rem;
+
+  @media screen and (max-width: 720px) {
+    flex-direction: column;
+    gap: 3rem;
+  }
 `;
 
 const IntroImage = styled.div`
   margin-right: 2rem;
+
+  @media screen and (max-width: 720px) {
+    margin-right: 0;
+  }
 `;
 
 const Image = styled.img`
@@ -111,15 +119,30 @@ const Image = styled.img`
 `;
 
 const IntroText = styled.div`
+  color: var(--color-white);
   h1 {
     font-size: 3.4rem;
     margin-bottom: 2rem;
+
+    @media screen and (max-width: 720px) {
+      font-size: 3rem;
+      text-align: center;
+    }
   }
 
   p {
     font-weight: 400;
     line-height: 1.5;
     font-size: 2.2rem;
+
+    @media screen and (max-width: 720px) {
+      font-size: 1.8rem;
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    padding: 0 3rem;
   }
 `;
 
@@ -147,7 +170,7 @@ function About() {
         <AccordionWrapper>
           <Accordion panels={panels} />
         </AccordionWrapper>
-        <Footer style={{ color: "var(--color-primary-3)" }} />
+        <Footer />
       </AboutContainer>
     </TransitionAnim>
   );
