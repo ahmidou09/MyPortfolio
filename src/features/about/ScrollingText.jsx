@@ -70,7 +70,7 @@ const ScrollingTextContainer = styled.div`
     padding-right: 5rem;
 
     @media screen and (max-width: 720px) {
-      font-size: 15rem;
+      font-size: 12rem;
     }
   }
 

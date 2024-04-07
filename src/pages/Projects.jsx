@@ -15,6 +15,13 @@ const Container = styled.div`
 
   h1 {
     font-size: 8rem;
+    color: var(--color-white);
+
+    @media screen and (max-width: 720px) {
+      font-size: 6rem;
+      text-align: center;
+      margin-bottom: 4rem;
+    }
   }
 `;
 
@@ -22,6 +29,10 @@ const ButtonContainer = styled.div`
   margin-top: 2rem;
   display: flex;
   justify-content: end;
+
+  @media screen and (max-width: 720px) {
+    justify-content: center;
+  }
 `;
 
 const Button = styled.button`
@@ -30,7 +41,8 @@ const Button = styled.button`
   font-size: 2rem;
   background-color: transparent;
   color: var(--color-primary-3);
-  border: 2px solid var(--color-primary-3);
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
   border-radius: 0.5rem;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;

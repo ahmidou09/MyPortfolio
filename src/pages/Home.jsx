@@ -3,12 +3,12 @@ import styled from "styled-components";
 import Lottie from "lottie-react";
 import animationWord from "../assets/json/Animationw_world_3.json";
 import hero from "../assets/img/hero.png";
-import Character from "../ui/Character";
+import Character from "../features/about/Character";
 import MyProjects from "../features/projects/MyProjects";
 import { Link } from "react-router-dom";
 import MainButton from "../ui/Button";
-import Skills from "../ui/MySkills";
-import ScrollingText from "../ui/ScrollingText";
+import Skills from "../features/about/Skills";
+import ScrollingText from "../features/about/ScrollingText";
 import Footer from "../features/footer/Footer";
 import TransitionAnim from "../ui/TransitionAnim";
 
@@ -48,7 +48,7 @@ function Home() {
             </MainButton>
           </ShowMore>
         </SectionWork>
-        {/* <Footer /> */}
+        <Footer />
       </HomeContainer>
     </TransitionAnim>
   );
@@ -66,13 +66,18 @@ const Header = styled.header`
   overflow: hidden;
   height: 100vh;
 
+  h4 {
+    text-shadow: 0 0 10px var(--color-purple-1), 0 0 20px var(--color-purple-1);
+  }
+
   @media screen and (max-width: 720px) {
     flex-direction: column;
+    height: 70vh;
   }
 `;
 
 const LocatedLeft = styled.div`
-  background-color: var(--color-grey-1);
+  background-color: var(--color-primary-2);
   border-radius: 0 10rem 10rem 0;
   color: var(--color-white);
   display: flex;
@@ -85,6 +90,7 @@ const LocatedLeft = styled.div`
   margin-top: -30rem;
   height: 10rem;
   width: 30%;
+  max-width: 30rem;
 
   svg {
     width: 8rem !important;
@@ -119,6 +125,16 @@ const BoxHero = styled.div`
 
   img {
     height: 100vh;
+
+    @media screen and (max-width: 720px) {
+      height: 60vh;
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    align-items: end;
+    width: 100%;
+    height: 100%;
   }
 `;
 
@@ -127,7 +143,7 @@ const ScrollingTextContainer = styled.div`
   top: calc(100vh - 35rem);
 
   @media screen and (max-width: 720px) {
-    top: calc(100vh - 40rem);
+    top: calc(100vh - 70rem);
   }
 `;
 

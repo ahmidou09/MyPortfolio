@@ -33,7 +33,7 @@ const SideBar = styled(motion.div)`
   right: 0;
   bottom: 0;
   width: 400px;
-  background: var(--color-primary-3);
+  background: var(--color-primary-1);
   opacity: ${(props) => props.opacity};
 
   @media screen and (max-width: 720px) {

@@ -7,23 +7,41 @@ import TransitionAnim from "../ui/TransitionAnim";
 const Container = styled.div`
   max-width: 120rem;
   margin: 0 auto;
-  padding: 12rem 0;
+  padding: 6rem 0 0 0;
   color: var(--color-white);
 
   h1 {
     font-size: 8rem;
     margin-bottom: 2rem;
+    padding: 0 3rem;
+
+    @media screen and (max-width: 720px) {
+      font-size: 6rem;
+      text-align: center;
+    }
   }
 `;
 
 const InfoParagraph = styled.p`
   margin-bottom: 8rem;
   font-size: 1.9rem;
+  padding: 0 3rem;
+
+  @media screen and (max-width: 720px) {
+    text-align: center;
+  }
 `;
 
 const InfoDetails = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 10rem;
+
+  @media screen and (max-width: 720px) {
+    flex-direction: column;
+    gap: 5rem;
+    padding: 0 5rem;
+  }
 `;
 
 const ContactDetails = styled.div`
@@ -42,21 +60,11 @@ const ContactDetails = styled.div`
   }
 `;
 
-const ContactWrapp = styled.div``;
-
-const SocialLinksWrapper = styled(SocialLinks)``;
-
 const SectionCopyright = styled.div`
-  font-size: 1.9rem;
-  background-color: var(--color-balck);
+  font-size: 1.6rem;
   color: var(--color-white);
   padding: 6rem 3rem;
   text-align: center;
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  left: 50%;
-  transform: translateX(-50%);
 `;
 
 function Contact() {
@@ -69,17 +77,17 @@ function Contact() {
           Whether you have a question or just want to say hi, I’ll try my best
           to get back to you!
         </InfoParagraph>
-        <ContactWrapp>
+        <div>
           <InfoDetails>
             <ContactForm />
             <ContactDetails>
               <h2>Contact Details</h2>
               <span>ahmidouem@gmail.com</span>
               <span>+2126 73 23 53 39</span>
-              <SocialLinksWrapper />
+              <SocialLinks />
             </ContactDetails>
           </InfoDetails>
-        </ContactWrapp>
+        </div>
         <SectionCopyright>
           <p>
             &copy; {new Date().getFullYear()} El Mehdi Ahmidou. All rights

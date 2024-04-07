@@ -21,8 +21,8 @@ const PanelLabel = styled.button`
   padding: 2.5rem 6rem 2.5rem 2.5rem;
   font-weight: 500;
   font-size: 1.8rem;
-  color: var(--color-primary-3);
-  background-color: #607b9645;
+  color: var(--color-white-2);
+  background-color: var(--color-primary-2);
   font-family: inherit;
   transition: color 0.2s linear;
   cursor: pointer;
@@ -35,13 +35,12 @@ const PanelLabel = styled.button`
   &:before {
     content: "";
     position: absolute;
-    color: var(--color-primary-3);
     right: 2.5rem;
     top: 50%;
     width: 2.2rem;
     height: 0.2rem;
     margin-top: -1px;
-    background-color: var(--color-primary-3);
+    background-color: var(--color-white-2);
   }
 
   &:before {
@@ -52,7 +51,7 @@ const PanelLabel = styled.button`
   ${(props) =>
     props.expanded &&
     css`
-      color: var(--color-purple-1);
+      color: var(--color-purple-2);
 
       &:before {
         transform: rotate(0deg);
@@ -64,12 +63,12 @@ const PanelInner = styled.div`
   overflow: hidden;
   will-change: height;
   transition: height 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
-  background-color: #607b9613;
+  background-color: var(--color-primary-2);
 `;
 
 const PanelContent = styled.div`
   font-size: 2rem;
-  color: var(--color-primary-3);
+  color: var(--color-white-2);
   opacity: 1;
   transition: opacity 0.3s linear 0.18s;
   padding: 3rem 6rem;
@@ -94,6 +93,10 @@ const PanelContent = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  @media screen and (max-width: 720px) {
+    padding: 2rem 4rem;
   }
 `;
 

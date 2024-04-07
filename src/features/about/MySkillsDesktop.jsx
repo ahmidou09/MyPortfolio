@@ -1,6 +1,6 @@
 import { useAnimate } from "framer-motion";
 import React, { useRef } from "react";
-import skills from "../assets/img/skills-bg_1.png";
+import skills from "../../assets/img/skills-bg_1.png";
 import styled from "styled-components";
 import {
   FaReact,
