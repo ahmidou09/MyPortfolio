@@ -33,11 +33,8 @@ const SideBar = styled(motion.div)`
   right: 0;
   bottom: 0;
   width: 400px;
-  background: var(--color-primary-1);
+  background: var(--color-purple-1);
   opacity: ${(props) => props.opacity};
-
-  @media screen and (max-width: 720px) {
-  }
 
   ul {
     position: absolute;
@@ -64,7 +61,7 @@ function MobileNavbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (isMobile || window.scrollY >= 200) {
+      if (isMobile || window.scrollY >= 100) {
         setSidebarOpacity(1);
       } else {
         setSidebarOpacity(0);

@@ -12,15 +12,12 @@ const panels = [
     label: <h2>ABOUT ME</h2>,
     content: (
       <p>
-        El Mehdi Ahmidou transitioned from a role as a Math Teacher with the
-        Ministry of National Education in Rabat, Morocco, where he delivered
-        tailored instruction to cater to diverse learning needs, fostering
-        personalized learning experiences and collaborating with peers to devise
-        interdisciplinary projects. Subsequently, he pursued a career shift
-        towards technology, enrolling in the Remote Full Stack Web Development
-        Program at MICROVERSE, where he honed his skills in algorithms, data
-        structures, and frontend development while managing projects using
-        JavaScript, React, and Redux.
+        As a Front End Developer, I am passionate about crafting clean code,
+        ensuring accessible design, and developing user interfaces and web
+        applications. I thrive in environments that embrace pair-programming and
+        remote work, With fluency in a variety of programming languages,
+        frameworks, and technologies, I can adapt and scale my skills rapidly
+        and effectively.
       </p>
     ),
   },
@@ -29,16 +26,48 @@ const panels = [
     content: (
       <ul>
         <li>
+          <h6>FREELANCE</h6>
           <h3>Front-End Developer - Remote</h3>
-          <p>Jan 2022 - Present</p>
+          <h5>Jan 2022 - Present</h5>
           <p>
-            Developed capstone projects utilizing various technologies including
-            HTML, CSS, JavaScript, and React.
+            ● Designed, and developed responsive UI for web applications using
+            React.js.
+          </p>
+          <p>
+            ● Interacted with third-party APIs using Redux Toolkit and React
+            Hooks.
+          </p>
+          <p>
+            ● Collaborated with back-end developers to integrate APIs and ensure
+            seamless data exchange.
+          </p>
+          <p>
+            ● Worked closely with designers and product managers to ensure
+            high-quality user experiences.
+          </p>
+          <p>
+            {" "}
+            ● Tested web applications using Jest and React Testing Library.
           </p>
         </li>
         <li>
-          <h3>Math Teacher - Ministry of National Education</h3>
-          <p>Jan 2018 - Jan 2022</p>
+          <h6>MICROVERSE | San Francisco, California, United States</h6>
+          <h3>Code Reviewer (TSE)</h3>
+          <h5>April 2024 - current</h5>
+          <p>
+            ● Giving quality code reviews to students’ projects resulting in
+            improved code quality, by providing constructive feedback.{" "}
+          </p>
+          <p>
+            ● Helping students identify and fix bugs in one-on-one coding
+            sessions thus improving my communication, problem-solving, and
+            debugging skills.{" "}
+          </p>
+        </li>
+        <li>
+          <h6> Ministry of National Education | Morocco</h6>
+          <h3>Math Teacher </h3>
+          <h5>Jan 2018 - Jan 2022</h5>
           <p>
             Delivered tailored instruction, fostered personalized learning
             experiences, and collaborated with peers on interdisciplinary
@@ -53,19 +82,25 @@ const panels = [
     content: (
       <ul>
         <li>
-          <h3>Remote Full Stack Web Development Program - MICROVERSE</h3>
-          <p>May 2023 - Present</p>
+          <h6>MICROVERSE | San Francisco, California, United States</h6>
+          <h3>Remote Full-stack Web Development Program, Full Time</h3>
+          <p>May 2023 - April 2024</p>
           <p>
-            Mastered algorithms, data structures, and frontend development.
-            Managed projects using JavaScript, React, and Redux.
+            - Spent 1300+ hours mastering algorithms, data structures, and
+            full-stack development while simultaneously developing projects with
+            Ruby, Rails, JavaScript, React, and Redux
+          </p>
+          <p>
+            - Developed skills in remote pair-programming using GitHub,
+            industry-standard git-flow, and daily standups to communicate and
+            collaborate with international remote developers
           </p>
         </li>
         <li>
-          <h3>
-            Master's degree in Physics Informatics - Faculty of Sciences Rabat
-          </h3>
+          <h6>University of Mohamed V, Rabat, Morocco</h6>
+          <h3>Master's degree in Physics Informatics</h3>
           <p>Sep 2015 - Sep 2017</p>
-          <p>Gained expertise in mathematics, physics, and programming.</p>
+          <p>- Gained expertise in mathematics, physics, and programming.</p>
         </li>
       </ul>
     ),
@@ -74,12 +109,21 @@ const panels = [
     label: <h2>SKILLS</h2>,
     content: (
       <ul>
-        <li>Front-End: JavaScript, React, Redux, HTML5, CSS3</li>
         <li>
-          Tools & Methods: Git, GitHub, Mobile/Responsive Development, Chrome
-          Dev Tools
+          <strong>Front-End :</strong> JavaScript, React.js, Redux, HTML, CSS3,
+          Sass(SCSS), Tailwind CSS, Bootstrap
         </li>
-        <li>Professional: Remote Pair-Programming, Teamwork</li>
+        <li>
+          <strong>Back-End:</strong> Ruby, Ruby on Rails, PostgreSQL{" "}
+        </li>
+        <li>
+          <strong>Tools & Methods:</strong> Git, GitHub, Mobile/Responsive
+          Development, RSpec, TDD, Jest, Chrome Dev Tools, Webpack{" "}
+        </li>
+        <li>
+          <strong>Professional:</strong> Remote Pair-Programming, Teamwork,
+          Mentoring, User experience design, Strong problem-solving.{" "}
+        </li>
       </ul>
     ),
   },
@@ -156,14 +200,7 @@ function About() {
           </IntroImage>
           <IntroText>
             <h1>Hello, I'm EL MEHDI AHMIDOU 🙂</h1>
-            <p>
-              {" "}
-              I’m Front End Developer, located in Rabat, Morocco. With an
-              experience of 4 years, I have built web applications for clients
-              from different countries and industries. My main objective is to
-              create interfaces that are engaging, accessible, and
-              high-performing for humans.
-            </p>
+            <p> I'm a Front End Developer from Rabat, Morocco.</p>
             <ComponentStatistics />
           </IntroText>
         </IntroContainer>

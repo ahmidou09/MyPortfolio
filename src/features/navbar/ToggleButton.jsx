@@ -9,7 +9,7 @@ const Button = styled.button`
   border-radius: 50%;
   top: 25px;
   right: 25px;
-  background-color: var(--color-white);
+  background-color: var(--color-purple-1);
   border: none;
   cursor: pointer;
 `;
@@ -20,7 +20,7 @@ const ToggleButton = ({ setOpen }) => {
       <svg width="23" height="23" viewBox="0 0 23 23">
         <motion.path
           strokeWidth="3"
-          stroke="black"
+          stroke={`var(--color-white)`}
           strokeLinecap="round"
           variants={{
             closed: { d: "M 2 2.5 L 20 2.5" },
@@ -29,7 +29,7 @@ const ToggleButton = ({ setOpen }) => {
         />
         <motion.path
           strokeWidth="3"
-          stroke="black"
+          stroke={`var(--color-white)`}
           strokeLinecap="round"
           d="M 2 9.423 L 20 9.423"
           variants={{
@@ -39,7 +39,7 @@ const ToggleButton = ({ setOpen }) => {
         />
         <motion.path
           strokeWidth="3"
-          stroke="black"
+          stroke={`var(--color-white)`}
           strokeLinecap="round"
           variants={{
             closed: { d: "M 2 16.346 L 20 16.346" },

@@ -6,11 +6,11 @@ import hero from "../assets/img/hero.png";
 import Character from "../features/about/Character";
 import MyProjects from "../features/projects/MyProjects";
 import { Link } from "react-router-dom";
-import MainButton from "../ui/Button";
 import Skills from "../features/about/Skills";
 import ScrollingText from "../features/about/ScrollingText";
 import Footer from "../features/footer/Footer";
 import TransitionAnim from "../ui/TransitionAnim";
+import ShowMoreLink from "../ui/ShowMoreLink";
 
 function Home() {
   return (
@@ -41,11 +41,11 @@ function Home() {
           <h3>My Work</h3>
           <MyProjects element={6} displayMode="grid" />
           <ShowMore>
-            <MainButton>
+            <ShowMoreLink>
               <Link to="/projects" onClick={() => window.scrollTo(0, 0)}>
                 <span>Show more</span>
               </Link>
-            </MainButton>
+            </ShowMoreLink>
           </ShowMore>
         </SectionWork>
         <Footer />
@@ -153,6 +153,8 @@ const SectionAbout = styled.div`
 
 const SectionWork = styled.div`
   background-color: var(--color-primary-3);
+  border-bottom: 1px solid var(--color-white);
+  padding: 10rem 0;
 
   h3 {
     color: var(--color-white);
@@ -169,19 +171,6 @@ const ShowMore = styled.div`
   justify-content: center;
   align-items: center;
   padding: 3rem;
-  a {
-    color: var(--color-white);
-    font-size: 2rem;
-    font-weight: 500;
-  }
-
-  span {
-    margin: 0 1rem;
-    background-color: var(--color-white);
-    color: var(--color-primary-3);
-    padding: 0.5rem 1.5rem;
-    border-radius: 100rem;
-  }
 `;
 
 const paragraph =

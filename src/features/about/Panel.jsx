@@ -76,6 +76,12 @@ const PanelContent = styled.div`
 
   p {
     margin-bottom: 2rem;
+    margin-left: 3rem;
+  }
+
+  h5 {
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--color-white-2);
   }
 
   li {

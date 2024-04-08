@@ -94,7 +94,6 @@ function Projects() {
 
         <MyProjects
           style={{ marginTop: "5rem", backgroundColor: "transparent" }}
-          color="var(--color-primary-3)"
           displayMode={displayMode}
         />
         <Footer />

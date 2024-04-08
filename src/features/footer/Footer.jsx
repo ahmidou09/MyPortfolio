@@ -1,16 +1,16 @@
 import React from "react";
-import HoverButton from "../../ui/HoverButton";
 import styled from "styled-components";
 import SocialLinks from "./SocialLinks";
 import { Link } from "react-router-dom";
+import HoverButton from "../../ui/HoverButton";
 
 const BoxContact = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5rem 1rem;
+  padding: 5rem 3rem;
 
-  @media only screen and (max-width: 720px) {
+  @media only screen and (max-width: 900px) {
     flex-direction: column;
     gap: 3rem;
   }

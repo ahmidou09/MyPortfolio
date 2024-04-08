@@ -73,7 +73,7 @@ const SocialItem = styled.li`
     height: 6rem;
     text-align: center;
     line-height: 6.3rem;
-    background: var(--color-grey-1);
+    background: var(--color-purple-1);
     border-radius: 50%;
     font-size: 3rem;
     color: var(--color-white);

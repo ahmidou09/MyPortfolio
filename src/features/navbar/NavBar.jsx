@@ -9,7 +9,7 @@ function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      window.scrollY > 200
+      window.scrollY > 100
         ? setShowMobileNavbar(true)
         : setShowMobileNavbar(false);
     };

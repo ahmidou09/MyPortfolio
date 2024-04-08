@@ -31,6 +31,16 @@ const ButtonBack = styled(Link)`
   z-index: 9999;
   padding: 0.5rem 1rem;
 
+  @media only screen and (max-width: 720px) {
+    position: absolute;
+    top: 2%;
+    border-radius: 0;
+    padding: 0.5rem 1rem;
+    height: 5rem;
+    font-size: 1.4rem;
+    width: auto;
+  }
+
   span {
     margin: 0.5rem;
     transition: transform 0.5s;
@@ -58,16 +68,28 @@ const TitleSection = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media only screen and (max-width: 720px) {
+    height: 40vh;
+  }
 `;
 
 const ProjectHeading = styled.h1`
   font-size: 6.5rem;
   margin-bottom: 0.5rem;
+
+  @media only screen and (max-width: 720px) {
+    font-size: 5rem;
+  }
 `;
 
 const ProjectSubheading = styled.h2`
   font-size: 3.2rem;
   margin-bottom: 2rem;
+
+  @media only screen and (max-width: 720px) {
+    font-size: 2.5rem;
+  }
 `;
 
 const ProjectOverview = styled.section`
@@ -165,6 +187,10 @@ const NextProjectSection = styled.div`
   justify-content: center;
   background-color: var(--color-primary-2);
 
+  @media only screen and (max-width: 720px) {
+    height: 30vh;
+  }
+
   h3 {
     font-size: 2.2rem;
     margin-bottom: 1rem;
@@ -189,6 +215,10 @@ const NextProjectButton = styled(Link)`
     transition: all 0.5s ease-in-out;
     font-weight: 300;
     text-decoration: underline var(--color-purple-1) 4px;
+
+    @media screen and (max-width: 720px) {
+      font-size: 6rem;
+    }
   }
 
   &:hover > span {
@@ -227,6 +257,10 @@ const ProjectView = () => {
 
   return (
     <TransitionAnim>
+      <ButtonBack to="/projects" onClick={() => window.scrollTo(0, 0)}>
+        {" "}
+        <span>←</span> GO BACK
+      </ButtonBack>
       <ProjectViewContainer>
         <TitleSection>
           <ProjectHeading>{project.heading}</ProjectHeading>
@@ -261,10 +295,6 @@ const ProjectView = () => {
             <Button to={project.githubLink} target="_blank">
               GITHUB
             </Button>
-            <ButtonBack to="/projects" onClick={() => window.scrollTo(0, 0)}>
-              {" "}
-              <span>←</span> GO BACK
-            </ButtonBack>
           </LiveSection>
         </Wrapper>
         <NextProjectSection>
