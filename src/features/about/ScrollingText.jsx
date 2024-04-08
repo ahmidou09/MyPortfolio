@@ -47,7 +47,7 @@ function ScrollingText({ name }) {
       gsap.killTweensOf(secondTextRef);
       gsap.killTweensOf(sliderRef);
     };
-  }, []);
+  }, [direction]);
 
   return (
     <ScrollingTextContainer ref={slider}>
