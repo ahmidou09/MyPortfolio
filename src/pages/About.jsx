@@ -26,9 +26,8 @@ const panels = [
     content: (
       <ul>
         <li>
-          <h6>FREELANCE</h6>
-          <h3>Front-End Developer - Remote</h3>
-          <h5>Jan 2022 - Present</h5>
+          <h3>Front-End Developer | Freelance | Remote </h3>
+          <h5>Jan 2022 - current</h5>
           <p>
             ● Designed, and developed responsive UI for web applications using
             React.js.
@@ -51,8 +50,10 @@ const panels = [
           </p>
         </li>
         <li>
-          <h6>MICROVERSE | San Francisco, California, United States</h6>
-          <h3>Code Reviewer (TSE)</h3>
+          <h3>
+            Code Reviewer | MICROVERSE | San Francisco, California, United
+            States
+          </h3>
           <h5>April 2024 - current</h5>
           <p>
             ● Giving quality code reviews to students’ projects resulting in
@@ -65,8 +66,8 @@ const panels = [
           </p>
         </li>
         <li>
-          <h6> Ministry of National Education | Morocco</h6>
-          <h3>Math Teacher </h3>
+          <h6> </h6>
+          <h3>Math Teacher | Ministry of National Education | Morocco </h3>
           <h5>Jan 2018 - Jan 2022</h5>
           <p>
             Delivered tailored instruction, fostered personalized learning
@@ -84,7 +85,7 @@ const panels = [
         <li>
           <h6>MICROVERSE | San Francisco, California, United States</h6>
           <h3>Remote Full-stack Web Development Program, Full Time</h3>
-          <p>May 2023 - April 2024</p>
+          <h5>May 2023 - April 2024</h5>
           <p>
             - Spent 1300+ hours mastering algorithms, data structures, and
             full-stack development while simultaneously developing projects with
@@ -99,7 +100,7 @@ const panels = [
         <li>
           <h6>University of Mohamed V, Rabat, Morocco</h6>
           <h3>Master's degree in Physics Informatics</h3>
-          <p>Sep 2015 - Sep 2017</p>
+          <h5>Sep 2015 - Sep 2017</h5>
           <p>- Gained expertise in mathematics, physics, and programming.</p>
         </li>
       </ul>

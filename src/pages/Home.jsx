@@ -41,11 +41,11 @@ function Home() {
           <h3>My Work</h3>
           <MyProjects element={6} displayMode="grid" />
           <ShowMore>
-            <ShowMoreLink>
-              <Link to="/projects" onClick={() => window.scrollTo(0, 0)}>
+            <Link to="/projects" onClick={() => window.scrollTo(0, 0)}>
+              <ShowMoreLink>
                 <span>Show more</span>
-              </Link>
-            </ShowMoreLink>
+              </ShowMoreLink>
+            </Link>
           </ShowMore>
         </SectionWork>
         <Footer />
