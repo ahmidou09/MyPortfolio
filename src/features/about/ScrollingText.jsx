@@ -7,7 +7,7 @@ function ScrollingText({ name }) {
   const firstText = useRef(null);
   const secondText = useRef(null);
   const slider = useRef(null);
-  let xPercent = 0;
+  const xPercentRef = useRef(0);
   let direction = -1;
 
   useEffect(() => {
@@ -28,15 +28,15 @@ function ScrollingText({ name }) {
     });
 
     const animate = () => {
-      if (xPercent < -100) {
-        xPercent = 0;
-      } else if (xPercent > 0) {
-        xPercent = -100;
+      if (xPercentRef.current < -100) {
+        xPercentRef.current = 0;
+      } else if (xPercentRef.current > 0) {
+        xPercentRef.current = -100;
       }
-      gsap.set(firstTextRef, { xPercent: xPercent });
-      gsap.set(secondTextRef, { xPercent: xPercent });
+      gsap.set(firstTextRef, { xPercent: xPercentRef.current });
+      gsap.set(secondTextRef, { xPercent: xPercentRef.current });
       requestAnimationFrame(animate);
-      xPercent += 0.1 * direction;
+      xPercentRef.current += 0.1 * direction;
     };
 
     requestAnimationFrame(animate);
@@ -47,7 +47,7 @@ function ScrollingText({ name }) {
       gsap.killTweensOf(secondTextRef);
       gsap.killTweensOf(sliderRef);
     };
-  }, []);
+  }, [name]);
 
   return (
     <ScrollingTextContainer ref={slider}>
