@@ -18,7 +18,7 @@ const SPRING_OPTIONS = {
 const Container = styled.div`
   position: relative;
   overflow: hidden;
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
   margin-bottom: 5rem;
 `;

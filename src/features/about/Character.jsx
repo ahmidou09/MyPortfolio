@@ -8,7 +8,7 @@ const ParagraphContainer = styled(motion.p)`
   line-height: 1;
   padding: 4rem;
   max-width: 120rem;
-  color: var(--color-primary-1);
+  color: var(--color-white);
   flex-wrap: wrap;
   margin: 0 auto;
 

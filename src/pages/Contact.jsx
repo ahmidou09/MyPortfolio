@@ -51,12 +51,22 @@ const ContactDetails = styled.div`
 
   h2 {
     font-size: 5rem;
+    font-weight: 300;
+
+    @media screen and (max-width: 720px) {
+      text-align: center;
+      font-size: 4rem;
+    }
   }
 
   span {
     font-size: 3.2rem;
     font-weight: 500;
     display: block;
+  }
+
+  @media screen and (max-width: 720px) {
+    align-items: center;
   }
 `;
 

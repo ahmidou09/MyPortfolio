@@ -60,7 +60,10 @@ const BoxSocial = styled.ul`
   align-items: center;
   justify-content: center;
   gap: 3rem;
-  //padding: 4rem;
+
+  @media screen and (max-width: 720px) {
+    gap: 1.5rem;
+  }
 `;
 
 const SocialItem = styled.li`
@@ -78,6 +81,12 @@ const SocialItem = styled.li`
     font-size: 3rem;
     color: var(--color-white);
     transition: 0.5s;
+
+    @media screen and (max-width: 720px) {
+      width: 4rem;
+      height: 4rem;
+      line-height: 4.3rem;
+    }
   }
 
   a::before {
@@ -88,7 +97,7 @@ const SocialItem = styled.li`
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background: var(--color-button-p-3);
+    background: var(--color-white);
     transition: 0.5s;
     transform: scale(0.9);
     z-index: -1;
@@ -96,18 +105,23 @@ const SocialItem = styled.li`
 
   a:hover::before {
     transform: scale(1.1);
-    box-shadow: 0 0 1.5rem var(--color-button-p-3);
+    box-shadow: 0 0 1.5rem var(--color-white);
   }
 
   a:hover {
-    color: var(--color-button-p-3);
-    box-shadow: 0 0 0.5rem var(--color-button-p-3);
-    text-shadow: 0 0 0.5rem var(--color-button-p-3);
+    color: var(--color-white);
+    box-shadow: 0 0 0.5rem var(--color-white);
+    text-shadow: 0 0 0.5rem var(--color-white);
   }
 
   svg {
     width: 2.5rem;
     height: 2.5rem;
+
+    @media screen and (max-width: 720px) {
+      width: 2rem;
+      height: 2rem;
+    }
   }
 `;
 

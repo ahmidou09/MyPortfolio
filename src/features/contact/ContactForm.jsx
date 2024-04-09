@@ -5,6 +5,10 @@ const Form = styled.form``;
 const FormcarryBlock = styled.div`
   position: relative;
   width: 40rem;
+
+  @media screen and (max-width: 720px) {
+    width: 100%;
+  }
 `;
 
 const Label = styled.label`

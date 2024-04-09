@@ -51,7 +51,7 @@ const PanelLabel = styled.button`
   ${(props) =>
     props.expanded &&
     css`
-      color: var(--color-purple-2);
+      color: var(--color-white);
 
       &:before {
         transform: rotate(0deg);

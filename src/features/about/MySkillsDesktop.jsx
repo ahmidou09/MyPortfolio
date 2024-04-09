@@ -21,15 +21,27 @@ const SkillsContainer = styled.div`
 `;
 
 const Section = styled.div`
-  height: 100vh;
+  height: 90vh;
   width: 100%;
-  display: grid;
-  place-content: center;
-  background-image: url(${skills});
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, #011627f9, #01080ef8),
+    url(${skills});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
-  opacity: 0.09;
+
+  h2 {
+    color: var(--color-white);
+    font-size: 12rem;
+    font-weight: 300;
+    transition: opacity 0.2s ease-in;
+  }
+
+  &:hover h2 {
+    opacity: 0;
+  }
 `;
 
 const MouseIcon = styled.div`
@@ -64,7 +76,9 @@ const Skills = () => {
         <FaGitAlt color="#E84E31" />,
       ]}
     >
-      <Section />
+      <Section>
+        <h2>My Skills</h2>
+      </Section>
     </MouseImageTrail>
   );
 };

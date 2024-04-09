@@ -38,7 +38,7 @@ function Home() {
           <Skills />
         </SectionAbout>
         <SectionWork>
-          <h3>My Work</h3>
+          <h3>My Recent Work</h3>
           <MyProjects element={6} displayMode="grid" />
           <ShowMore>
             <Link to="/projects" onClick={() => window.scrollTo(0, 0)}>
@@ -68,6 +68,10 @@ const Header = styled.header`
 
   h4 {
     text-shadow: 0 0 10px var(--color-purple-1), 0 0 20px var(--color-purple-1);
+
+    @media screen and (max-width: 720px) {
+      font-size: 4rem;
+    }
   }
 
   @media screen and (max-width: 720px) {
@@ -110,10 +114,10 @@ const LocatedRight = styled.div`
 
   @media screen and (max-width: 720px) {
     position: absolute;
+    padding: 1rem;
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 5rem 2rem;
   }
 `;
 
@@ -143,12 +147,12 @@ const ScrollingTextContainer = styled.div`
   top: calc(100vh - 35rem);
 
   @media screen and (max-width: 720px) {
-    top: calc(100vh - 70rem);
+    top: calc(100vh - 58rem);
   }
 `;
 
 const SectionAbout = styled.div`
-  background-color: var(--color-white);
+  background-color: var(--color-primary-2);
 `;
 
 const SectionWork = styled.div`

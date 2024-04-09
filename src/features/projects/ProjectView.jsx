@@ -175,7 +175,7 @@ const Button = styled(Link)`
   display: inline-block;
 
   &:hover {
-    background-color: var(--color-purple-2);
+    background-color: var(--color-button-p-1);
   }
 `;
 
