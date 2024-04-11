@@ -15,7 +15,7 @@ const Container = styled.div`
     margin-bottom: 2rem;
     padding: 0 3rem;
 
-    @media screen and (max-width: 720px) {
+    @media screen and (max-width: 900px) {
       font-size: 6rem;
       text-align: center;
     }
@@ -27,18 +27,22 @@ const InfoParagraph = styled.p`
   font-size: 1.9rem;
   padding: 0 3rem;
 
-  @media screen and (max-width: 720px) {
+  @media screen and (max-width: 900px) {
     text-align: center;
   }
 `;
 
 const InfoDetails = styled.div`
   display: flex;
-  justify-content: center;
-  gap: 10rem;
+  justify-content: space-between;
+  gap: 4rem;
+  padding: 0 3rem;
+
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+  }
 
   @media screen and (max-width: 720px) {
-    flex-direction: column;
     gap: 5rem;
     padding: 0 5rem;
   }
@@ -53,7 +57,7 @@ const ContactDetails = styled.div`
     font-size: 5rem;
     font-weight: 300;
 
-    @media screen and (max-width: 720px) {
+    @media screen and (max-width: 900px) {
       text-align: center;
       font-size: 4rem;
     }
@@ -65,7 +69,7 @@ const ContactDetails = styled.div`
     display: block;
   }
 
-  @media screen and (max-width: 720px) {
+  @media screen and (max-width: 900px) {
     align-items: center;
   }
 `;

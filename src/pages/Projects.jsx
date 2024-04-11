@@ -6,6 +6,7 @@ import { useSearchParams } from "react-router-dom";
 import { CiBoxList } from "react-icons/ci";
 import { IoGridOutline } from "react-icons/io5";
 import TransitionAnim from "../ui/TransitionAnim";
+import Magnetic from "../ui/Magnetic";
 
 const Container = styled.div`
   max-width: 120rem;
@@ -14,16 +15,19 @@ const Container = styled.div`
   h1 {
     font-size: 8rem;
     color: var(--color-white);
+    padding: 0 3rem;
     @media screen and (max-width: 720px) {
       font-size: 6rem;
       text-align: center;
       margin-bottom: 4rem;
+      padding: 1rem;
     }
   }
 `;
 
 const ButtonContainer = styled.div`
   margin-top: 2rem;
+  padding: 0 3rem;
   display: flex;
   justify-content: end;
   @media screen and (max-width: 720px) {
@@ -69,17 +73,19 @@ function Projects() {
         <h1>My Projects</h1>
 
         <ButtonContainer>
-          <Button onClick={toggleDisplayMode}>
-            {displayMode === "list" ? <IoGridOutline /> : <CiBoxList />}
-            {displayMode === "list" ? "Grid View" : "List View"}
-          </Button>
+          <Magnetic>
+            <Button onClick={toggleDisplayMode}>
+              {displayMode === "list" ? <IoGridOutline /> : <CiBoxList />}
+              {displayMode === "list" ? "Grid View" : "List View"}
+            </Button>
+          </Magnetic>
         </ButtonContainer>
 
         <MyProjects
           style={{ marginTop: "5rem", backgroundColor: "transparent" }}
           displayMode={displayMode}
         />
-        <Footer />
+        <Footer style={{ backgroundColor: "var(--color-primary-2)" }} />
       </Container>
     </TransitionAnim>
   );

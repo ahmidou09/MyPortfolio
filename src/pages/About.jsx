@@ -201,7 +201,7 @@ function About() {
           </IntroImage>
           <IntroText>
             <h1>Hello, I'm EL MEHDI AHMIDOU 🙂</h1>
-            <p> I'm a Front End Developer from Rabat, Morocco.</p>
+            <p> I'm a Front End Developer from Morocco.</p>
             <ComponentStatistics />
           </IntroText>
         </IntroContainer>

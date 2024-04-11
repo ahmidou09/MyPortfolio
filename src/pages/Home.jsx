@@ -11,6 +11,7 @@ import ScrollingText from "../features/about/ScrollingText";
 import Footer from "../features/footer/Footer";
 import TransitionAnim from "../ui/TransitionAnim";
 import ShowMoreLink from "../ui/ShowMoreLink";
+import SlidingImages from "../ui/SlidingImages";
 
 function Home() {
   return (
@@ -48,6 +49,9 @@ function Home() {
             </Link>
           </ShowMore>
         </SectionWork>
+        <SectionSlidingImages>
+          <SlidingImages />
+        </SectionSlidingImages>
         <Footer />
       </HomeContainer>
     </TransitionAnim>
@@ -71,6 +75,7 @@ const Header = styled.header`
 
     @media screen and (max-width: 720px) {
       font-size: 4rem;
+      text-align: center;
     }
   }
 
@@ -147,7 +152,7 @@ const ScrollingTextContainer = styled.div`
   top: calc(100vh - 35rem);
 
   @media screen and (max-width: 720px) {
-    top: calc(100vh - 58rem);
+    top: calc(100vh - 54rem);
   }
 `;
 
@@ -157,7 +162,6 @@ const SectionAbout = styled.div`
 
 const SectionWork = styled.div`
   background-color: var(--color-primary-3);
-  border-bottom: 1px solid var(--color-white);
   padding: 10rem 0;
 
   h3 {
@@ -168,6 +172,12 @@ const SectionWork = styled.div`
     font-weight: 500;
     margin-bottom: 2rem;
   }
+`;
+
+const SectionSlidingImages = styled.div`
+  padding: 10rem 0;
+  background-color: var(--color-primary-2);
+  overflow: hidden;
 `;
 
 const ShowMore = styled.div`

@@ -1,5 +1,5 @@
 import React from "react";
-import HoverButton from "./HoverButton";
+import Magnetic from "./Magnetic";
 import styled from "styled-components";
 
 const Button = styled.button`
@@ -13,9 +13,9 @@ const Button = styled.button`
 
 function MainButton({ children }) {
   return (
-    <HoverButton>
+    <Magnetic>
       <Button>{children}</Button>
-    </HoverButton>
+    </Magnetic>
   );
 }
 
