@@ -1,13 +1,13 @@
 import React from "react";
 import { FaLinkedinIn, FaGithub, FaFacebook } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
-import HoverButton from "../../ui/HoverButton";
+import Magnetic from "../../ui/Magnetic";
 import styled from "styled-components";
 
 function SocialLinks({ style }) {
   return (
     <BoxSocial style={style}>
-      <HoverButton>
+      <Magnetic>
         <SocialItem>
           <a
             href={"https://www.linkedin.com/in/el-mehdi-ahmidou-312590125/"}
@@ -17,8 +17,8 @@ function SocialLinks({ style }) {
             <FaLinkedinIn />
           </a>
         </SocialItem>
-      </HoverButton>
-      <HoverButton>
+      </Magnetic>
+      <Magnetic>
         <SocialItem>
           <a
             href={"https://github.com/ahmidou09/"}
@@ -28,8 +28,8 @@ function SocialLinks({ style }) {
             <FaGithub />
           </a>
         </SocialItem>
-      </HoverButton>
-      <HoverButton>
+      </Magnetic>
+      <Magnetic>
         <SocialItem>
           <a
             href={"https://www.facebook.com/mehdi.ahmidou"}
@@ -39,8 +39,8 @@ function SocialLinks({ style }) {
             <FaFacebook />
           </a>
         </SocialItem>
-      </HoverButton>
-      <HoverButton>
+      </Magnetic>
+      <Magnetic>
         <SocialItem>
           <a
             href={"https://twitter.com/el_ahmidou"}
@@ -50,7 +50,7 @@ function SocialLinks({ style }) {
             <BsTwitterX />
           </a>
         </SocialItem>
-      </HoverButton>
+      </Magnetic>
     </BoxSocial>
   );
 }
@@ -60,6 +60,11 @@ const BoxSocial = styled.ul`
   align-items: center;
   justify-content: center;
   gap: 3rem;
+  margin-top: 3rem;
+
+  @media screen and (max-width: 900px) {
+    gap: 2rem;
+  }
 
   @media screen and (max-width: 720px) {
     gap: 1.5rem;
@@ -81,6 +86,12 @@ const SocialItem = styled.li`
     font-size: 3rem;
     color: var(--color-white);
     transition: 0.5s;
+
+    @media screen and (max-width: 900px) {
+      width: 5rem;
+      height: 5rem;
+      line-height: 5.3rem;
+    }
 
     @media screen and (max-width: 720px) {
       width: 4rem;
@@ -117,6 +128,11 @@ const SocialItem = styled.li`
   svg {
     width: 2.5rem;
     height: 2.5rem;
+
+    @media screen and (max-width: 900px) {
+      width: 2.25rem;
+      height: 2.25rem;
+    }
 
     @media screen and (max-width: 720px) {
       width: 2rem;

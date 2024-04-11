@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 const ParagraphContainer = styled(motion.p)`
   display: flex;
+  justify-content: center;
   font-size: 6rem;
   line-height: 1;
   padding: 4rem;

@@ -2,7 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import SocialLinks from "./SocialLinks";
 import { Link } from "react-router-dom";
-import HoverButton from "../../ui/HoverButton";
+import Magnetic from "../../ui/Magnetic";
+
+const FooterContainer = styled.footer`
+  padding: 12rem 0;
+  height: 100vh;
+`;
 
 const BoxContact = styled.div`
   display: flex;
@@ -32,7 +37,7 @@ const SectionContact = styled.section`
 const Wrapper = styled.div`
   max-width: 120rem;
   margin: 0 auto;
-  padding: 12rem 0 5rem 0;
+  padding: 5rem 0;
 
   h2 {
     font-size: 8rem;
@@ -53,7 +58,6 @@ const Line = styled.hr`
   background-color: var(--color-white);
   border: none;
   border-radius: 5rem;
-  margin-bottom: 4rem;
 `;
 
 const GetTouch = styled.button`
@@ -78,33 +82,35 @@ const SectionCopyright = styled.div`
 
 function Footer({ style }) {
   return (
-    <SectionContact style={style}>
-      <Wrapper>
-        <h2>Let’s work together</h2>
-        <Line />
-        <BoxContact>
-          <Enfo>
-            <span>ahmidouem@gmail.com</span>
-          </Enfo>
-          <HoverButton>
-            <GetTouch>
-              <Link to="/contact">Get in touch</Link>
-            </GetTouch>
-          </HoverButton>
-          <Enfo>
-            <span>+212673235339</span>
-          </Enfo>
-        </BoxContact>
-        <Line />
-        <SocialLinks />
-      </Wrapper>
-      <SectionCopyright>
-        <p>
-          &copy; {new Date().getFullYear()} El Mehdi Ahmidou. All rights
-          reserved.
-        </p>
-      </SectionCopyright>
-    </SectionContact>
+    <FooterContainer style={style}>
+      <SectionContact style={style}>
+        <Wrapper>
+          <h2>Let’s work together</h2>
+          <Line />
+          <BoxContact>
+            <Enfo>
+              <span>ahmidouem@gmail.com</span>
+            </Enfo>
+            <Magnetic>
+              <GetTouch>
+                <Link to="/contact">Get in touch</Link>
+              </GetTouch>
+            </Magnetic>
+            <Enfo>
+              <span>+212673235339</span>
+            </Enfo>
+          </BoxContact>
+          <Line />
+          <SocialLinks />
+        </Wrapper>
+        <SectionCopyright>
+          <p>
+            &copy; {new Date().getFullYear()} El Mehdi Ahmidou. All rights
+            reserved.
+          </p>
+        </SectionCopyright>
+      </SectionContact>
+    </FooterContainer>
   );
 }
 

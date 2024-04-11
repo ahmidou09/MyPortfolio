@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import styled, { css } from "styled-components";
-import HoverButton from "../../ui/HoverButton";
+import Magnetic from "../../ui/Magnetic";
 
 const StyledDesktopNavbar = styled.header`
   display: flex;
@@ -14,9 +14,7 @@ const StyledDesktopNavbar = styled.header`
   ${(props) =>
     props.$isProjectPage &&
     css`
-      background-color: var(
-        --color-primary-3
-      );
+      background-color: var(--color-primary-3);
     `}
 `;
 
@@ -120,7 +118,7 @@ function DesktopNavbar() {
   const isProjectPage = location.pathname.match(/^\/projects\/\d+/);
   return (
     <StyledDesktopNavbar $isProjectPage={!!isProjectPage}>
-      <HoverButton>
+      <Magnetic>
         <Link to="/">
           <ButtonText>
             <div className="copy">
@@ -133,25 +131,25 @@ function DesktopNavbar() {
             </div>
           </ButtonText>
         </Link>
-      </HoverButton>
+      </Magnetic>
 
       <Nav>
         <ul>
-          <HoverButton>
+          <Magnetic>
             <li>
               <NavLinkWithHover to="/projects">Projects</NavLinkWithHover>
             </li>
-          </HoverButton>
-          <HoverButton>
+          </Magnetic>
+          <Magnetic>
             <li>
               <NavLinkWithHover to="/about">About-me</NavLinkWithHover>
             </li>
-          </HoverButton>
-          <HoverButton>
+          </Magnetic>
+          <Magnetic>
             <li>
               <NavLinkWithHover to="/contact">Contact</NavLinkWithHover>
             </li>
-          </HoverButton>
+          </Magnetic>
         </ul>
       </Nav>
     </StyledDesktopNavbar>

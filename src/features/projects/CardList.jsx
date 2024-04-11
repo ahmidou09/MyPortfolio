@@ -117,10 +117,14 @@ const LinkWrapper = styled(motion.a)`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 2px solid
-    ${(props) => (props.color ? props.color : "var(--color-grey-0)")};
+
   padding: 3rem;
   transition: border-color 0.5s;
+
+  &:not(:last-child) {
+    border-bottom: 2px solid
+      ${(props) => (props.color ? props.color : "var(--color-grey-0)")};
+  }
 
   &:hover span {
     color: var(--color-white-2);

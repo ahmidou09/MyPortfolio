@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import MobileNavbar from "./MobileNavbar";
 import DesktopNavbar from "./DesktopNavbar";
 import useIsMobile from "../../hooks/useIsMobile";
+import MobileNavbar from "./MobileNavbar";
 
 function Navbar() {
   const isMobile = useIsMobile();

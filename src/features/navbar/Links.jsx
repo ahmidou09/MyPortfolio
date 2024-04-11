@@ -1,91 +1,57 @@
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import SocialLinks from "../footer/SocialLinks";
+import { motion } from "framer-motion";
+import styled from "styled-components";
 
-const variants = {
-  open: {
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-  closed: {
-    transition: {
-      staggerChildren: 0.05,
-      staggerDirection: -1,
-    },
-  },
-};
-const itemVariants = {
-  open: {
-    y: 0,
-    opacity: 1,
-  },
-  closed: {
-    y: 50,
-    opacity: 0,
-  },
+const slide = {
+  initial: { x: 80 },
+  enter: (i) => ({
+    x: 0,
+    transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.05 * i },
+  }),
+  exit: (i) => ({
+    x: 80,
+    transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.05 * i },
+  }),
 };
 
-const Links = ({ handleCloseSidebar }) => {
-  const handleLinkClick = () => {
-    handleCloseSidebar();
-  };
+const scale = {
+  open: { scale: 1, transition: { duration: 0.3 } },
+  closed: { scale: 0, transition: { duration: 0.4 } },
+};
 
+const LinksContainer = styled(motion.div)`
+  position: relative;
+  display: flex;
+  align-items: center;
+`;
+
+const Indicator = styled(motion.div)`
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--color-white);
+  border-radius: 50%;
+  position: absolute;
+  left: -3rem;
+`;
+
+export default function Links({
+  data: { title, href, index },
+  isActive,
+  setSelectedIndicator,
+}) {
   return (
-    <motion.ul variants={variants}>
-      <motion.li
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        variants={itemVariants}
-      >
-        <Link to="/" onClick={handleLinkClick}>
-          Home
-        </Link>
-      </motion.li>
-      <motion.li
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        variants={itemVariants}
-      >
-        <Link to="/projects" onClick={handleLinkClick}>
-          Projects
-        </Link>
-      </motion.li>
-      <motion.li
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        variants={itemVariants}
-      >
-        <Link to="/contact" onClick={handleLinkClick}>
-          Contact
-        </Link>
-      </motion.li>
-      <motion.li
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        variants={itemVariants}
-      >
-        <Link to="/about" onClick={handleLinkClick}>
-          About
-        </Link>
-      </motion.li>
-
-      <motion.li
-        whileHover={{ scale: 0.95 }}
-        whileTap={{ scale: 0.95 }}
-        variants={itemVariants}
-      >
-        <SocialLinks
-          style={{
-            position: "static",
-            display: "flex",
-            flexDirection: "row",
-            marginTop: "20rem",
-          }}
-        />
-      </motion.li>
-    </motion.ul>
+    <LinksContainer
+      onMouseEnter={() => setSelectedIndicator(href)}
+      custom={index}
+      variants={slide}
+      initial="initial"
+      animate="enter"
+      exit="exit"
+    >
+      <Indicator variants={scale} animate={isActive ? "open" : "closed"} />
+      <Link to={href} aria-label={title}>
+        {title}
+      </Link>
+    </LinksContainer>
   );
-};
-
-export default Links;
+}

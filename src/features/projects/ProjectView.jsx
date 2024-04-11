@@ -11,46 +11,6 @@ const ProjectViewContainer = styled.div`
   position: relative;
 `;
 
-const ButtonBack = styled(Link)`
-  position: fixed;
-  width: 10rem;
-  height: 10rem;
-  padding: 1rem;
-  border-radius: 50%;
-  top: 15%;
-  left: 2rem;
-  background: none;
-  border: none;
-  color: var(--color-white-2);
-  background-color: var(--color-purple-1);
-  font-size: 1.2rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  z-index: 9999;
-  padding: 0.5rem 1rem;
-
-  @media only screen and (max-width: 720px) {
-    position: absolute;
-    top: 2%;
-    border-radius: 0;
-    padding: 0.5rem 1rem;
-    height: 5rem;
-    font-size: 1.4rem;
-    width: auto;
-  }
-
-  span {
-    margin: 0.5rem;
-    transition: transform 0.5s;
-  }
-
-  &:hover span {
-    transform: translateX(-0.5rem);
-  }
-`;
-
 const Wrapper = styled.div`
   max-width: 120rem;
   margin: 0 auto;
@@ -257,10 +217,6 @@ const ProjectView = () => {
 
   return (
     <TransitionAnim>
-      <ButtonBack to="/projects" onClick={() => window.scrollTo(0, 0)}>
-        {" "}
-        <span>←</span> GO BACK
-      </ButtonBack>
       <ProjectViewContainer>
         <TitleSection>
           <ProjectHeading>{project.heading}</ProjectHeading>

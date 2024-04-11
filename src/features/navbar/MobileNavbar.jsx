@@ -1,97 +1,95 @@
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import Links from "./Links";
-import ToggleButton from "./ToggleButton";
+import { useEffect, useState } from "react";
+import { AnimatePresence } from "framer-motion";
 import styled from "styled-components";
-import useIsMobile from "../../hooks/useIsMobile";
+import Menu from "./Menu";
+import Magnetic from "../../ui/Magnetic";
 
-const variants = {
-  open: {
-    clipPath: "circle(1200px at 350px 50px)",
-    transition: {
-      delay: 0,
-      type: "spring",
-      stiffness: 40,
-      restDelta: 10,
-    },
-  },
-  closed: {
-    clipPath: "circle(24px at 350px 50px)",
-    transition: {
-      delay: 0,
-      type: "spring",
-      stiffness: 2000,
-      damping: 4000,
-    },
-  },
-};
+const MainContainer = styled.div`
+  .header {
+    padding: 3rem;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 9999;
 
-const SideBar = styled(motion.div)`
-  z-index: 9999;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 400px;
-  background: var(--color-purple-1);
-  opacity: ${(props) => props.opacity};
-
-  ul {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-
-    a {
-      font-size: 40px;
-      color: var(--color-white);
+    .button {
+      width: 8rem;
+      height: 8rem;
+      border-radius: 50%;
+      background-color: var(--color-grey-1);
       cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .burger {
+        width: 100%;
+
+        &::after,
+        &::before {
+          content: "";
+          display: block;
+          height: 0.1rem;
+          width: 40%;
+          margin: auto;
+          background-color: white;
+          position: relative;
+          transition: transform 0.3s;
+        }
+
+        &::after {
+          top: -0.5rem;
+        }
+
+        &::before {
+          top: 0.5rem;
+        }
+      }
+
+      .burgerActive {
+        &::after {
+          transform: rotate(45deg);
+          top: -0.1rem;
+        }
+
+        &::before {
+          transform: rotate(-45deg);
+          top: 0;
+        }
+      }
     }
   }
 `;
 
-function MobileNavbar() {
-  const [open, setOpen] = useState(false);
-  const isMobile = useIsMobile();
-  const [sidebarOpacity, setSidebarOpacity] = useState(isMobile ? 1 : 0);
+export default function MobileNavbar() {
+  const [isActive, setIsActive] = useState(false);
+  const [pathname, setPathname] = useState(window.location.pathname);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (isMobile || window.scrollY >= 100) {
-        setSidebarOpacity(1);
-      } else {
-        setSidebarOpacity(0);
-      }
-    };
+    if (isActive) setIsActive(true);
+  }, [pathname, isActive]);
 
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [isMobile]);
-
-  const handleCloseSidebar = () => {
-    setOpen(false);
-    window.scrollTo(0, 0);
-  };
+  useEffect(() => {
+    const handleLocationChange = () => setPathname(window.location.pathname);
+    window.addEventListener("popstate", handleLocationChange);
+    return () => window.removeEventListener("popstate", handleLocationChange);
+  }, []);
 
   return (
-    <>
-      <SideBar
-        animate={open ? "open" : "closed"}
-        variants={variants}
-        opacity={sidebarOpacity}
-      >
-        <ToggleButton setOpen={setOpen} />
-        <Links handleCloseSidebar={handleCloseSidebar} />
-      </SideBar>
-    </>
+    <MainContainer>
+      <div className="header">
+        <Magnetic>
+          <div
+            onClick={() => {
+              setIsActive(!isActive);
+            }}
+            className="button"
+          >
+            <div className={`burger ${isActive ? "burgerActive" : ""}`}></div>
+          </div>
+        </Magnetic>
+      </div>
+      <AnimatePresence mode="wait">{isActive && <Menu />}</AnimatePresence>
+    </MainContainer>
   );
 }
-
-export default MobileNavbar;

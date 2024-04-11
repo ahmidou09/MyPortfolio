@@ -6,7 +6,7 @@ const FormcarryBlock = styled.div`
   position: relative;
   width: 40rem;
 
-  @media screen and (max-width: 720px) {
+  @media screen and (max-width: 900px) {
     width: 100%;
   }
 `;
