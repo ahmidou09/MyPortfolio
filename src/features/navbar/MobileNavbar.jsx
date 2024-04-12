@@ -23,18 +23,18 @@ const MainContainer = styled.div`
       justify-content: center;
 
       @media screen and (max-width: 720px) {
-        width: 6rem;
-        height: 6rem;
+        width: 5.2rem;
+        height: 5.2rem;
       }
 
       .burger {
         content: "";
         display: block;
-        height: 0.1rem;
+        height: 0.15rem;
         margin: auto;
-        background-color: white;
+        background-color: var(--color-white);
         transition: transform 0.3s;
-        width: 4.6rem;
+        width: 4.2rem;
 
         @media screen and (max-width: 720px) {
           width: 3.6rem;
@@ -44,10 +44,10 @@ const MainContainer = styled.div`
         &::before {
           content: "";
           display: block;
-          height: 0.1rem;
+          height: 0.15rem;
           width: 100%;
           margin: auto;
-          background-color: white;
+          background-color: var(--color-white);
           position: relative;
           transition: transform 0.3s;
         }
@@ -66,12 +66,12 @@ const MainContainer = styled.div`
         background-color: transparent;
 
         &::after {
-          transform: rotate(45deg);
+          transform: rotate(135deg);
           top: -0.1rem;
         }
 
         &::before {
-          transform: rotate(-45deg);
+          transform: rotate(-135deg);
           top: 0;
         }
       }

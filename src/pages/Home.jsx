@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Lottie from "lottie-react";
-import animationWord from "../assets/json/Animationw_world_3.json";
 import hero from "../assets/img/hero.png";
 import Character from "../features/about/Character";
 import MyProjects from "../features/projects/MyProjects";
@@ -18,18 +16,15 @@ function Home() {
     <TransitionAnim>
       <div>
         <Header>
-          <LocatedLeft>
-            <span>Located in the morroco</span>
-            <span>
-              <Lottie animationData={animationWord} />
-            </span>
-          </LocatedLeft>
+          <LocatedRight>
+            <span>hello</span>
+            <h1>I'm mehdi</h1>
+            <h3>Front-End Software Developer</h3>
+            <p>I Devlop Attractive, user Interface and web applications</p>
+          </LocatedRight>
           <BoxHero>
             <img src={hero} alt="hero" />
           </BoxHero>
-          <LocatedRight>
-            <h4>Front-End Developer &amp; Designer</h4>
-          </LocatedRight>
           <ScrollingTextContainer>
             <ScrollingText name={"El Mehdi Ahmidou -"} />
           </ScrollingTextContainer>
@@ -64,7 +59,7 @@ const Header = styled.header`
   align-items: center;
   position: relative;
   overflow: hidden;
-  height: 100vh;
+  height: calc(100vh - 7rem);
 
   h4 {
     text-shadow: 0 0 10px var(--color-purple-1), 0 0 20px var(--color-purple-1);
@@ -81,44 +76,45 @@ const Header = styled.header`
   }
 `;
 
-const LocatedLeft = styled.div`
-  background-color: var(--color-primary-2);
-  border-radius: 0 10rem 10rem 0;
-  color: var(--color-white);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 2rem;
-  gap: 2rem;
-  font-size: 1.8rem;
-  font-weight: 300;
-  margin-top: -30rem;
-  height: 10rem;
-  width: 30%;
-  max-width: 30rem;
-
-  svg {
-    width: 8rem !important;
-  }
-
-  @media screen and (max-width: 720px) {
-    display: none;
-  }
-`;
-
 const LocatedRight = styled.div`
   color: var(--color-white);
-  padding: 2rem;
+  padding: 2rem 0 2rem 3rem;
   font-size: 5rem;
   margin-top: -30rem;
-  width: 30%;
+  width: 50%;
+
+  span {
+    color: var(--color-purple-2);
+    font-size: 3rem;
+
+    @media screen and (max-width: 720px) {
+      display: none;
+    }
+  }
+
+  h1 {
+    font-size: clamp(6rem, 8vw, 12rem);
+
+    @media screen and (max-width: 720px) {
+      display: none;
+    }
+  }
+
+  h3 {
+    font-size: clamp(3rem, 3.5vw, 6rem);
+  }
+
+  p {
+    font-size: clamp(1.5rem, 2vw, 3rem);
+  }
 
   @media screen and (max-width: 720px) {
     position: absolute;
-    padding: 1rem;
+    padding: 2rem 3rem;
     bottom: 0;
     left: 0;
     width: 100%;
+    text-align: center;
   }
 `;
 
@@ -126,20 +122,24 @@ const BoxHero = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40%;
-
-  img {
-    height: 100vh;
-
-    @media screen and (max-width: 720px) {
-      height: 60vh;
-    }
-  }
+  width: 50%;
 
   @media screen and (max-width: 720px) {
     align-items: end;
     width: 100%;
     height: 100%;
+  }
+
+  img {
+    height: 100vh;
+
+    @media screen and (max-width: 900px) {
+      height: 80vh;
+    }
+
+    @media screen and (max-width: 720px) {
+      height: 60vh;
+    }
   }
 `;
 
@@ -148,7 +148,7 @@ const ScrollingTextContainer = styled.div`
   top: calc(100vh - 35rem);
 
   @media screen and (max-width: 720px) {
-    top: calc(100vh - 54rem);
+    top: calc(100vh - 55rem);
   }
 `;
 

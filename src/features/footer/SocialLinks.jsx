@@ -59,16 +59,7 @@ const BoxSocial = styled.ul`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
-  margin-top: 3rem;
-
-  @media screen and (max-width: 900px) {
-    gap: 2rem;
-  }
-
-  @media screen and (max-width: 720px) {
-    gap: 1.5rem;
-  }
+  gap: 1rem;
 `;
 
 const SocialItem = styled.li`
@@ -81,7 +72,7 @@ const SocialItem = styled.li`
     height: 6rem;
     text-align: center;
     line-height: 6.3rem;
-    background: var(--color-purple-1);
+    background: transparent;
     border-radius: 50%;
     font-size: 3rem;
     color: var(--color-white);
@@ -108,7 +99,7 @@ const SocialItem = styled.li`
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background: var(--color-white);
+    background: transparent;
     transition: 0.5s;
     transform: scale(0.9);
     z-index: -1;

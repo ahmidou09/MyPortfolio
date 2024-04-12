@@ -50,23 +50,6 @@ const panels = [
           </p>
         </li>
         <li>
-          <h3>
-            Code Reviewer | MICROVERSE | San Francisco, California, United
-            States
-          </h3>
-          <h5>April 2024 - current</h5>
-          <p>
-            ● Giving quality code reviews to students’ projects resulting in
-            improved code quality, by providing constructive feedback.{" "}
-          </p>
-          <p>
-            ● Helping students identify and fix bugs in one-on-one coding
-            sessions thus improving my communication, problem-solving, and
-            debugging skills.{" "}
-          </p>
-        </li>
-        <li>
-          <h6> </h6>
           <h3>Math Teacher | Ministry of National Education | Morocco </h3>
           <h5>Jan 2018 - Jan 2022</h5>
           <p>
@@ -83,7 +66,7 @@ const panels = [
     content: (
       <ul>
         <li>
-          <h6>MICROVERSE | San Francisco, California, United States</h6>
+          <h6>MICROVERSE | Remote</h6>
           <h3>Remote Full-stack Web Development Program, Full Time</h3>
           <h5>May 2023 - April 2024</h5>
           <p>
@@ -99,8 +82,8 @@ const panels = [
         </li>
         <li>
           <h6>University of Mohamed V, Rabat, Morocco</h6>
-          <h3>Master's degree in Physics Informatics</h3>
-          <h5>Sep 2015 - Sep 2017</h5>
+          <h3>Bachelor's Degree in Physics</h3>
+          <h5>Sep 2012 - Sep 2015</h5>
           <p>- Gained expertise in mathematics, physics, and programming.</p>
         </li>
       </ul>

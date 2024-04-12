@@ -5,8 +5,9 @@ import { Link } from "react-router-dom";
 import Magnetic from "../../ui/Magnetic";
 
 const FooterContainer = styled.footer`
-  padding: 12rem 0;
+  padding: 12rem 0 0 0;
   height: 100vh;
+  position: relative;
 `;
 
 const BoxContact = styled.div`
@@ -80,6 +81,16 @@ const SectionCopyright = styled.div`
   text-align: center;
 `;
 
+const CopyrightWrapper = styled.div`
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 12rem;
+`;
+
 function Footer({ style }) {
   return (
     <FooterContainer style={style}>
@@ -101,14 +112,17 @@ function Footer({ style }) {
             </Enfo>
           </BoxContact>
           <Line />
-          <SocialLinks />
         </Wrapper>
-        <SectionCopyright>
-          <p>
-            &copy; {new Date().getFullYear()} El Mehdi Ahmidou. All rights
-            reserved.
-          </p>
-        </SectionCopyright>
+
+        <CopyrightWrapper>
+          <SocialLinks />
+          <SectionCopyright>
+            <p>
+              &copy; {new Date().getFullYear()} El Mehdi Ahmidou. All rights
+              reserved.
+            </p>
+          </SectionCopyright>
+        </CopyrightWrapper>
       </SectionContact>
     </FooterContainer>
   );
