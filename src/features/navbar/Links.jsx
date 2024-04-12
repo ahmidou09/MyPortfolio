@@ -38,6 +38,7 @@ export default function Links({
   data: { title, href, index },
   isActive,
   setSelectedIndicator,
+  setIsActive,
 }) {
   return (
     <LinksContainer
@@ -47,6 +48,10 @@ export default function Links({
       initial="initial"
       animate="enter"
       exit="exit"
+      onClick={() => {
+        setIsActive(false);
+        window.scrollTo(0, 0);
+      }}
     >
       <Indicator variants={scale} animate={isActive ? "open" : "closed"} />
       <Link to={href} aria-label={title}>

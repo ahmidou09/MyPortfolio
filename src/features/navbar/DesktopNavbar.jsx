@@ -88,7 +88,7 @@ const Nav = styled.nav`
   }
 `;
 
-const NavLinkWithHover = styled(NavLink)`
+const NavbarLink = styled(NavLink)`
   position: relative;
   color: inherit;
   text-decoration: none;
@@ -137,17 +137,17 @@ function DesktopNavbar() {
         <ul>
           <Magnetic>
             <li>
-              <NavLinkWithHover to="/projects">Projects</NavLinkWithHover>
+              <NavbarLink to="/projects">Projects</NavbarLink>
             </li>
           </Magnetic>
           <Magnetic>
             <li>
-              <NavLinkWithHover to="/about">About-me</NavLinkWithHover>
+              <NavbarLink to="/about">About-me</NavbarLink>
             </li>
           </Magnetic>
           <Magnetic>
             <li>
-              <NavLinkWithHover to="/contact">Contact</NavLinkWithHover>
+              <NavbarLink to="/contact">Contact</NavbarLink>
             </li>
           </Magnetic>
         </ul>

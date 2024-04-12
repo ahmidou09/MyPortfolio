@@ -49,7 +49,7 @@ const PanelLabel = styled.button`
   }
 
   ${(props) =>
-    props.expanded &&
+    props.$expanded === "true" &&
     css`
       color: var(--color-white);
 
@@ -118,7 +118,7 @@ const Panel = ({ label, content, isActive, onClick }) => {
 
   return (
     <PanelWrapper>
-      <PanelLabel onClick={onClick} expanded={isActive}>
+      <PanelLabel onClick={onClick} $expanded={isActive.toString()}>
         {label}
       </PanelLabel>
       <PanelInner style={{ height: isActive ? height + "px" : 0 }}>

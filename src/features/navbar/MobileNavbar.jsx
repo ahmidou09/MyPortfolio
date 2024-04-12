@@ -13,24 +13,39 @@ const MainContainer = styled.div`
     z-index: 9999;
 
     .button {
-      width: 8rem;
-      height: 8rem;
+      width: 7rem;
+      height: 7rem;
       border-radius: 50%;
-      background-color: var(--color-grey-1);
+      background-color: var(--color-purple-1);
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
 
+      @media screen and (max-width: 720px) {
+        width: 6rem;
+        height: 6rem;
+      }
+
       .burger {
-        width: 100%;
+        content: "";
+        display: block;
+        height: 0.1rem;
+        margin: auto;
+        background-color: white;
+        transition: transform 0.3s;
+        width: 4.6rem;
+
+        @media screen and (max-width: 720px) {
+          width: 3.6rem;
+        }
 
         &::after,
         &::before {
           content: "";
           display: block;
           height: 0.1rem;
-          width: 40%;
+          width: 100%;
           margin: auto;
           background-color: white;
           position: relative;
@@ -38,15 +53,18 @@ const MainContainer = styled.div`
         }
 
         &::after {
-          top: -0.5rem;
+          top: -0.9rem;
+          height: 0.1rem;
         }
 
         &::before {
-          top: 0.5rem;
+          top: 0.8rem;
         }
       }
 
       .burgerActive {
+        background-color: transparent;
+
         &::after {
           transform: rotate(45deg);
           top: -0.1rem;
@@ -89,7 +107,9 @@ export default function MobileNavbar() {
           </div>
         </Magnetic>
       </div>
-      <AnimatePresence mode="wait">{isActive && <Menu />}</AnimatePresence>
+      <AnimatePresence mode="wait">
+        {isActive && <Menu isActive={isActive} setIsActive={setIsActive} />}
+      </AnimatePresence>
     </MainContainer>
   );
 }

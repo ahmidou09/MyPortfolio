@@ -4,41 +4,42 @@ import styled from "styled-components";
 
 const slider1 = [
   {
-    color: "#1f6ebd",
     src: "https://i.ibb.co/vLZ4tDL/1.png",
   },
   {
-    color: "#d6d9dc",
-    src: "https://i.ibb.co/vLZ4tDL/1.png",
+    src: "https://i.ibb.co/74MgCWD/4.png",
   },
   {
-    color: "#902626",
-    src: "https://i.ibb.co/vLZ4tDL/1.png",
+    src: "https://i.ibb.co/0s29YPg/3.png",
   },
   {
-    color: "#21242b",
-    src: "https://i.ibb.co/vLZ4tDL/1.png",
+    src: "https://i.ibb.co/rcMy522/5.png",
   },
 ];
 
 const slider2 = [
   {
-    color: "#0fc80f",
     src: "https://i.ibb.co/vLZ4tDL/1.png",
   },
   {
-    color: "#a4247d",
-    src: "https://i.ibb.co/vLZ4tDL/1.png",
+    src: "https://i.ibb.co/74MgCWD/4.png",
   },
   {
-    color: "#308528",
-    src: "https://i.ibb.co/vLZ4tDL/1.png",
+    src: "https://i.ibb.co/0s29YPg/3.png",
   },
   {
-    color: "#a74d18",
-    src: "https://i.ibb.co/vLZ4tDL/1.png",
+    src: "https://i.ibb.co/rcMy522/5.png",
   },
 ];
+
+const getRandomColor = () => {
+  const letters = "0123456789ABCDEF";
+  let color = "#";
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+};
 
 const SlidingImages = () => {
   const container = useRef(null);
@@ -54,7 +55,7 @@ const SlidingImages = () => {
     <SlidingImagesContainer ref={container}>
       <Slider style={{ x: x1 }}>
         {slider1.map((project, index) => (
-          <Project key={index} bgColor={project.color}>
+          <Project key={index} style={{ backgroundColor: getRandomColor() }}>
             <ImageContainer>
               <img
                 src={project.src}
@@ -67,7 +68,7 @@ const SlidingImages = () => {
       </Slider>
       <Slider style={{ x: x2 }}>
         {slider2.map((project, index) => (
-          <Project key={index} bgColor={project.color}>
+          <Project key={index} style={{ backgroundColor: getRandomColor() }}>
             <ImageContainer>
               <img
                 src={project.src}
@@ -99,13 +100,12 @@ const Slider = styled(motion.div)`
 `;
 
 const Project = styled.div`
-  padding: 2rem;
+  padding: 1rem;
   width: 25%;
   height: 20vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${({ bgColor }) => bgColor};
 `;
 
 const ImageContainer = styled.div`

@@ -11,14 +11,20 @@ const FormcarryBlock = styled.div`
   }
 `;
 
+const ErrorMessage = styled.div`
+  color: red;
+  margin: 10px 0;
+  font-weight: bold;
+`;
+
 const Label = styled.label`
   transition: 0.5s;
   position: absolute;
-  top: ${({ $hasContent }) => ($hasContent ? "-20px" : "0")};
+  top: ${({ $hasContent }) => ($hasContent ? "-30px" : "0")};
   left: 0;
   font-size: ${({ $hasContent }) => ($hasContent ? "12px" : "16px")};
   color: ${({ $hasContent }) =>
-    $hasContent ? "var(--color-purple-1)" : "var(--color-white)"};
+    $hasContent ? "var(--color-grey-0)" : "var(--color-white)"};
   padding: 10px 0;
   pointer-events: none;
   transition: 0.5s;
@@ -36,9 +42,9 @@ const inputStyles = css`
   background: transparent;
 
   &:focus ~ label {
-    top: -20px;
+    top: -30px;
     left: 0;
-    color: var(--color-purple-1);
+    color: var(--color-grey-0);
     font-size: 12px;
   }
 `;
@@ -164,7 +170,6 @@ function ContactForm() {
   const [message, setMessage] = useState("");
 
   const [error, setError] = useState("");
-  console.log(error);
 
   function onSubmit(e) {
     e.preventDefault();
@@ -198,6 +203,7 @@ function ContactForm() {
 
   return (
     <Form onSubmit={(e) => onSubmit(e)}>
+      {error && <ErrorMessage>{error}</ErrorMessage>}
       <FormcarryBlock>
         <Input
           type="text"

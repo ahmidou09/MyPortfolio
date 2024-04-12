@@ -16,7 +16,7 @@ import SlidingImages from "../ui/SlidingImages";
 function Home() {
   return (
     <TransitionAnim>
-      <HomeContainer>
+      <div>
         <Header>
           <LocatedLeft>
             <span>Located in the morroco</span>
@@ -53,14 +53,10 @@ function Home() {
           <SlidingImages />
         </SectionSlidingImages>
         <Footer />
-      </HomeContainer>
+      </div>
     </TransitionAnim>
   );
 }
-
-const HomeContainer = styled.div`
-  position: static;
-`;
 
 const Header = styled.header`
   display: flex;

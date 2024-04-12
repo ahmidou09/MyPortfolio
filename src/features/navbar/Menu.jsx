@@ -58,7 +58,7 @@ const NavSection = styled.div`
   }
 `;
 
-export default function Menu() {
+export default function Menu({ setIsActive }) {
   const location = useLocation();
   const pathname = location.pathname;
   const [selectedIndicator, setSelectedIndicator] = useState(pathname);
@@ -78,6 +78,7 @@ export default function Menu() {
               data={{ ...data, index }}
               isActive={selectedIndicator === data.href}
               setSelectedIndicator={setSelectedIndicator}
+              setIsActive={setIsActive}
             />
           ))}
         </NavSection>
