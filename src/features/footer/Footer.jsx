@@ -89,6 +89,11 @@ const CopyrightWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 3rem 12rem;
+
+  @media only screen and (max-width: 820px) {
+    flex-direction: column;
+    padding: 2rem;
+  }
 `;
 
 function Footer({ style }) {
