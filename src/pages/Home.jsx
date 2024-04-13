@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import hero from "../assets/img/hero.png";
+import bg from "../assets/img/bg.png";
 import Character from "../features/about/Character";
 import MyProjects from "../features/projects/MyProjects";
 import { Link } from "react-router-dom";
@@ -84,8 +85,8 @@ const LocatedRight = styled.div`
   width: 50%;
 
   span {
-    color: var(--color-purple-2);
-    font-size: 3rem;
+    color: var(--color-purple-1);
+    font-size: 12rem;
 
     @media screen and (max-width: 720px) {
       display: none;
@@ -102,6 +103,7 @@ const LocatedRight = styled.div`
 
   h3 {
     font-size: clamp(3rem, 3.5vw, 6rem);
+    color: var(--color-purple-1);
   }
 
   p {
@@ -119,6 +121,10 @@ const LocatedRight = styled.div`
 `;
 
 const BoxHero = styled.div`
+  background-image: url(${bg});
+  background-size: cover;
+  background-position: end;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -128,6 +134,7 @@ const BoxHero = styled.div`
     align-items: end;
     width: 100%;
     height: 100%;
+    background-position: center;
   }
 
   img {

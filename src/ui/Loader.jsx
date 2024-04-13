@@ -1,7 +1,5 @@
-// components/Loader.jsx
-
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const LoaderContainer = styled.div`
   display: flex;
@@ -10,19 +8,23 @@ const LoaderContainer = styled.div`
   height: 100vh;
 `;
 
-const Spinner = styled.div`
-  width: 50px;
-  height: 50px;
-  border: 5px solid rgba(255, 255, 255, 0.3);
-  border-top-color: #fff;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-
-  @keyframes spin {
-    to {
-      transform: rotate(360deg);
-    }
+const rotate = keyframes`
+  to {
+    transform: rotate(1turn)
   }
+`;
+
+const Spinner = styled.div`
+  margin: 4.8rem auto;
+
+  width: 6.4rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, #4d5bce 94%, #0000) top/10px 10px
+      no-repeat,
+    conic-gradient(#0000 30%, #4d5bce);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 10px), #000 0);
+  animation: ${rotate} 1.5s infinite linear;
 `;
 
 function Loader() {
