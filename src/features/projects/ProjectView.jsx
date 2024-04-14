@@ -145,6 +145,7 @@ const NextProjectSection = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   background-color: var(--color-primary-2);
 
   @media only screen and (max-width: 720px) {
@@ -169,6 +170,7 @@ const NextProjectButton = styled(Link)`
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  width: max-content;
 
   h2 {
     font-size: 12rem;

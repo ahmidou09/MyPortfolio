@@ -86,7 +86,7 @@ function Projects() {
           displayMode={displayMode}
         />
       </Container>
-      <Footer style={{ backgroundColor: "var(--color-primary-1)" }} />
+      <Footer style={{ backgroundColor: "var(--color-primary-2)" }} />
     </TransitionAnim>
   );
 }

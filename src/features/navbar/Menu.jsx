@@ -51,7 +51,6 @@ const NavSection = styled.div`
   align-items: center;
   gap: 4rem;
   font-size: 4.6rem;
-  margin-top: 8rem;
 
   @media screen and (max-width: 720px) {
     font-size: 3.8rem;
