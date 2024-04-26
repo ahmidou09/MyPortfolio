@@ -17,16 +17,17 @@ const defaultOptions = {
 };
 
 const CardContainer = styled.div`
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  box-shadow: 2px -2px 10px 2px rgb(109 94 94 / 31%);
   transition: transform 0.5s, box-shadow 0.3s;
   transform-style: preserve-3d;
   position: relative;
   cursor: pointer;
   transform-origin: center center;
+  min-height: 60rem;
 
   &:hover {
-    box-shadow: 0 5px 20px 5px #00000044;
+    box-shadow: 3px -1px 20px 7px #59595978;
   }
 
   &:hover p span {

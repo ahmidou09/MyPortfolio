@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import styled from "styled-components";
-import data from "../../assets/json/data/links.json";
+import data from "../../assets/data/data.json";
 import SwipeCarousel from "./SwipeCarousel";
 import Footer from "../footer/Footer";
 import TransitionAnim from "../../ui/TransitionAnim";
@@ -21,7 +21,6 @@ const TitleSection = styled.section`
   text-align: center;
   color: var(--color-white-2);
   padding: 4rem 0;
-  height: 70vh;
   margin-bottom: 4rem;
   background-color: var(--color-primary-3);
   display: flex;

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import linksData from "../../assets/json/data/links.json";
+import data from "../../assets/data/data.json";
 import CardList from "./CardList";
 import CardGrid from "./CardGrid";
 
@@ -28,22 +28,20 @@ const GridContainer = styled.div`
 
 const MyProjects = ({ style, element, color, displayMode = "list" }) => {
   const numberOfLinks =
-    element && element >= 0 && element <= linksData.length
-      ? element
-      : linksData.length;
+    element && element >= 0 && element <= data.length ? element : data.length;
 
   return (
     <StyledSection style={style}>
       <MaxWidthContainer>
         {displayMode === "list" ? (
           <ListContainer>
-            {linksData.slice(0, numberOfLinks).map((link, index) => (
+            {data.slice(0, numberOfLinks).map((link, index) => (
               <CardList key={link.id} projectData={link} color={color} />
             ))}
           </ListContainer>
         ) : (
           <GridContainer>
-            {linksData.slice(0, numberOfLinks).map((link, index) => (
+            {data.slice(0, numberOfLinks).map((link, index) => (
               <CardGrid key={link.id} projectData={link} color={color} />
             ))}
           </GridContainer>
