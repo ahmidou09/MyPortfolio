@@ -85,8 +85,8 @@ const LocatedRight = styled.div`
   width: 50%;
 
   span {
-    color: var(--color-purple-1);
-    font-size: 12rem;
+    color: var(--color-purple-2);
+    font-size: 4rem;
 
     @media screen and (max-width: 720px) {
       display: none;
@@ -103,7 +103,7 @@ const LocatedRight = styled.div`
 
   h3 {
     font-size: clamp(3rem, 3.5vw, 6rem);
-    color: var(--color-purple-1);
+    color: var(--color-purple-2);
   }
 
   p {
