@@ -24,7 +24,7 @@ app.use(cookieParser());
 // cors
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://myportfolio-umlm.onrender.com",
     credentials: true,
   })
 );
@@ -32,7 +32,6 @@ app.use(
 app.use("/api/projects", projectRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/upload", uploadRoutes);
-
 
 if (process.env.NODE_ENV === "production") {
   const __dirname = path.resolve();
