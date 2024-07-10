@@ -32,8 +32,9 @@ This portfolio project showcases my skills and projects in a web format. It's de
 
 #### Tech Stack <a name="tech-stack"></a>
 
-- **Frontend**: React.js
-- **Styling**: Styled Components
+- **Frontend**: React.js, Vite, React-Router, React-Icons, React-Helmet.
+- **Backend**: Node.js, Express.js, MongoDB, GridFS, Multer, Mongoose
+- **Styling**: Styled Components.
 - **Animation**: Motion, GSAP
 
 #### Key Features <a name="key-features"></a>
