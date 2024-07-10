@@ -24,7 +24,7 @@ app.use(cookieParser());
 // cors
 app.use(
   cors({
-    origin: "https://myportfolio-umlm.onrender.com",
+    origin: "https://elmehdi.in",
     credentials: true,
   })
 );
