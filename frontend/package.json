@@ -14,6 +14,7 @@
     "@reduxjs/toolkit": "^2.1.0",
     "@vitejs/plugin-react": "^4.2.1",
     "axios": "^1.6.7",
+    "eslint": "^8.56.0",
     "eslint-config-react-app": "^7.0.1",
     "framer-motion": "^11.0.5",
     "gsap": "^3.12.5",
@@ -31,13 +32,12 @@
     "react-tilt": "^1.0.2",
     "react-toastify": "^10.0.5",
     "styled-components": "^6.1.6",
-    "vite": "^5.0.11"
+    "vite": "^5.0.11",
+    "vite-plugin-eslint": "^1.8.1"
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@types/react": "^18.2.47",
-    "@types/react-dom": "^18.2.18",
-    "eslint": "^8.56.0",
-    "vite-plugin-eslint": "^1.8.1"
+    "@types/react-dom": "^18.2.18"
   }
 }
