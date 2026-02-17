@@ -24,7 +24,7 @@ app.use(cookieParser());
 // cors
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://www.elmehdi.cv",
     credentials: true,
   })
 );
@@ -51,7 +51,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(notFound);
 app.use(errorHandler);
 
-if (process.env.NODE_ENV !== "production") {
+if (!process.env.VERCEL) {
   app.listen(port, () => {
     console.log(`Server started on port ${port}`);
   });
