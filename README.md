@@ -45,7 +45,7 @@ This portfolio project showcases my skills and projects in a web format. It's de
 
 ### 🚀 Live Demo <a name="live-demo"></a>
 
-[Visit the live demo](https://elmehdi.in/)
+[Visit the live demo](https://elmehdi.cv/)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
