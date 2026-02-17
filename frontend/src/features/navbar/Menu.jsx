@@ -5,6 +5,10 @@ import Links from "./Links";
 import Curve from "./Curve";
 import styled from "styled-components";
 import SocialLinks from "../footer/SocialLinks";
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../../redux/slices/authSlice";
+import { useLogoutMutation } from "../../redux/slices/usersApiSlice";
+import { useNavigate } from "react-router-dom";
 
 const menuSlide = {
   initial: { x: "calc(100% + 10rem)" },
@@ -61,6 +65,21 @@ export default function Menu({ setIsActive }) {
   const location = useLocation();
   const pathname = location.pathname;
   const [selectedIndicator, setSelectedIndicator] = useState(pathname);
+  const { userInfo } = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const [logoutUser] = useLogoutMutation();
+
+  const logoutHandler = async () => {
+    try {
+      await logoutUser().unwrap();
+      dispatch(logout());
+      navigate("/login");
+      setIsActive(false);
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   return (
     <MenuContiner
@@ -80,6 +99,19 @@ export default function Menu({ setIsActive }) {
               setIsActive={setIsActive}
             />
           ))}
+          {userInfo && userInfo.isAdmin && (
+            <Links
+              data={{ title: "Admin", href: "/admin/projects", index: 4 }}
+              isActive={selectedIndicator === "/admin/projects"}
+              setSelectedIndicator={setSelectedIndicator}
+              setIsActive={setIsActive}
+            />
+          )}
+          {userInfo && (
+            <div onClick={logoutHandler} style={{ cursor: "pointer" }}>
+              Logout
+            </div>
+          )}
         </NavSection>
         <SocialLinks />
       </MenuWrapper>

@@ -191,7 +191,7 @@ function DesktopNavbar() {
             </Magnetic>
           )}
 
-          {userInfo && userInfo.isAdmin && (
+          {userInfo && (
             <Magnetic>
               <li>
                 <Button onClick={logoutHandler}>Logout</Button>
